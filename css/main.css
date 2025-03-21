@@ -15,7 +15,6 @@
   color: #FDCC32;
   border-radius: 10px;
   border: 2px solid #FDCC32;
-  min-width: 150px;
 }
 
 .btn-01:hover {
@@ -35,6 +34,7 @@
   font-weight: bold;
   cursor: pointer;
   height: fit-content;
+  min-width: 100px;
 }
 .btn-02:hover {
   background-color: #ffffff;
@@ -80,6 +80,12 @@
 }
 
 /* <Main 공통적용> */
+#main {
+  margin: 0 auto;
+  flex-grow: 1;
+  max-width: 1024px;
+}
+
 #main .text-box {
   padding-top: 10px;
   text-align: left;
@@ -147,12 +153,6 @@ object-fit: cover;
 
 
 
-#main {
-  margin: 0 auto;
-  flex-grow: 1;
-  max-width: 1024px;
-}
-
 /* <sec1> */
 #main .sec1 {
   display: flex;
@@ -162,12 +162,12 @@ object-fit: cover;
 
 /* 구독자 박스 */
 #main .sec1 .subscriber-box {
-  width: 35%;
+  width: 40%;
   background-color: #FFF4D7;
   border: 2px solid #FFBD3B;
   border-radius: 40px;
   box-shadow: 0 4px 10px rgba(254, 166, 117, 0.28);
-  padding: 15px 30px;
+  padding: 1.5% 4%;
   color: #121212;
   font-size: 16px;
 }
@@ -201,20 +201,27 @@ object-fit: cover;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 5%;
 }
 
+#main .sec1 .profile-box .profile-img {
+  width: 30%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+}
 
 #main .sec1 .profile-box .profile-img img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
 }
 
 #main .sec1 .profile-box .profile-text {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 2%;
+  line-height: 1.5;
 }
 
 #main .sec1 .profile-box .nickname {
@@ -243,14 +250,14 @@ object-fit: cover;
   display: flex;
   align-items: center;
   padding: 3% 3%;
-  gap: 40px;
+  gap: 5%;
   background-color: #Fefefe;
   border: 2px solid #FFBD3B;
   border-radius: 20px;
 }
 
 #main .sec1 .count-left {
-  flex: 5;
+  flex: 6;
 }
 
 #main .sec1 .count-text {
@@ -266,7 +273,7 @@ object-fit: cover;
 }
  
 #main .sec1 .count-right {
-  flex: 5;
+  flex: 4;
   padding-top: 8%;
   text-align: left;
   display: flex;
@@ -415,26 +422,70 @@ object-fit: cover;
 @media screen and (max-width: 1024px) {
 
   #main .sec1 .profile-box {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3%;
+    align-items: center;
+    /* display: flex;
+    flex: 5;
+    padding: 3% 5%;
     flex-direction: column;
     align-items: center;
+    align-items: flex-start; */
+  }
+  #main .sec1 .subscriber-box {
+    width: 50%;
+  }
+  #main .sec1 .profile-img {
+    width: 100%; 
+    height: 0; 
+    padding-bottom: 30%; 
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative; 
+    display: block; 
+  }
+  #main .sec1 .profile-box .profile-img img {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
   }
 
+  #main .sec1 .profile-box .subscribe-btn {
+    margin-top: 5%;
+    width: 100%;
+  }
 
+  #main .sec1 .count-box {
+    flex: 5;
+    flex-direction: column;
+    padding: 5% 5%;
+    align-items: flex-start;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  #main .sec1 .subscriber-box {
+    width: 100%;
+    padding: 2.5% 4%;
+  }
 
-
-  #main .sec2 .photo-box {
+  #main .photo-box {
     width: calc((100% - 20px) / 2); /* 2개 한 줄 */
   }
-
-  .text-box h3 {
-    font-size: 1rem; /* 글자 크기 조정 */
+  #main .profile-text {
+    text-align: center;
   }
 
-  .text-box p.date {
-    font-size: 0.8rem; /* 날짜 크기 조정 */
+  #main .post-title {
+    font-size: 1rem; 
+  }
+
+  #main .post-date{
+    font-size: 0.8rem; 
   }
 
 }
