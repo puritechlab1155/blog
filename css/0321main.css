@@ -126,7 +126,7 @@
     opacity: 1;
     visibility: visible;
 }
-.menu-panel li {
+.menu-panel .panel-list {
     padding: 14px 0;
     cursor: pointer;
     font-size: 26px;
@@ -134,9 +134,10 @@
     text-align: center;
     line-height: 160%;
 }
-.menu-panel li:hover {
-    background: #FDCC32;
+.menu-panel .panel-list:hover {
+    background-color: #FDCC32;
     color: #FEFEFE;
+
 }
 .menu-close {
     border: none;
