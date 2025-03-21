@@ -15,7 +15,7 @@
     <div class="logo">BLOG SITE</div>
     <div class="header-right">
       <div class="search-container" id="searchContainer">
-        <input type="text" placeholder="검색어 입력..." class="search-input" />
+        <input type="text" placeholder="키워드를 검색하세요" class="search-input" />
       </div>
       <button class="icon-btn" id="searchBtn"><i class="fas fa-search"></i></button>
       <button class="icon-btn" id="menuBtn"><i class="fas fa-bars"></i></button>
@@ -37,11 +37,48 @@
       <li>Contact</li>
     </ul>
   </div>
-  <div class="main-content">
-    <div class="sec1 padding-1200">
-      <!-- sec1 내용 -->
+  <div id="main">
+    <div class="sec1 m-t-100">
+      <!-- 구독자 박스 -->
+    <div class="subscriber-box m-t-50">
+      <p>
+        <span class="subscriber-count">1,638명</span> 이 해당 블로그를 구독중입니다
+      </p>
     </div>
-    <div class="sec2 padding-1200">
+    <!-- 큰 제목 -->
+    <h2 class="main-title m-t-50">보통 날이네요, 어느새.</h2>
+    <!-- 프로필/키워드 박스 전체 컨테이너 -->
+    <div class="profile-count-container">
+      <!-- 프로필 박스 -->
+      <div class="profile-box">
+        <div class="profile-info">
+          <div class="profile-img">
+            <img src="img/profile.png" alt="프로필 사진" />
+          </div>
+          <div class="profile-text">
+            <p class="nickname">휠소굳</p>
+            <p class="job-title">프로 여행러</p>
+            <p class="bio">
+              현실만을 믿는 삶이란 때론 더욱 불행할 수도 있지 그렇지 않은감
+            </p>
+          </div>
+        </div>
+        <button type="button" class="subscribe-btn btn-02 radius-20">구독하기</button>
+      </div>
+      <!-- 조회수 박스 -->
+      <div class="count-box">
+        <div class="count-left">
+          <p class="count-text">전체 방문자수</p>
+          <p class="count-number">4,333명</p>
+        </div>
+        <div class="count-right">
+          <p class="count-today">Today <span class="count-today-number">15</span></p>
+          <p class="count-yesterday">Yesterday <span class="count-yesterday-number">23</span></p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="sec2 m-t-100">
       <!-- 인기글 제목 -->
       <h2 class="section-title">인기글</h2>
     
@@ -51,81 +88,323 @@
         <div class="photo-box">
           <img src="img/img1.png" alt="사진 1" />
           <div class="text-box">
-            <h3>서울 인기있는 맛집 베스트 10</h3>
-            <p class="date">2025.03.19</p>
+            <h3 class="post-title" class="post-title">서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+            <p class="post-date">2025.03.19</p>
           </div>
         </div>
         <div class="photo-box">
           <img src="img/img2.png" alt="사진 2" />
           <div class="text-box">
-            <h3>서울 핫플레이스 모음</h3>
-            <p class="date">2025.03.19</p>
+            <h3 class="post-title" class="post-title">서울 핫플레이스 모음</h3>
+            <p class="post-date">2025.03.19</p>
           </div>
         </div>
         <div class="photo-box">
           <img src="img/img3.png" alt="사진 3" />
           <div class="text-box">
-            <h3>요즘 뜨는 카페 리스트</h3>
-            <p class="date">2025.03.19</p>
+            <h3 class="post-title">요즘 뜨는 카페 리스트</h3>
+            <p class="post-date">2025.03.19</p>
           </div>
         </div>
         <div class="photo-box">
           <img src="img/img4.png" alt="사진 4" />
           <div class="text-box">
-            <h3>장사 잘되는 맛집 순위</h3>
-            <p class="date">2025.03.19</p>
+            <h3 class="post-title">장사 잘되는 맛집 순위</h3>
+            <p class="post-date">2025.03.19</p>
           </div>
         </div>
     
         <!-- 숨겨진 4개 -->
         <div class="photo-box hidden">
-          <img src="img/img1.png" alt="사진 5" />
+          <img src="img/img5.png" alt="사진 5" />
           <div class="text-box">
-            <h3>핫한 브런치 맛집 모음</h3>
-            <p class="date">2025.03.19</p>
+            <h3 class="post-title">핫한 브런치 맛집 모음</h3>
+            <p class="post-date">2025.03.19</p>
           </div>
         </div>
         <div class="photo-box hidden">
-          <img src="img/img2.png" alt="사진 6" />
+          <img src="img/img6.png" alt="사진 6" />
           <div class="text-box">
-            <h3>데이트하기 좋은 카페</h3>
-            <p class="date">2025.03.19</p>
+            <h3 class="post-title">데이트하기 좋은 카페</h3>
+            <p class="post-date">2025.03.19</p>
           </div>
         </div>
         <div class="photo-box hidden">
-          <img src="img/img3.png" alt="사진 7" />
+          <img src="img/img2.png" alt="사진 7" />
           <div class="text-box">
-            <h3>서울 야경 명소 BEST</h3>
-            <p class="date">2025.03.19</p>
+            <h3 class="post-title">서울 야경 명소 BEST</h3>
+            <p class="post-date">2025.03.19</p>
           </div>
         </div>
         <div class="photo-box hidden">
-          <img src="img/img4.png" alt="사진 8" />
+          <img src="img/img1.png" alt="사진 8" />
           <div class="text-box">
-            <h3>전통시장 먹거리 탐방</h3>
-            <p class="date">2025.03.19</p>
+            <h3 class="post-title">전통시장 먹거리 탐방</h3>
+            <p class="post-date">2025.03.19</p>
           </div>
         </div>
       </div>
     
       <!-- 더보기 버튼 -->
-      <button class="load-more-btn" id="loadMoreBtn">더보기</button>
+      <button type="button" class="load-more-btn btn-01">더보기</button>
     </div>
+    <div class="sec3 m-t-100">
+      <!-- 인기글 제목 -->
+      <h2 class="section-title">전체글 <span class="total yellow">1,356</span>개</h2>
     
+      <!-- 한 번에 묶기 -->
+      <div class="photo-box-container">
+        <!-- 기본 노출 8개 -->
+        <div class="photo-box">
+          <img src="img/img1.png" alt="사진 1" />
+          <div class="text-box">
+            <h3 class="post-title">서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box">
+          <img src="img/img2.png" alt="사진 2" />
+          <div class="text-box">
+            <h3 class="post-title">서울 핫플레이스 모음</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box">
+          <img src="img/img3.png" alt="사진 3" />
+          <div class="text-box">
+            <h3 class="post-title">요즘 뜨는 카페 리스트</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box">
+          <img src="img/img4.png" alt="사진 4" />
+          <div class="text-box">
+            <h3 class="post-title">장사 잘되는 맛집 순위</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box">
+          <img src="img/img1.png" alt="사진 1" />
+          <div class="text-box">
+            <h3 class="post-title">서울 인기있는 맛집 베스트 10</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box">
+          <img src="img/img2.png" alt="사진 2" />
+          <div class="text-box">
+            <h3 class="post-title">서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box">
+          <img src="img/img3.png" alt="사진 3" />
+          <div class="text-box">
+            <h3 class="post-title">요즘 뜨는 카페 리스트</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box">
+          <img src="img/img4.png" alt="사진 4" />
+          <div class="text-box">
+            <h3 class="post-title">장사 잘되는 맛집 순위</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+    
+        <!-- 숨겨진 8개 -->
+        <div class="photo-box hidden">
+          <img src="img/img5.png" alt="사진 5" />
+          <div class="text-box">
+            <h3 class="post-title">핫한 브런치 맛집 모음</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box hidden">
+          <img src="img/img6.png" alt="사진 6" />
+          <div class="text-box">
+            <h3 class="post-title">데이트하기 좋은 카페</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box hidden">
+          <img src="img/img2.png" alt="사진 7" />
+          <div class="text-box">
+            <h3 class="post-title">서울 야경 명소 BEST</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box hidden">
+          <img src="img/img1.png" alt="사진 8" />
+          <div class="text-box">
+            <h3 class="post-title">전통시장 먹거리 탐방</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box hidden">
+          <img src="img/img1.png" alt="사진 5" />
+          <div class="text-box">
+            <h3 class="post-title">핫한 브런치 맛집 모음</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box hidden">
+          <img src="img/img2.png" alt="사진 6" />
+          <div class="text-box">
+            <h3 class="post-title">데이트하기 좋은 카페</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box hidden">
+          <img src="img/img3.png" alt="사진 7" />
+          <div class="text-box">
+            <h3 class="post-title">서울 야경 명소 BEST</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box hidden">
+          <img src="img/img4.png" alt="사진 8" />
+          <div class="text-box">
+            <h3 class="post-title">전통시장 먹거리 탐방</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
       </div>
-        <div class="sec3 padding-1200">
-          <!-- sec1 내용 -->
+      <!-- 더보기 버튼 -->
+      <button type="button" class="load-more-btn btn-01">더보기</button>
+    </div> 
+
+    <div class="sec4 m-t-100">
+      <!-- 인기글 제목 -->
+      <h2 class="section-title">12월</h2>
+    
+      <!-- 한 번에 묶기 -->
+      <div class="photo-box-container">
+        <!-- 기본 노출 4개 -->
+        <div class="photo-box">
+          <img src="img/Desem01.png" alt="사진 1" />
+          <div class="text-box">
+            <h3 class="post-title">서울 인기있는 맛집 베스트 10</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
         </div>
-        <div class="sec4 padding-1200">
-          <!-- sec1 내용 -->
+        <div class="photo-box">
+          <img src="img/Desem02.png" alt="사진 2" />
+          <div class="text-box">
+            <h3 class="post-title">이탈리아에서의 일상 #93 - 2024년 크리스마스</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
         </div>
-        <div class="sec5 padding-1200">
-          <!-- sec1 내용 -->
+        <div class="photo-box">
+          <img src="img/Desem03.png" alt="사진 3" />
+          <div class="text-box">
+            <h3 class="post-title">요즘 뜨는 카페 리스트</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
         </div>
+        <div class="photo-box">
+          <img src="img/Desem04.png" alt="사진 4" />
+          <div class="text-box">
+            <h3 class="post-title">대만여행, 코스트코, 치과, 그리고 늘고 있는 나의 김장 실력</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+    
+        <!-- 숨겨진 4개 -->
+        <div class="photo-box hidden">
+          <img src="img/Desem04.png" alt="사진 5" />
+          <div class="text-box">
+            <h3 class="post-title">핫한 브런치 맛집 모음</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box hidden">
+          <img src="img/Desem03.png" alt="사진 6" />
+          <div class="text-box">
+            <h3 class="post-title">데이트하기 좋은 카페</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box hidden">
+          <img src="img/Desem02.png" alt="사진 7" />
+          <div class="text-box">
+            <h3 class="post-title">서울 야경 명소 BEST</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box hidden">
+          <img src="img/Desem01.png" alt="사진 8" />
+          <div class="text-box">
+            <h3 class="post-title">전통시장 먹거리 탐방</h3>
+            <p class="post-date">2025.03.19</p>
+          </div>
+        </div>
+      </div>
+    
+      <!-- 더보기 버튼 -->
+      <button type="button" class="load-more-btn btn-01">더보기</button>
+    </div>
+
+    <div class="sec5 m-t-100">
+      <!-- 키워드 박스 -->
+      <div class="keyword-box">
+        <div class="keyword-header">
+          <p class="keyword-title">Keywords</p>
+          <a href="#" class="keyword-more">더보기</a>
+        </div>
+        <div class="keyword-list">
+          <button type="button" class="keyword-btn btn-03 radius-20">전국커피</button>
+          <button type="button" class="keyword-btn btn-03 radius-20">이탈리아</button>
+          <button type="button" class="keyword-btn btn-03 radius-20">맛집</button>
+          <button type="button" class="keyword-btn btn-03 radius-20">주문진</button>
+          <button type="button" class="keyword-btn btn-03 radius-20">분조카</button>
+          <button type="button" class="keyword-btn btn-03 radius-20">한화 이글스</button>
+          <button type="button" class="keyword-btn btn-03 radius-20">합정</button>
+          <button type="button" class="keyword-btn btn-03 radius-20">연남동</button>
+        </div>
+      </div>
+
+      <!-- 팔로워 박스 -->
+      <div class="follower-box">
+        <div class="follower-header">
+          <p class="follower-title">새로운 구독자</p>
+          <a href="#" class="follower-more">더보기</a>
+        </div>
+        <div class="follower-info">
+          <p class="follower-count">총 <span class="follower-count-number yellow">14</span>명</p>
+        </div>
+        <div class="follower-profiles">
+          <div class="follower-profile">
+            <img src="img/profile01.png" alt="방문자1" class="profile-img" />
+            <p class="profile-name">방문자1</p>
+            <p class="profile-date">2025. 03. 19</p>
+          </div>
+          <div class="follower-profile">
+            <img src="img/profile02.png" alt="방문자2" class="profile-img" />
+            <p class="profile-name">방문자2</p>
+            <p class="profile-date">2025. 03. 19</p>
+          </div>
+          <div class="follower-profile">
+            <img src="img/profile03.png" alt="방문자3" class="profile-img" />
+            <p class="profile-name">방문자3</p>
+            <p class="profile-date">2025. 03. 19</p>
+          </div>
+          <div class="follower-profile">
+            <img src="img/profile04.png" alt="방문자4" class="profile-img" />
+            <p class="profile-name">방문자4</p>
+            <p class="profile-date">2025. 03. 19</p>
+          </div>
+          <div class="follower-profile">
+            <img src="img/profile05.png" alt="방문자5" class="profile-img" />
+            <p class="profile-name">방문자5</p>
+            <p class="profile-date">2025. 03. 19</p>
+          </div>
+        </div>
+      </div>
   
 
     </div>
-  </div>
+
   </div>
 
   <!-- 푸터 -->
@@ -194,15 +473,69 @@
     });
 
 
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
-    const hiddenBoxes = document.querySelectorAll('.photo-box.hidden');
+    // 모든 섹션을 선택
+    const sections = document.querySelectorAll('.sec2, .sec3, .sec4');
 
-    loadMoreBtn.addEventListener('click', function () {
-      hiddenBoxes.forEach(box => {
-        box.classList.remove('hidden'); // 숨김 해제
-      });
-      loadMoreBtn.style.display = 'none'; // 버튼 숨김
+    sections.forEach(section => {
+      const loadMoreBtn = section.querySelector('.load-more-btn');
+      const container = section.querySelector('.photo-box-container');
+
+      // sec2, sec3, sec4 분기 처리
+      if (section.classList.contains('sec2') || section.classList.contains('sec4')) {
+        // ✅ sec2와 sec4 로직 (더보기/숨기기 전환) - 동일하게 작동
+        let isExpanded = false;
+
+        loadMoreBtn.addEventListener('click', function () {
+          const hiddenItems = section.querySelectorAll('.photo-box.hidden');
+          const allBoxes = section.querySelectorAll('.photo-box');
+          
+          // 처음 4개 항목 이후의 항목들 선택 (숨겨야 할 항목들)
+          const itemsToHide = Array.from(allBoxes).slice(4);
+
+          if (!isExpanded) {
+            // 숨겨진 박스 보여주기
+            hiddenItems.forEach(box => box.classList.remove('hidden'));
+
+            // 버튼 텍스트 변경
+            loadMoreBtn.textContent = '숨기기';
+
+            // 버튼을 컨테이너 맨 아래로 이동
+            container.appendChild(loadMoreBtn);
+
+            isExpanded = true;
+          } else {
+            // 다시 숨김 - 4번째 이후 항목부터 모두 숨김 처리
+            itemsToHide.forEach(box => box.classList.add('hidden'));
+
+            // 버튼 텍스트 다시 '더보기'
+            loadMoreBtn.textContent = '더보기';
+
+            // 버튼을 원래 자리로 복구
+            section.appendChild(loadMoreBtn);
+
+            isExpanded = false;
+          }
+        });
+
+      } else if (section.classList.contains('sec3')) {
+        // ✅ sec3 로직 (더보기 → 컨텐츠 아래로만 이동)
+        loadMoreBtn.addEventListener('click', function () {
+          const hiddenBoxes = section.querySelectorAll('.photo-box.hidden');
+
+          // 숨겨진 박스를 보여줌
+          hiddenBoxes.forEach(box => box.classList.remove('hidden'));
+
+          // 버튼은 텍스트 변경 X (항상 '더보기' 유지)
+
+          // 버튼을 컨테이너 맨 아래로 이동
+          container.appendChild(loadMoreBtn);
+
+          // 버튼 클릭 이후에 추가 동작 X (숨기기 없음!)
+        });
+      }
     });
+
+
 
 
   </script>
