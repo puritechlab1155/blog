@@ -1,0 +1,219 @@
+@charset "UTF-8";
+/* ------헤더 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 86px;
+    background-color: #FEFEFE;
+    padding: 15px 7%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.header .header-contain {
+    margin: 0 auto;
+    max-width: 1176px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.header .header-contain h1{
+    font-size: 28px;
+    /* line-height: 1px; */
+    font-weight: bold;
+}
+.header .logo {
+    font-weight: bold;
+    color: #FDCC32; /* 노란색 */
+}
+.header .header-right {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 40px;
+}
+.header .header-right .search-container {
+
+}
+.header .header-right .search-input {
+    
+}
+.header .header-right .search-icon {
+    width: 100%;
+    padding-top: 4px;
+}
+.header .header-right .search-container {
+    display: none;
+    /* display: block; */
+    position: absolute;
+    right: 500px;
+}
+.header .header-right .search-input {
+    max-width: 264px;
+    width: 100%;
+    height: 48px;
+    padding: 0 10px;
+    border: 2px solid #EFEFEF; 
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    background: #FEFEFE;
+}
+.header .header-right .search-container .search-icon img{
+    
+}
+.header .header-right .search {
+
+}
+ /* 햄버거 메뉴 */
+.header .ham-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+.header .ham-box .ham {
+    width: 20px;
+    height: 3px;
+    background-color: #727272;
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+/* 햄버거 버튼이 X로 변하는 효과 */
+.header .ham-box.active .ham:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.header .ham-box.active .ham:nth-child(2) {
+    opacity: 0;
+}
+
+.header .ham-box.active .ham:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* 검색창 */
+.search-container {
+    display: none;
+}
+.search-container.active {
+    display: block;
+}
+
+/* 메뉴 패널 */
+.menu-panel {
+    position: absolute;
+    top: 86px; /* 헤더 높이만큼 아래에 위치 */
+    right: 0; /* 헤더 padding과 동일하게 설정 */
+    width: 200px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 5; /* 검색창보다 아래에 표시 */
+}
+.menu-panel.active {
+    width: 100%;
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+}
+.menu-panel li {
+    padding: 14px 0;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 160%;
+}
+.menu-panel li:hover {
+    background: #FDCC32;
+    color: #FEFEFE;
+}
+.menu-close {
+    border: none;
+    background: none;
+    font-size: 24px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+.content-wrap {
+    padding: 0 7%;
+}
+
+/* ------컨텐트 css시작  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------푸터 */
+.footer {
+    background-color: #F8F8F8;
+}
+.footer .footer-contain {
+    margin: 0 auto;
+    max-width: 1176px;
+    width: 100%;
+    padding: 50px 7%;
+}
+.footer .social-icons {
+    display: flex;
+    justify-content:left;
+    gap: 40px;
+}
+.footer .footer-text {
+    font-size: 18px;
+    color: #727272;
+    margin-top: 40px;
+}
+
+  /* 반응형 */
+  @media screen and (max-width: 1024px) {
+    /* header {
+      padding: 0 50px;
+    }
+  
+    footer {
+      padding: 40px 50px;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    */
+  }
+  
+  @media screen and (max-width: 767px) {
+    /* header {
+        padding: 0 20px;
+    }
+    footer {
+        padding: 20px;
+    } */
+    .footer .social-icons {
+        justify-content: center;
+    }
+    .footer .footer-text {
+        text-align: center;
+    }
+}
