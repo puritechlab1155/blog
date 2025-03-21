@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>블로그 디자인</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">BLOG SITE</div>
+    <div class="header-right">
+      <div class="search-container" id="searchContainer">
+        <input type="text" placeholder="검색어 입력..." class="search-input" />
+      </div>
+      <button class="icon-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+      <button class="icon-btn" id="menuBtn"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- 오버레이 배경 -->
+  <div class="overlay-bg" id="overlayBg">
+    
+  </div>
+
+  <!-- 메뉴 패널 -->
+  <div class="menu-panel" id="menuPanel">
+    <button class="menu-close" id="menuClose">&times;</button>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Blog</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div class="sec1 padding-1200">
+      <!-- sec1 내용 -->
+    </div>
+    <div class="sec2 padding-1200">
+      <!-- 인기글 제목 -->
+      <h2 class="section-title">인기글</h2>
+      <!-- 첫 번째 사진박스 그룹 -->
+      <div class="photo-box-container">
+        <div class="photo-box">
+          <img src="img/img1.png" alt="사진 1">
+          <div class="text-box">
+            <h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+            <p class="date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box">
+          <img src="img/img2.png" alt="사진 2">
+          <div class="text-box">
+            <h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+            <p class="date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box">
+          <img src="img/img3.png" alt="사진 3">
+          <div class="text-box">
+            <h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+            <p class="date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box">
+          <img src="img/img4.png" alt="사진 4">
+          <div class="text-box">
+            <h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+            <p class="date">2025.03.19</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- 두 번째 사진박스 그룹 -->
+      <div class="photo-box-container">
+        <div class="photo-box">
+          <img src="img/img5.png" alt="사진 5">
+          <div class="text-box">
+            <h3 h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+            <p class="date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box">
+          <img src="img/img6.png" alt="사진 6">
+          <div class="text-box">
+            <h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+            <p class="date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box">
+          <img src="img/img1.png" alt="사진 7">
+          <div class="text-box">
+            <h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+            <p class="date">2025.03.19</p>
+          </div>
+        </div>
+        <div class="photo-box">
+          <img src="img/img2.png" alt="사진 8">
+          <div class="text-box">
+            <h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+            <p class="date">2025.03.19</p>
+          </div>
+        </div>
+              <!-- 더보기 버튼 -->
+      <button class="show-more-btn" id="showMoreBtn">더보기</button>
+  
+      <!-- 숨겨진 추가 박스들 -->
+      <div class="more-photo-boxes" id="morePhotoBoxes" style="display: none;">
+        <!-- 세 번째 사진박스 그룹 -->
+        <div class="photo-box-container">
+          <div class="photo-box">
+            <img src="img/img5.png" alt="사진 5">
+            <div class="text-box">
+              <h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+              <p class="date">2025.03.19</p>
+            </div>
+          </div>
+          <div class="photo-box">
+            <img src="img/img6.png" alt="사진 6">
+            <div class="text-box">
+              <h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+              <p class="date">2025.03.19</p>
+            </div>
+          </div>
+          <div class="photo-box">
+            <img src="img/img1.png" alt="사진 7">
+            <div class="text-box">
+              <h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+              <p class="date">2025.03.19</p>
+            </div>
+          </div>
+          <div class="photo-box">
+            <img src="img/img2.png" alt="사진 8">
+            <div class="text-box">
+              <h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+              <p class="date">2025.03.19</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- 네 번째 사진박스 그룹 -->
+        <div class="photo-box-container">
+          <div class="photo-box">
+            <img src="img/img5.png" alt="사진 5">
+            <div class="text-box">
+              <h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+              <p class="date">2025.03.19</p>
+            </div>
+          </div>
+          <div class="photo-box">
+            <img src="img/img6.png" alt="사진 6">
+            <div class="text-box">
+              <h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+              <p class="date">2025.03.19</p>
+            </div>
+          </div>
+          <div class="photo-box">
+            <img src="img/img1.png" alt="사진 7">
+            <div class="text-box">
+              <h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+              <p class="date">2025.03.19</p>
+            </div>
+          </div>
+          <div class="photo-box">
+            <img src="img/img2.png" alt="사진 8">
+            <div class="text-box">
+              <h3>서울 인기있는 맛집 베스트 10, 장사 잘되는 서울 맛집 방문 순위 TOP 50</h3>
+              <p class="date">2025.03.19</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+        <div class="sec3 padding-1200">
+          <!-- sec1 내용 -->
+        </div>
+        <div class="sec4 padding-1200">
+          <!-- sec1 내용 -->
+        </div>
+        <div class="sec5 padding-1200">
+          <!-- sec1 내용 -->
+        </div>
+  
+
+    </div>
+  </div>
+  </div>
+
+  <!-- 푸터 -->
+  <footer>
+    <!-- 소셜 아이콘 -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.spacex.com" target="_blank"><i class="fas fa-xmark"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://blog.naver.com" target="_blank"><i class="fab fa-blogger"></i></a>
+      <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="mailto:example@email.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  
+    <!-- 푸터 텍스트 -->
+    <div class="footer-text">
+      ㅇㅇㅇㅇㅇㅇ Ⓒ Magazine Lab
+    </div>
+  
+    <!-- 패밀리 사이트 -->
+    <div class="family-site">
+      <div class="family-site-input">
+        <input type="text" placeholder="패밀리 사이트" readonly>
+        <i class="fas fa-chevron-up"></i> <!-- V 모양의 아이콘 (클릭 시 회전) -->
+      </div>
+      <div class="family-sites-dropdown">
+        <a href="https://www.example1.com" target="_blank">사이트 1</a>
+        <a href="https://www.example2.com" target="_blank">사이트 2</a>
+        <a href="https://www.example3.com" target="_blank">사이트 3</a>
+        <a href="https://www.example4.com" target="_blank">사이트 4</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const menuPanel = document.getElementById('menuPanel');
+    const menuClose = document.getElementById('menuClose');
+    const overlayBg = document.getElementById('overlayBg');
+    const searchBtn = document.getElementById('searchBtn');
+    const searchContainer = document.getElementById('searchContainer');
+
+    // 메뉴 열기
+    menuBtn.addEventListener('click', () => {
+      menuPanel.classList.add('active');
+      overlayBg.classList.add('active');
+    });
+
+    // 메뉴 닫기
+    menuClose.addEventListener('click', closeMenu);
+    overlayBg.addEventListener('click', closeMenu);
+
+    function closeMenu() {
+      menuPanel.classList.remove('active');
+      overlayBg.classList.remove('active');
+    }
+
+    // 검색 버튼 클릭 시 인풋 열기/닫기
+    searchBtn.addEventListener('click', () => {
+      searchContainer.classList.toggle('active');
+      if (searchContainer.classList.contains('active')) {
+        searchBtn.innerHTML = '&times;';
+      } else {
+        searchBtn.innerHTML = '<i class="fas fa-search"></i>';
+      }
+    });
+
+    // 더보기 버튼 클릭 시 추가 박스를 보이게 하는 함수
+    document.getElementById("showMoreBtn").addEventListener("click", function() {
+      var morePhotoBoxes = document.getElementById("morePhotoBoxes");
+
+      // 추가 박스를 보이거나 숨기는 동작
+      if (morePhotoBoxes.style.display === "none" || morePhotoBoxes.style.display === "") {
+        morePhotoBoxes.style.display = "flex";  // 추가 박스를 보이게 함
+      } else {
+        morePhotoBoxes.style.display = "none";  // 추가 박스를 숨김
+      }
+
+      // 더보기 버튼을 추가된 요소 밑으로 내려가게 하는 동작
+      var morePhotoBoxParent = document.getElementById("morePhotoBoxParent"); // 추가 박스를 감싸고 있는 부모 div
+      morePhotoBoxParent.appendChild(this);  // 더보기 버튼을 부모 div 아래로 이동
+    });
+
+  </script>
+
+</body>
+</html>
