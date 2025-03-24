@@ -1,85 +1,94 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>블로그 디자인</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/0321main.css">
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
 
 
-  <header>
-    <div class="logo">BLOG SITE</div>
-    <div class="header-right">
-      <div class="search-container" id="searchContainer">
-        <input type="text" placeholder="키워드를 검색하세요" class="search-input" />
-      </div>
-      <button class="icon-btn" id="searchBtn"><i class="fas fa-search"></i></button>
-      <button class="icon-btn" id="menuBtn"><i class="fas fa-bars"></i></button>
+  <header class="header">
+    <div class="header-contain">
+        <h1>
+            <a class="logo" href="index.html">BLOG SITE</a>
+        </h1>
+        <div class="header-right">
+            <div class="search-container" id="searchContainer">
+                <input type="text" placeholder="검색어를 입력해주세요." class="search-input" />
+            </div>
+            <button type="button" class="search-icon" id="searchBtn">
+                <img src="img/common/search.png" alt="돋보기 이미지">
+            </button>
+            <button type="button" class="ham-box" id="menuBtn">
+                <span class="ham"></span>
+                <span class="ham"></span>
+                <span class="ham"></span>
+            </button>
+        </div>
     </div>
   </header>
-
-  <!-- 오버레이 배경 -->
-  <div class="overlay-bg" id="overlayBg">
-    
-  </div>
-
   <!-- 메뉴 패널 -->
   <div class="menu-panel" id="menuPanel">
-    <button class="menu-close" id="menuClose">&times;</button>
-    <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Blog</li>
-      <li>Contact</li>
+    <ul class="menu-list-box">
+        <a href="#"><li class="panel-list">About</li></a>
+        <a href="#"><li class="panel-list">Home</li></a>
+        <a href="#"><li class="panel-list">Blog</li></a>
+        <a href="#"><li class="panel-list">Contact</li></a>
     </ul>
-  </div>
+</div><!-- 여기까지 메뉴 패널 -->
+
   <div id="main">
     <div class="sec1 m-t-100">
       <!-- 구독자 박스 -->
-    <div class="subscriber-box m-t-50">
-      <p>
-        <span class="subscriber-count">1,638명</span> 이 해당 블로그를 구독중입니다
-      </p>
-    </div>
-    <!-- 큰 제목 -->
-    <h2 class="main-title m-t-50">보통 날이네요, 어느새.</h2>
-    <!-- 프로필/키워드 박스 전체 컨테이너 -->
-    <div class="profile-count-container">
-      <!-- 프로필 박스 -->
-      <div class="profile-box">
+      <div class="subscriber-box m-t-50">
+        <p>
+          <span class="subscriber-count">1,638명</span> 이 해당 블로그를 구독중입니다
+        </p>
+      </div>
+      <!-- 큰 제목 -->
+      <h2 class="main-title m-t-50">보통 날이네요, 어느새.</h2>
+      <!-- 프로필/키워드 박스 전체 컨테이너 -->
+      <div class="profile-count-container">
+        <!-- 프로필 박스 -->
+        <div class="profile-box">
           <div class="profile-img">
             <img src="img/profile.png" alt="프로필 사진" />
           </div>
           <div class="profile-text">
-            <p class="nickname">휠소굳</p>
-            <p class="job-title">프로 여행러</p>
+            <div class="nick-job-container">
+              <p class="nickname">휠소굳</p>
+              <p class="job-title">프로 여행러</p>
+            </div>
             <p class="bio">
               현실만을 믿는 삶이란 때론 더욱 불행할 수도 있지 그렇지 않은감
             </p>
           </div>
-        <button type="button" class="subscribe-btn btn-02 radius-20">구독하기</button>
-      </div>
-      <!-- 조회수 박스 -->
-      <div class="count-box">
-        <div class="count-left">
-          <p class="count-text">전체 방문자수</p>
-          <p class="count-number">4,333명</p>
+          <button type="button" class="subscribe-btn btn-02 radius-20">구독하기</button>
         </div>
-        <div class="count-right">
-          <p class="count-today">Today <span class="count-today-number">15</span></p>
-          <p class="count-yesterday">Yesterday <span class="count-yesterday-number">23</span></p>
+        <!-- 조회수 박스 -->
+        <div class="count-box">
+          <div class="count-left">
+            <p class="count-text">전체 방문자수</p>
+            <p class="count-number">4,333명</p>
+          </div>
+          <div class="count-right">
+            <p class="count-today">Today <span class="count-today-number">15</span></p>
+            <p class="count-yesterday">Yesterday <span class="count-yesterday-number">23</span></p>
+          </div>
         </div>
       </div>
-    </div>
     </div>
     <div class="sec2 m-t-100">
       <!-- 인기글 제목 -->
       <h2 class="section-title">인기글</h2>
-    
+
       <!-- 한 번에 묶기 -->
       <div class="photo-box-container">
         <!-- 기본 노출 4개 -->
@@ -111,7 +120,7 @@
             <p class="post-date">2025.03.19</p>
           </div>
         </div>
-    
+
         <!-- 숨겨진 4개 -->
         <div class="photo-box hidden">
           <img src="img/img5.png" alt="사진 5" />
@@ -142,14 +151,14 @@
           </div>
         </div>
       </div>
-    
+
       <!-- 더보기 버튼 -->
       <button type="button" class="load-more-btn btn-01">더보기</button>
     </div>
     <div class="sec3 m-t-100">
       <!-- 인기글 제목 -->
       <h2 class="section-title">전체글 <span class="total yellow">1,356</span>개</h2>
-    
+
       <!-- 한 번에 묶기 -->
       <div class="photo-box-container">
         <!-- 기본 노출 8개 -->
@@ -209,7 +218,7 @@
             <p class="post-date">2025.03.19</p>
           </div>
         </div>
-    
+
         <!-- 숨겨진 8개 -->
         <div class="photo-box hidden">
           <img src="img/img5.png" alt="사진 5" />
@@ -270,12 +279,12 @@
       </div>
       <!-- 더보기 버튼 -->
       <button type="button" class="load-more-btn btn-01">더보기</button>
-    </div> 
+    </div>
 
     <div class="sec4 m-t-100">
       <!-- 인기글 제목 -->
       <h2 class="section-title">12월</h2>
-    
+
       <!-- 한 번에 묶기 -->
       <div class="photo-box-container">
         <!-- 기본 노출 4개 -->
@@ -307,7 +316,7 @@
             <p class="post-date">2025.03.19</p>
           </div>
         </div>
-    
+
         <!-- 숨겨진 4개 -->
         <div class="photo-box hidden">
           <img src="img/Desem04.png" alt="사진 5" />
@@ -338,7 +347,7 @@
           </div>
         </div>
       </div>
-    
+
       <!-- 더보기 버튼 -->
       <button type="button" class="load-more-btn btn-01">더보기</button>
     </div>
@@ -399,144 +408,47 @@
           </div>
         </div>
       </div>
-  
+
 
     </div>
 
   </div>
 
-  <!-- 푸터 -->
-  <footer>
-    <!-- 소셜 아이콘 -->
-    <div class="social-icons">
-      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.spacex.com" target="_blank"><i class="fas fa-xmark"></i></a>
-      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://blog.naver.com" target="_blank"><i class="fab fa-blogger"></i></a>
-      <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="mailto:example@email.com"><i class="fas fa-envelope"></i></a>
-    </div>
-  
-    <!-- 푸터 텍스트 -->
-    <div class="footer-text">
-      ㅇㅇㅇㅇㅇㅇ Ⓒ Magazine Lab
-    </div>
-  
-    <!-- 패밀리 사이트 -->
-    <div class="family-site">
-      <div class="family-site-input">
-        <input type="text" placeholder="패밀리 사이트" readonly>
-        <i class="fas fa-chevron-up"></i> <!-- V 모양의 아이콘 (클릭 시 회전) -->
+    <!-- 푸터 -->
+    <footer class="footer">
+      <div class="footer-contain">
+          <!-- 소셜 아이콘 -->
+          <div class="social-icons">
+              <a href="https://www.facebook.com" target="_blank">
+                   <img src="/img/common/facebook.png" alt="facebook">
+              </a>
+              <a href="https://www.spacex.com" target="_blank">
+                  <img src="/img/common/xmark.png" alt="xmark">
+              </a>
+              <a href="https://www.instagram.com" target="_blank">
+                  <img src="/img/common/instagram.png" alt="instagram">
+              </a>
+              <a href="https://blog.naver.com" target="_blank">
+                  <img src="/img/common/blogger.png" alt="blogger">
+              </a>
+              <a href="https://www.youtube.com" target="_blank">
+                  <img src="/img/common/youtube.png" alt="youtube">
+              </a>
+              <a href="mailto:example@email.com">
+                  <img src="/img/common/email.png" alt="email">
+              </a>
+          </div>
+         
+          <div class="footer-text">
+              BlogStory Ⓒ 2025 Magazine Lab
+          </div>
+      
       </div>
-      <div class="family-sites-dropdown">
-        <a href="https://www.example1.com" target="_blank">사이트 1</a>
-        <a href="https://www.example2.com" target="_blank">사이트 2</a>
-        <a href="https://www.example3.com" target="_blank">사이트 3</a>
-        <a href="https://www.example4.com" target="_blank">사이트 4</a>
-      </div>
-    </div>
   </footer>
+  
+  <script src="/js/script.js"></script>
 
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const menuPanel = document.getElementById('menuPanel');
-    const menuClose = document.getElementById('menuClose');
-    const overlayBg = document.getElementById('overlayBg');
-    const searchBtn = document.getElementById('searchBtn');
-    const searchContainer = document.getElementById('searchContainer');
-
-    // 메뉴 열기
-    menuBtn.addEventListener('click', () => {
-      menuPanel.classList.add('active');
-      overlayBg.classList.add('active');
-    });
-
-    // 메뉴 닫기
-    menuClose.addEventListener('click', closeMenu);
-    overlayBg.addEventListener('click', closeMenu);
-
-    function closeMenu() {
-      menuPanel.classList.remove('active');
-      overlayBg.classList.remove('active');
-    }
-
-    // 검색 버튼 클릭 시 인풋 열기/닫기
-    searchBtn.addEventListener('click', () => {
-      searchContainer.classList.toggle('active');
-      if (searchContainer.classList.contains('active')) {
-        searchBtn.innerHTML = '&times;';
-      } else {
-        searchBtn.innerHTML = '<i class="fas fa-search"></i>';
-      }
-    });
-
-
-    // 모든 섹션을 선택
-    const sections = document.querySelectorAll('.sec2, .sec3, .sec4');
-
-    sections.forEach(section => {
-      const loadMoreBtn = section.querySelector('.load-more-btn');
-      const container = section.querySelector('.photo-box-container');
-
-      // sec2, sec3, sec4 분기 처리
-      if (section.classList.contains('sec2') || section.classList.contains('sec4')) {
-        // ✅ sec2와 sec4 로직 (더보기/숨기기 전환) - 동일하게 작동
-        let isExpanded = false;
-
-        loadMoreBtn.addEventListener('click', function () {
-          const hiddenItems = section.querySelectorAll('.photo-box.hidden');
-          const allBoxes = section.querySelectorAll('.photo-box');
-          
-          // 처음 4개 항목 이후의 항목들 선택 (숨겨야 할 항목들)
-          const itemsToHide = Array.from(allBoxes).slice(4);
-
-          if (!isExpanded) {
-            // 숨겨진 박스 보여주기
-            hiddenItems.forEach(box => box.classList.remove('hidden'));
-
-            // 버튼 텍스트 변경
-            loadMoreBtn.textContent = '숨기기';
-
-            // 버튼을 컨테이너 맨 아래로 이동
-            container.appendChild(loadMoreBtn);
-
-            isExpanded = true;
-          } else {
-            // 다시 숨김 - 4번째 이후 항목부터 모두 숨김 처리
-            itemsToHide.forEach(box => box.classList.add('hidden'));
-
-            // 버튼 텍스트 다시 '더보기'
-            loadMoreBtn.textContent = '더보기';
-
-            // 버튼을 원래 자리로 복구
-            section.appendChild(loadMoreBtn);
-
-            isExpanded = false;
-          }
-        });
-
-      } else if (section.classList.contains('sec3')) {
-        // ✅ sec3 로직 (더보기 → 컨텐츠 아래로만 이동)
-        loadMoreBtn.addEventListener('click', function () {
-          const hiddenBoxes = section.querySelectorAll('.photo-box.hidden');
-
-          // 숨겨진 박스를 보여줌
-          hiddenBoxes.forEach(box => box.classList.remove('hidden'));
-
-          // 버튼은 텍스트 변경 X (항상 '더보기' 유지)
-
-          // 버튼을 컨테이너 맨 아래로 이동
-          container.appendChild(loadMoreBtn);
-
-          // 버튼 클릭 이후에 추가 동작 X (숨기기 없음!)
-        });
-      }
-    });
-
-
-
-
-  </script>
 
 </body>
+
 </html>

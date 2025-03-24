@@ -35,6 +35,7 @@
   cursor: pointer;
   height: fit-content;
   min-width: 100px;
+  max-width: 120px;
 }
 .btn-02:hover {
   background-color: #ffffff;
@@ -116,7 +117,7 @@
 }
 
 #main .section-title {
-  font-size: 1.5rem;
+  font-size: clamp(20px, 1.3vw, 45px);
   font-weight: bold;
   text-align: left;
   margin-bottom: 20px;
@@ -160,27 +161,28 @@ object-fit: cover;
   gap: 20px;
 }
 
+
 /* 구독자 박스 */
 #main .sec1 .subscriber-box {
   width: 40%;
   background-color: #FFF4D7;
   border: 2px solid #FFBD3B;
-  border-radius: 40px;
+  border-radius: 50px;
   box-shadow: 0 4px 10px rgba(254, 166, 117, 0.28);
-  padding: 1.5% 4%;
+  padding: 1% 4%;
   color: #121212;
   font-size: 16px;
 }
 
 #main .sec1 .subscriber-box .subscriber-count {
   font-weight: bold;
-  font-size: 24px;
+  font-size: clamp(20px, 2.5vw, 25px);
   color: #292929;
 }
 
 /* 큰 제목 */
 #main .sec1 .main-title {
-  font-size: 40px;
+  font-size: clamp(25px, 4vw, 40px);
   color: #121212;
   font-weight: bold;
 }
@@ -197,18 +199,20 @@ object-fit: cover;
   background-color: #FFF7ED;
   border: 2px solid #FFBD3B;
   border-radius: 20px;
-  padding: 3% 3%;
+  padding: 2% 3%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5%;
+  gap: 4%;
 }
 
 #main .sec1 .profile-box .profile-img {
-  width: 30%;
-  aspect-ratio: 1;
+  width: clamp(200px, 20vw, 200px);
+  height: auto;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   overflow: hidden;
+  object-fit: cover;
 }
 
 #main .sec1 .profile-box .profile-img img {
@@ -220,8 +224,6 @@ object-fit: cover;
 #main .sec1 .profile-box .profile-text {
   display: flex;
   flex-direction: column;
-  gap: 2%;
-  line-height: 1.5;
 }
 
 #main .sec1 .profile-box .nickname {
@@ -236,21 +238,23 @@ object-fit: cover;
 }
 
 #main .sec1 .profile-box .bio {
-  margin-top: 12px;
+  margin-top: 10px;
   color: #202020;
   font-size: 16px;
+  line-height: 1.5;
 }
 
-/* 구독하기 버튼 */
-#main .sec1 .profile-box .subscribe-btn {
+#main .sec1 .profile-box .subscribe-btn{
+  margin-bottom: 5px;
 }
+
 
 #main .sec1 .count-box {
   flex: 3;
   display: flex;
   align-items: center;
   padding: 3% 3%;
-  gap: 5%;
+  gap: 4%;
   background-color: #Fefefe;
   border: 2px solid #FFBD3B;
   border-radius: 20px;
@@ -267,18 +271,13 @@ object-fit: cover;
 
 #main .sec1 .count-number {
   margin-top: 10px;
-  font-size: 35px;
+  font-size: clamp(25px, 3.5vw, 35px);
   font-weight: bold;
   color: #202020;
 }
  
 #main .sec1 .count-right {
-  flex: 4;
-  padding-top: 8%;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+  flex: 5;
 }
 
 #main .sec1 .count-today, 
@@ -342,9 +341,6 @@ object-fit: cover;
   gap: 15px;
 }
 
-#main .sec5 .keyword-box .keword-btn {
-}
-
 
 /* 팔로워 박스 스타일 */
 #main .sec5 .follower-box {
@@ -398,20 +394,20 @@ object-fit: cover;
 }
 
 #main .sec5 .follower-box .follower-profile .profile-img {
-  width: 120px;
-  height: 120px;
+  width: 90%;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 8px;
 }
 
 #main .sec5 .follower-box .follower-profile .profile-name {
-  font-size: 15px;
+  font-size: clamp(13px,2vw,15px);
   color: #202020;
 }
 
 #main .sec5 .follower-box .follower-profile .profile-date {
-  font-size: 13px;
+  font-size: clamp(9px,1.8vw,15px);
   color: #B0B0B0;
 }
 
@@ -420,64 +416,85 @@ object-fit: cover;
 
 /* 반응형 */
 @media screen and (max-width: 1024px) {
-
-  #main .sec1 .profile-box {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 3%;
-    align-items: center;
-    /* display: flex;
-    flex: 5;
-    padding: 3% 5%;
-    flex-direction: column;
-    align-items: center;
-    align-items: flex-start; */
+  #main .sec1 {
+    gap: 1%;
   }
+
   #main .sec1 .subscriber-box {
     width: 50%;
   }
-  #main .sec1 .profile-img {
-    width: 100%; 
-    height: 0; 
-    padding-bottom: 30%; 
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative; 
-    display: block; 
-  }
-  #main .sec1 .profile-box .profile-img img {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover;
-  }
 
-  #main .sec1 .profile-box .subscribe-btn {
-    margin-top: 5%;
-    width: 100%;
-  }
-
-  #main .sec1 .count-box {
-    flex: 5;
+  #main .sec5 {
     flex-direction: column;
-    padding: 5% 5%;
-    align-items: flex-start;
   }
 }
 
 @media screen and (max-width: 767px) {
-  #main .sec1 .subscriber-box {
-    width: 100%;
-    padding: 2.5% 4%;
+  #main .sec1 .profile-box .profile-img {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: clamp(120px, 20vw, 130px);
   }
 
-  #main .photo-box {
-    width: calc((100% - 20px) / 2); /* 2개 한 줄 */
+  #main .sec1 .profile-box {
+    flex: 7;
+    display: grid;
+    flex-direction: column;
+    gap: 3% 3%;
+    align-items: center;
   }
-  #main .profile-text {
+  #main .sec1 .nick-job-container{
+    height: 30px;
+    margin: 10px auto;
+    display: flex;           
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+  }
+  #main .sec1 .profile-box .profile-text {
+    line-height: 0.5;
+  }
+
+ #main .sec1 .count-box {
+    flex: 3;
+    flex-direction: column;
+    padding: 8% 3%;
+  }
+  #main .sec1 .profile-box .profile-text {
     text-align: center;
+    margin: 0 auto;
+    width: 80%;
+  } 
+  #main .sec1 .count-box .count-right {
+    width: 100%;
+  }
+  #main .sec1 .count-box .count-left{
+    width: 100%;
+  }
+  #main .sec1 .subscriber-box {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5% 3%;
+  }
+  #main .sec1 .subscribe-btn {
+    margin: 0 auto;
+  }
+  #main .sec1 .count-number {
+  font-size: 34px;
+  }
+
+  /* photo-box-container 중앙 정렬 */
+  #main .photo-box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  #main .photo-box {
+    width: clamp(150px, calc((100% - 20px) / 2), 300px);
+    height: 300px;
+
   }
 
   #main .post-title {
@@ -487,10 +504,35 @@ object-fit: cover;
   #main .post-date{
     font-size: 0.8rem; 
   }
+  #main .sec5 .follower-box .follower-profile .profile-img {
+  width: 100%;
+  }
+
+  #main .load-more-btn{
+    padding: 10px 30px;
+    font-size: 0.8rem;
+  }
 
 }
 @media screen and (max-width: 480px) {
-
+  #main .sec1 .profile-box .profile-img{
+    width: 100px;
+  }
+  #main .sec1 .profile-box .nickname{
+    font-size: 20px;
+  }
+  #main .sec1 .profile-box .bio{
+    font-size: 15px;
+  }
+  #main .sec1 .count-box {
+    padding: 10% 3%;
+  }
+  #main .sec1 .count-number {
+    font-size: 25px;
+    }
+    #main .photo-box {
+    margin-bottom: -50px;
+    }
 }
 
 
