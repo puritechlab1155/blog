@@ -159,11 +159,9 @@
         right: 1px;
         display: none;
     }
-    .detail .more-menu button {
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
+    .detail .more-menu .report {
+        color: #fff;
+        /* cursor: pointer; */
     }
     .detail .more-menu.hidden {
         display: none;
@@ -172,7 +170,7 @@
         display: block;
     }
     /* 신고 모달부분 */
-    .modal {
+    .detail .modal {
         position: fixed;
         top: 0;
         left: 0;
@@ -183,14 +181,32 @@
         justify-content: center;
         align-items: center;
     }
-    .modal-content {
+    .detail .modal-content {
+        max-width: 400px;
+        width: 100%;
         background: white;
-        padding: 20px;
+        padding: 50px;
         border-radius: 5px;
         text-align: center;
     }
-    .modal.hidden {
+    .detail .modal-content {
+        background: white;
+        padding: 50px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .detail .modal.hidden {
         display: none;
+    }
+    .detail .modal.hidden {
+        display: none;
+    }
+    .detail .modal .text {
+        font-size: 18px;
+    }
+    .detail .modal .w-125 {
+        width: 125px;
+        margin-right: 20px;
     }
 
 
@@ -326,16 +342,18 @@
                             <!-- 신고 모달 -->
                             <div id="reportModal" class="modal hidden">
                                 <div class="modal-content">
-                                    <p>정말로 신고하시겠습니까?</p>
-                                    <button type="button" class="confirm" onclick="confirmReport()">예</button>
-                                    <button type="button" class="cancel" onclick="closeReportModal()">아니요</button>
+                                    <p class="text"><b>정말로 신고하시겠습니까?</b></p>
+                                    <div class="m-t-40">
+                                        <button type="button" class="confirm btn-01 w-125" onclick="confirmReport()">예</button>
+                                        <button type="button" class="cancel btn-01 w-125" onclick="closeReportModal()">아니요</button>
+                                    </div>
                                 </div>
                             </div>
                             <!-- 신고 접수 완료 모달 -->
                             <div id="reportSuccessModal" class="modal hidden">
                                 <div class="modal-content">
-                                    <p>신고가 접수되었습니다.</p>
-                                    <button type="button" class="close" onclick="closeReportSuccessModal()">확인</button>
+                                    <p class="text"><b>신고가 접수되었습니다.</b></p>
+                                    <button type="button" class="close m-t-40 btn-01 w-125" onclick="closeReportSuccessModal()">확인</button>
                                 </div>
                             </div>
 
