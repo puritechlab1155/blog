@@ -7,26 +7,63 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/0321main.css">
+  <!-- <link rel="stylesheet" href="/css/0321main.css"> -->
   <link rel="stylesheet" href="/css/main.css">
 
 
 
   <style>
     /* body { font-family: Arial, sans-serif; margin: 20px; display: flex; } */
-    .container { display: flex; width: 100%; }
-    .content { width: 70%; padding: 20px; border-right: 1px solid #ddd; }
-    .sidebar { width: 30%; padding: 20px; }
-    .post-title { font-size: 24px; font-weight: bold; }
-    .post-meta { color: gray; font-size: 14px; }
-    .post-body { margin: 20px 0; }
-    .btn-container { display: flex; gap: 10px; }
-    .comment-list { margin-top: 20px; }
-    .comment { border-bottom: 1px solid #ddd; padding: 10px 0; }
-    .input-area { margin-top: 10px; }
-    .posts-list { margin-top: 20px; }
-    .post-item { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-    .post-item img { width: 50px; height: 50px; object-fit: cover; border-radius: 5px; }
+    .m-t-20{
+        margin-top: 20px;
+    }
+    .m-t-60{
+        margin-top: 60px;
+    }
+    .detail .container { 
+        display: flex; 
+        width: 100%; 
+    }
+    .detail .detail-content { 
+        width: 70%; 
+        margin-right: 50px;
+        box-sizing: content-box;
+    }
+    .detail .detail-content .post-title { 
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 140%;
+    }
+    .detail .detail-content .writer { 
+        color: #727272;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .detail .detail-content .date { 
+        color: #AFAFAF;
+        font-size: 14px;
+    }
+    .detail .sidebar { width: 30%; padding: 20px; }
+    .detail .post-title { font-size: 24px; font-weight: bold; }
+    .detail .post-meta { color: gray; font-size: 14px; }
+    .detail .post-body { margin: 20px 0; }
+    .detail .btn-container { display: flex; gap: 10px; }
+    .detail .comment-list { margin-top: 20px; }
+    .detail .comment { border-bottom: 1px solid #ddd; padding: 10px 0; }
+    .detail .input-area { margin-top: 10px; }
+    .detail .posts-list { margin-top: 20px; }
+    .detail .post-item { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .detail .post-item img { width: 50px; height: 50px; object-fit: cover; border-radius: 5px; }
+    .detail .post-body .text {
+        line-height: 200%;
+        color: #727272;
+        font-size: 18px;
+    }
+    .detail .post-body .post-img {
+        max-width: 700px;
+        width: 100%;
+        border-radius: 20px;
+    }
 </style>
 
 </head>
@@ -72,27 +109,34 @@
 
                 <div class="container">
                     <!-- 1단: 게시글 상세 -->
-                    <div class="content">
-                        <div class="post-title">게시글 제목</div>
-                        <div class="post-meta">
-                            <span>맛거리</span>
-                            <span>2025. 03. 19</span>
+                    <div class="detail-content">
+                        <div class="post-title yellow">게시글 제목</div>
+                        <div class="post-meta m-t-60">
+                            <span class="writer">맛거리</span>
+                            <span class="date">2025. 03. 19</span>
                         </div>
-                        <div class="post-body">
-                            <p class="text">
-                                초봄이 다가오며 얼었던 땅이 녹아 내리고, 잔디 위에 따스한 햇살이 스며듭니다. 차가운 공기는 어느새 옅은 미풍으로 변해가며, 나뭇가지 끝에는 작은 새싹이 모습을 드러냅니다. 이윽고 나무들은 조금씩 연두빛을 띠기 시작하고, 기다란 가지는 새로운 생명을 향해 뻗어갑니다. 봄은 언제나 그러하듯 천천히, 조용히 다가오지만, 그 변화는 미세하면서도 놀랍도록 분명합니다. 사람들은 이런 변화를 알아차리기 위해 어느새 걸음을 늦추고, 자연의 속삭임에 귀를 기울입니다. 숲속에 들어서면 사방에서 울려 퍼지는 새들의 노랫소리가 귓가를 간지럽히고, 강가에는 물고기들이 평화롭게 유영하며 봄을 맞이하고 있습니다. 어린 시절, 봄은 늘 짧고 아쉬운 계절이었습니다. 계절의 변화가 빠르게 느껴졌고, 그 변화 속에서 삶은 자주 가벼워졌습니다. 지금은 이 계절을 좀 더 천천히 느끼고자 노력합니다. 바쁜 일상 속에서 잠시 멈추어 서서 새로이 피어나는 생명의 기운을 느끼며, 봄이 가져다주는 작은 기쁨을 소중히 여깁니다. 우리의 삶도 이처럼 순환하며 매해 새로운 시작을 맞이하는 것처럼, 봄은 우리에게 끊임없는 재생의 메시지를 전합니다.초봄이 다가오며 얼었던 땅이 녹아 내리고, 잔디 위에 따스한 햇살이 스며듭니다. 차가운 공기는 어느새 옅은 미풍으로 변해가며, 나뭇가지 끝에는 작은 새싹이 모습을 드러냅니다. 
-                                이윽고 나무들은 조금씩 연두빛을 띠기 시작하고, 기다란 가지는 새로운 생명을 향해 뻗어갑니다. 봄은 언제나 그러하듯 천천히, 조용히 다가오지만, 그 변화는 미세하면서도 놀랍도록 분명합니다. 사람들은 이런 변화를 알아차리기 위해 어느새 걸음을 늦추고, 자연의 속삭임에 귀를 기울입니다. 숲속에 들어서면 사방에서 울려 퍼지는 새들의 노랫소리가 귓가를 간지럽히고, 강가에는 물고기들이 평화롭게 유영하며 봄을 맞이하고 있습니다. 어린 시절, 봄은 늘 짧고 아쉬운 계절이었습니다. 계절의 변화가 빠르게 느껴졌고, 그 변화 속에서 삶은 자주 가벼워졌습니다. 지금은 이 계절을 좀 더 천천히 느끼고자 노력합니다. 바쁜 일상 속에서 잠시 멈추어 서서 새로이 피어나는 생명의 기운을 느끼며, 봄이 가져다주는 작은 기쁨을 소중히 여깁니다. 우리의 삶도 이처럼 순환하며 매해 새로운 시작을 맞이하는 것처럼, 봄은 우리에게 끊임없는 재생의 메시지를 전합니다.초봄이 다가오며 얼었던 땅이 녹아 내리고, 잔디 위에 따스한 햇살이 스며듭니다. 
-                            </p>
-                            <img src="" alt="">
-                            <p class="text">
-                                초봄이 다가오며 얼었던 땅이 녹아 내리고, 잔디 위에 따스한 햇살이 스며듭니다. 차가운 공기는 어느새 옅은 미풍으로 변해가며, 나뭇가지 끝에는 작은 새싹이 모습을 드러냅니다. 이윽고 나무들은 조금씩 연두빛을 띠기 시작하고, 기다란 가지는 새로운 생명을 향해 뻗어갑니다. 봄은 언제나 그러하듯 천천히, 조용히 다가오지만, 그 변화는 미세하면서도 놀랍도록 분명합니다. 사람들은 이런 변화를 알아차리기 위해 어느새 걸음을 늦추고, 자연의 속삭임에 귀를 기울입니다. 숲속에 들어서면 사방에서 울려 퍼지는 새들의 노랫소리가 귓가를 간지럽히고, 강가에는 물고기들이 평화롭게 유영하며 봄을 맞이하고 있습니다. 어린 시절, 봄은 늘 짧고 아쉬운 계절이었습니다. 계절의 변화가 빠르게 느껴졌고, 그 변화 속에서 삶은 자주 가벼워졌습니다. 지금은 이 계절을 좀 더 천천히 느끼고자 노력합니다. 바쁜 일상 속에서 잠시 멈추어 서서 새로이 피어나는 생명의 기운을 느끼며, 봄이 가져다주는 작은 기쁨을 소중히 여깁니다. 우리의 삶도 이처럼 순환하며 매해 새로운 시작을 맞이하는 것처럼, 봄은 우리에게 끊임없는 재생의 메시지를 전합니다.초봄이 다가오며 얼었던 땅이 녹아 내리고, 잔디 위에 따스한 햇살이 스며듭니다. 차가운 공기는 어느새 옅은 미풍으로 변해가며, 나뭇가지 끝에는 작은 새싹이 모습을 드러냅니다. 
-                            </p>
-                            <p class="text">
-                                이윽고 나무들은 조금씩 연두빛을 띠기 시작하고, 기다란 가지는 새로운 생명을 향해 뻗어갑니다. 봄은 언제나 그러하듯 천천히, 조용히 다가오지만, 그 변화는 미세하면서도 놀랍도록 분명합니다. 사람들은 이런 변화를 알아차리기 위해 어느새 걸음을 늦추고, 자연의 속삭임에 귀를 기울입니다. 숲속에 들어서면 사방에서 울려 퍼지는 새들의 노랫소리가 귓가를 간지럽히고, 강가에는 물고기들이 평화롭게 유영하며 봄을 맞이하고 있습니다. 어린 시절, 봄은 늘 짧고 아쉬운 계절이었습니다. 계절의 변화가 빠르게 느껴졌고, 그 변화 속에서 삶은 자주 가벼워졌습니다. 지금은 이 계절을 좀 더 천천히 느끼고자 노력합니다. 바쁜 일상 속에서 잠시 멈추어 서서 새로이 피어나는 생명의 기운을 느끼며, 봄이 가져다주는 작은 기쁨을 소중히 여깁니다. 우리의 삶도 이처럼 순환하며 매해 새로운 시작을 맞이하는 것처럼, 봄은 우리에게 끊임없는 재생의 메시지를 전합니다.초봄이 다가오며 얼었던 땅이 녹아 내리고, 잔디 위에 따스한 햇살이 스며듭니다. 
-                            </p>
+                        <div class="post-body m-t-60">
+                            <div class="post-text">
+                                <p class="text">
+                                    초봄이 다가오며 얼었던 땅이 녹아 내리고, 잔디 위에 따스한 햇살이 스며듭니다. 차가운 공기는 어느새 옅은 미풍으로 변해가며, 나뭇가지 끝에는 작은 새싹이 모습을 드러냅니다. 이윽고 나무들은 조금씩 연두빛을 띠기 시작하고, 기다란 가지는 새로운 생명을 향해 뻗어갑니다. 봄은 언제나 그러하듯 천천히, 조용히 다가오지만, 그 변화는 미세하면서도 놀랍도록 분명합니다. 사람들은 이런 변화를 알아차리기 위해 어느새 걸음을 늦추고, 자연의 속삭임에 귀를 기울입니다. 숲속에 들어서면 사방에서 울려 퍼지는 새들의 노랫소리가 귓가를 간지럽히고, 강가에는 물고기들이 평화롭게 유영하며 봄을 맞이하고 있습니다. 어린 시절, 봄은 늘 짧고 아쉬운 계절이었습니다. 계절의 변화가 빠르게 느껴졌고, 그 변화 속에서 삶은 자주 가벼워졌습니다. 지금은 이 계절을 좀 더 천천히 느끼고자 노력합니다. 바쁜 일상 속에서 잠시 멈추어 서서 새로이 피어나는 생명의 기운을 느끼며, 봄이 가져다주는 작은 기쁨을 소중히 여깁니다. 우리의 삶도 이처럼 순환하며 매해 새로운 시작을 맞이하는 것처럼, 봄은 우리에게 끊임없는 재생의 메시지를 전합니다.초봄이 다가오며 얼었던 땅이 녹아 내리고, 잔디 위에 따스한 햇살이 스며듭니다. 차가운 공기는 어느새 옅은 미풍으로 변해가며, 나뭇가지 끝에는 작은 새싹이 모습을 드러냅니다. 
+                                    이윽고 나무들은 조금씩 연두빛을 띠기 시작하고, 기다란 가지는 새로운 생명을 향해 뻗어갑니다. 봄은 언제나 그러하듯 천천히, 조용히 다가오지만, 그 변화는 미세하면서도 놀랍도록 분명합니다. 사람들은 이런 변화를 알아차리기 위해 어느새 걸음을 늦추고, 자연의 속삭임에 귀를 기울입니다. 숲속에 들어서면 사방에서 울려 퍼지는 새들의 노랫소리가 귓가를 간지럽히고, 강가에는 물고기들이 평화롭게 유영하며 봄을 맞이하고 있습니다. 어린 시절, 봄은 늘 짧고 아쉬운 계절이었습니다. 계절의 변화가 빠르게 느껴졌고, 그 변화 속에서 삶은 자주 가벼워졌습니다. 지금은 이 계절을 좀 더 천천히 느끼고자 노력합니다. 바쁜 일상 속에서 잠시 멈추어 서서 새로이 피어나는 생명의 기운을 느끼며, 봄이 가져다주는 작은 기쁨을 소중히 여깁니다. 우리의 삶도 이처럼 순환하며 매해 새로운 시작을 맞이하는 것처럼, 봄은 우리에게 끊임없는 재생의 메시지를 전합니다.초봄이 다가오며 얼었던 땅이 녹아 내리고, 잔디 위에 따스한 햇살이 스며듭니다. 
+                                </p>
+                                <img class="m-t-60 post-img" src="img/detail/post-body1.png" alt="본문 이미지1">
+                                <p class="text m-t-50">
+                                    초봄이 다가오며 얼었던 땅이 녹아 내리고, 잔디 위에 따스한 햇살이 스며듭니다. 차가운 공기는 어느새 옅은 미풍으로 변해가며, 나뭇가지 끝에는 작은 새싹이 모습을 드러냅니다. 이윽고 나무들은 조금씩 연두빛을 띠기 시작하고, 기다란 가지는 새로운 생명을 향해 뻗어갑니다. 봄은 언제나 그러하듯 천천히, 조용히 다가오지만, 그 변화는 미세하면서도 놀랍도록 분명합니다. 사람들은 이런 변화를 알아차리기 위해 어느새 걸음을 늦추고, 자연의 속삭임에 귀를 기울입니다. 숲속에 들어서면 사방에서 울려 퍼지는 새들의 노랫소리가 귓가를 간지럽히고, 강가에는 물고기들이 평화롭게 유영하며 봄을 맞이하고 있습니다. 어린 시절, 봄은 늘 짧고 아쉬운 계절이었습니다. 계절의 변화가 빠르게 느껴졌고, 그 변화 속에서 삶은 자주 가벼워졌습니다. 지금은 이 계절을 좀 더 천천히 느끼고자 노력합니다. 바쁜 일상 속에서 잠시 멈추어 서서 새로이 피어나는 생명의 기운을 느끼며, 봄이 가져다주는 작은 기쁨을 소중히 여깁니다. 우리의 삶도 이처럼 순환하며 매해 새로운 시작을 맞이하는 것처럼, 봄은 우리에게 끊임없는 재생의 메시지를 전합니다.초봄이 다가오며 얼었던 땅이 녹아 내리고, 잔디 위에 따스한 햇살이 스며듭니다. 차가운 공기는 어느새 옅은 미풍으로 변해가며, 나뭇가지 끝에는 작은 새싹이 모습을 드러냅니다. 
+                                </p>
+                                <p class="text m-t-50">
+                                    이윽고 나무들은 조금씩 연두빛을 띠기 시작하고, 기다란 가지는 새로운 생명을 향해 뻗어갑니다. 봄은 언제나 그러하듯 천천히, 조용히 다가오지만, 그 변화는 미세하면서도 놀랍도록 분명합니다. 사람들은 이런 변화를 알아차리기 위해 어느새 걸음을 늦추고, 자연의 속삭임에 귀를 기울입니다. 숲속에 들어서면 사방에서 울려 퍼지는 새들의 노랫소리가 귓가를 간지럽히고, 강가에는 물고기들이 평화롭게 유영하며 봄을 맞이하고 있습니다. 어린 시절, 봄은 늘 짧고 아쉬운 계절이었습니다. 계절의 변화가 빠르게 느껴졌고, 그 변화 속에서 삶은 자주 가벼워졌습니다. 지금은 이 계절을 좀 더 천천히 느끼고자 노력합니다. 바쁜 일상 속에서 잠시 멈추어 서서 새로이 피어나는 생명의 기운을 느끼며, 봄이 가져다주는 작은 기쁨을 소중히 여깁니다. 우리의 삶도 이처럼 순환하며 매해 새로운 시작을 맞이하는 것처럼, 봄은 우리에게 끊임없는 재생의 메시지를 전합니다.초봄이 다가오며 얼었던 땅이 녹아 내리고, 잔디 위에 따스한 햇살이 스며듭니다. 
+                                </p>
+                            </div>
+
+
+
+
+                            <!--  -->
                         </div>
                         
-                        <div class="btn-container">
+                        <div class="btn-container m-t-50">
                             <div class="keyword-list">
                                 <button type="button" class="keyword-btn btn-03 radius-20">전국커피</button>
                                 <button type="button" class="keyword-btn btn-03 radius-20">카페 추천</button>
