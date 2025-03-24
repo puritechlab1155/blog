@@ -28,43 +28,66 @@
 }
 .header .header-right {
     display: flex;
-    justify-self: center;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
+    position: relative; 
 }
 .header .header-right .search-container {
-
+  width: 0;
+  position: absolute;
+  right: 35px;
+  overflow: hidden; 
+  transition: width 0.4s ease-in;
+  visibility: visible;  
+  opacity: 0;  
+  display: inline-block;
 }
+
 .header .header-right .search-input {
-    
+  left: 0;
+  max-width: 300px;
+  width: 100%;
+  height: 48px;
+  padding: 0 10px;
+  border: 2px solid #EFEFEF; 
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+}
+.header .header-right .search-container.active {
+  width: 250px; 
+  opacity: 1;
+  display: inline-block;
 }
 .header .header-right .search-icon {
     width: 100%;
     padding-top: 4px;
+    cursor: pointer;
+    display: block;
 }
-.header .header-right .search-container {
-    display: none;
-    /* display: block; */
-    position: absolute;
-    right: 500px;
-}
-.header .header-right .search-input {
-    max-width: 264px;
-    width: 100%;
-    height: 48px;
-    padding: 0 10px;
-    border: 2px solid #EFEFEF; 
-    border-radius: 10px;
-    outline: none;
-    font-size: 16px;
-    background: #FEFEFE;
-}
-.header .header-right .search-container .search-icon img{
-    
-}
-.header .header-right .search {
 
+.header .header-right .close-icon {
+  display: none; 
+  position: absolute;
+  right: 10px;
+  top: 48%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
 }
+.header .header-right .search-container.active .close-icon {
+  display: block;
+}
+
+.keyword-btn:hover {
+  background-color: #FFF3E4;
+  color: #202020;
+  cursor: default;
+}
+
+
  /* 햄버거 메뉴 */
 .header .ham-box {
     width: 100%;
@@ -96,13 +119,7 @@
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* 검색창 */
-.search-container {
-    display: none;
-}
-.search-container.active {
-    display: block;
-}
+
 
 /* 메뉴 패널 */
 .menu-panel {
@@ -160,6 +177,31 @@
   flex-grow: 1;
   max-width: 1170px;
 }
+.intro {
+  width: 90%;
+}
+
+/* .intro .bg1 {
+  width: 100%; 
+  height: 20%;
+  background-color: #FFF4D7; 
+  position: absolute;  
+  top: 98%;  
+  left: 50%;  
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.intro .bg2 {
+  width: 100%; 
+  height: 400px;
+  background-color: #FFF4D7; 
+  position: absolute;  
+  top: 270%;  
+  left: 50%;  
+  transform: translateX(-50%);
+  z-index: -1;
+} */
+
 
 .intro .text-box {
   padding-top: 10px;
@@ -171,7 +213,7 @@
   
 .intro .post-title {
   font-size: 1.1rem;
-  font-weight: bold;
+  font-weight: 500;
   margin: 0;
   line-height: 1.4;
   max-height: 3em; /* 두 줄까지만 나오도록 설정 */
@@ -237,6 +279,8 @@ object-fit: cover;
 
 /* 구독자 박스 */
 .intro .sec1 .subscriber-box {
+  display: flex;
+  align-items: center; 
   width: 40%;
   background-color: #FFF4D7;
   border: 2px solid #FFBD3B;
@@ -246,11 +290,16 @@ object-fit: cover;
   color: #121212;
   font-size: 16px;
 }
+.subscriber-box p {
+  display: flex;
+  align-items: center;
+}
 
 .intro .sec1 .subscriber-box .subscriber-count {
   font-weight: bold;
   font-size: clamp(20px, 2.5vw, 25px);
   color: #292929;
+  margin-right: 10px;
 }
 
 /* 큰 제목 */
@@ -280,7 +329,7 @@ object-fit: cover;
 }
 
 .intro .sec1 .profile-box .profile-img {
-  width: clamp(200px, 20vw, 200px);
+  width: clamp(180px, 20vw, 180px);
   height: auto;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -342,7 +391,7 @@ object-fit: cover;
 }
 
 .intro .sec1 .count-number {
-  font-size: clamp(23px, 3.5vw, 35px);
+  font-size: clamp(23px, 3vw, 35px);
   font-weight: bold;
   color: #202020;
 }
@@ -354,13 +403,13 @@ object-fit: cover;
 
 .intro .sec1 .count-today, 
 .intro .sec1 .count-yesterday {
-  font-size: clamp(13px, 1vw,15px);
+  font-size: clamp(12px, 1vw,15px);
   color: #6F6F6F;
 }
 
 .intro .sec1 .count-today-number, 
 .intro .sec1 .count-yesterday-number {
-  font-size: clamp(13px, 1vw, 16px);
+  font-size: clamp(12px, 1vw, 16px);
   margin-left: 5%;
   font-weight: bold;
   color: #6F6F6F;
@@ -418,7 +467,6 @@ object-fit: cover;
 .intro .sec5 .follower-box {
   flex: 8;
   background-color: #FAFAFA;
-  border: 1px solid #EFEFEF;
   border-radius: 20px;
   padding: 24px;
   display: flex;
@@ -463,6 +511,7 @@ object-fit: cover;
 .intro .sec5 .follower-box .follower-profile {
   width: calc(20% - 10px);
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .intro .sec5 .follower-box .follower-profile .profile-img {
@@ -475,12 +524,13 @@ object-fit: cover;
 
 .intro .sec5 .follower-box .follower-profile .profile-name {
   font-size: clamp(13px,2vw,15px);
-  color: #202020;
+  color: #727272;
+  font-weight: 600;
 }
 
 .intro .sec5 .follower-box .follower-profile .profile-date {
   font-size: clamp(9px,1.8vw,15px);
-  color: #B0B0B0;
+  color: #afafaf;
 }
 
 
@@ -511,8 +561,18 @@ object-fit: cover;
 
 
 /* 반응형 */
+@media screen and (max-width: 1300px) {
+  .intro .bg1{
+    top: 90%;
+  }
+}
 @media screen and (max-width: 1024px) {
-  
+  .intro .bg1{
+    display: none;
+   }
+   .bg2 {
+    display: none;
+   }
   .intro .sec1 {
     gap: 1%;
   }
@@ -526,7 +586,6 @@ object-fit: cover;
   .intro .sec1 .count-box {
     padding: 3% 2%;
   }
-  
 
   .intro .sec5 {
     flex-direction: column;
@@ -563,7 +622,7 @@ object-fit: cover;
   .intro .sec1 .count-box {
     flex: 3;
     flex-direction: column;
-    padding: 8% 3%;
+    padding: 15% 3%;
   }
   .intro .sec1 .profile-box .profile-text {
     text-align: center;
@@ -585,7 +644,7 @@ object-fit: cover;
     margin: 0 auto;
   }
   .intro .sec1 .count-number {
-  font-size: 34px;
+  font-size: 28px;
   }
 
   /* photo-box-container 중앙 정렬 */
@@ -609,13 +668,32 @@ object-fit: cover;
   .intro .post-date{
     font-size: 0.8rem; 
   }
+  .intro .sec1 .count-today, 
+  .intro .sec1 .count-yesterday {
+    font-size: 15px;
+  }
+
+  .intro .sec1 .count-today-number, 
+  .intro .sec1 .count-yesterday-number {
+    font-size: 15px;
+  }
   .intro .sec5 .follower-box .follower-profile .profile-img {
   width: 100%;
   }
+  .intro .sec5 .follower-box .follower-profile {
+    margin-bottom: 30px;
+  }
+  
 
   .intro .load-more-btn{
     padding: 10px 30px;
     font-size: 0.8rem;
+  }
+  .footer .social-icons {
+    justify-content: center;
+}
+  .footer .footer-text {
+        text-align: center;
   }
 
 }
@@ -630,21 +708,28 @@ object-fit: cover;
     font-size: 15px;
   }
   .intro .sec1 .count-box {
-    padding: 10% 3%;
+    padding: 20% 3%;
   }
   .intro .sec1 .count-number {
-    font-size: 25px;
+    font-size: 20px;
   }
   .intro .photo-box {
-    margin-bottom: -50px;
+    margin-bottom: -60px;
+  }
+  .intro .post-date {
+    margin-top: -3px;
   }
 
-  .footer .social-icons {
-      justify-content: center;
+  .intro .sec1 .count-today, 
+  .intro .sec1 .count-yesterday {
+    font-size: 12px;
   }
-  .footer .footer-text {
-        text-align: center;
+
+  .intro .sec1 .count-today-number, 
+  .intro .sec1 .count-yesterday-number {
+    font-size: 12px;
   }
+
 }
 
 
