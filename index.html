@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/0321main.css">
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
@@ -44,20 +43,20 @@
     </ul>
 </div><!-- 여기까지 메뉴 패널 -->
 
-  <div id="main">
+  <div id="main" class="intro">
     <div class="sec1 m-t-100">
       <!-- 구독자 박스 -->
       <div class="subscriber-box m-t-50">
         <p>
-          <span class="subscriber-count">1,638명</span> 이 해당 블로그를 구독중입니다
+          <span class="subscriber-count paperlogy">1,638명</span> 이 해당 블로그를 구독중입니다
         </p>
       </div>
       <!-- 큰 제목 -->
-      <h2 class="main-title m-t-50">보통 날이네요, 어느새.</h2>
+      <h2 class="main-title paperlogy m-t-50">보통 날이네요, 어느새.</h2>
       <!-- 프로필/키워드 박스 전체 컨테이너 -->
       <div class="profile-count-container">
         <!-- 프로필 박스 -->
-        <div class="profile-box">
+        <div class="profile-box ">
           <div class="profile-img">
             <img src="img/profile.png" alt="프로필 사진" />
           </div>
@@ -76,7 +75,7 @@
         <div class="count-box">
           <div class="count-left">
             <p class="count-text">전체 방문자수</p>
-            <p class="count-number">4,333명</p>
+            <p class="count-number paperlogy">4,333명</p>
           </div>
           <div class="count-right">
             <p class="count-today">Today <span class="count-today-number">15</span></p>
@@ -357,7 +356,6 @@
       <div class="keyword-box">
         <div class="keyword-header">
           <p class="keyword-title">Keywords</p>
-          <a href="#" class="keyword-more">더보기</a>
         </div>
         <div class="keyword-list">
           <button type="button" class="keyword-btn btn-03 radius-20">전국커피</button>
@@ -448,7 +446,46 @@
   
   <script src="/js/script.js"></script>
 
+  <script>
+    // 모든 섹션을 선택
+const sections = document.querySelectorAll('.sec2, .sec3, .sec4');
 
+sections.forEach(section => {
+  const loadMoreBtn = section.querySelector('.load-more-btn');
+  const container = section.querySelector('.photo-box-container');
+
+  let isExpanded = false;
+
+  loadMoreBtn.addEventListener('click', function () {
+    const hiddenBoxes = section.querySelectorAll('.photo-box.hidden');
+
+    if (!isExpanded) {
+      // 숨겨진 박스를 보여줌 (hidden 클래스 제거)
+      hiddenBoxes.forEach(box => box.classList.remove('hidden'));
+
+      // 버튼 텍스트를 '숨기기'로 변경
+      loadMoreBtn.textContent = '숨기기';
+
+      // 버튼을 컨테이너 맨 아래로 이동
+      container.appendChild(loadMoreBtn);
+
+      isExpanded = true;
+    } else {
+      // 다시 숨김 (hidden 클래스 추가)
+      hiddenBoxes.forEach(box => box.classList.add('hidden'));
+
+      // 버튼 텍스트를 '더보기'로 변경
+      loadMoreBtn.textContent = '더보기';
+
+      // 버튼을 원래 자리로 이동 (필요 시 원하는 위치로)
+      section.appendChild(loadMoreBtn);
+
+      isExpanded = false;
+    }
+  });
+});
+
+  </script>
 </body>
 
 </html>

@@ -1,4 +1,12 @@
+@font-face {
+  font-family: 'Paperlogy-8ExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
 /* <공통적용> */
+
 .m-t-100{
   margin-top: 100px;
 }
@@ -7,7 +15,7 @@
 }
 
 .btn-01{
-  padding: 15px 40px;
+  padding: 10px 40px;
   font-size: 1rem;
   cursor: pointer;
   border: none;
@@ -53,7 +61,7 @@
   color: #202020;
   border: none;
   border-radius: 10px;
-  padding: 8px 16px;
+  padding: 6px 24px;
   font-size: 14px;
   cursor: pointer;
   white-space: nowrap;
@@ -80,14 +88,173 @@
   color: #FDCC32;
 }
 
+.paperlogy {
+  font-family: 'Paperlogy-8ExtraBold', sans-serif;
+}
+
+/* ------헤더 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 86px;
+    background-color: #FEFEFE;
+    padding: 15px 7%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.header .header-contain {
+    margin: 0 auto;
+    max-width: 1176px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.header .header-contain h1{
+    font-size: 28px;
+    /* line-height: 1px; */
+    font-weight: bold;
+}
+.header .logo {
+    font-weight: bold;
+    color: #FDCC32; /* 노란색 */
+}
+.header .header-right {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 40px;
+}
+.header .header-right .search-container {
+
+}
+.header .header-right .search-input {
+    
+}
+.header .header-right .search-icon {
+    width: 100%;
+    padding-top: 4px;
+}
+.header .header-right .search-container {
+    display: none;
+    /* display: block; */
+    position: absolute;
+    right: 500px;
+}
+.header .header-right .search-input {
+    max-width: 264px;
+    width: 100%;
+    height: 48px;
+    padding: 0 10px;
+    border: 2px solid #EFEFEF; 
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    background: #FEFEFE;
+}
+.header .header-right .search-container .search-icon img{
+    
+}
+.header .header-right .search {
+
+}
+ /* 햄버거 메뉴 */
+.header .ham-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+.header .ham-box .ham {
+    width: 20px;
+    height: 3px;
+    background-color: #727272;
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+/* 햄버거 버튼이 X로 변하는 효과 */
+.header .ham-box.active .ham:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.header .ham-box.active .ham:nth-child(2) {
+    opacity: 0;
+}
+
+.header .ham-box.active .ham:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* 검색창 */
+.search-container {
+    display: none;
+}
+.search-container.active {
+    display: block;
+}
+
+/* 메뉴 패널 */
+.menu-panel {
+    position: absolute;
+    top: 86px; /* 헤더 높이만큼 아래에 위치 */
+    right: 0; /* 헤더 padding과 동일하게 설정 */
+    width: 200px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 5; /* 검색창보다 아래에 표시 */
+}
+.menu-panel.active {
+    width: 100%;
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+}
+.menu-panel .panel-list {
+    padding: 14px 0;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 160%;
+}
+.menu-panel .panel-list:hover {
+    background-color: #FDCC32;
+    color: #FEFEFE;
+
+}
+.menu-close {
+    border: none;
+    background: none;
+    font-size: 24px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+.content-wrap {
+    padding: 0 7%;
+}
+
+/* ------컨텐트 css시작  */
+
 /* <Main 공통적용> */
 #main {
   margin: 0 auto;
   flex-grow: 1;
-  max-width: 1024px;
+  max-width: 1170px;
 }
 
-#main .text-box {
+.intro .text-box {
   padding-top: 10px;
   text-align: left;
   flex-grow: 1;
@@ -95,7 +262,7 @@
   flex-direction: column;
 }
   
-#main .post-title {
+.intro .post-title {
   font-size: 1.1rem;
   font-weight: bold;
   margin: 0;
@@ -106,47 +273,46 @@
   flex-grow: 1;
 }
 
-#main .post-date {
+.intro .post-date {
   font-size: 0.9rem;
   color: #777;
   margin-top: 5px;
 }
 
-#main .hidden {
+.intro .hidden {
   display: none !important; 
 }
 
-#main .section-title {
-  font-size: clamp(20px, 1.3vw, 45px);
-  font-weight: bold;
+.intro .section-title {
+  font-size: clamp(20px, 1.2vw, 35px);
+  font-weight: 500;
   text-align: left;
   margin-bottom: 20px;
 }
 
-#main .photo-box-container {
+.intro .photo-box-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: flex-start;
   margin-bottom: 40px;
 }
-#main .photo-box {
+.intro .photo-box {
   width: calc((100% - 60px) / 4); /* 4개 한 줄 (데스크탑 기본) */
-  border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: 0.3s;
 }
 
-#main .load-more-btn {
+.intro .load-more-btn {
   margin-top: 10px; 
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-#main .photo-box img {
+.intro .photo-box img {
 width: 100%;
 height: auto;
 object-fit: cover;
@@ -155,7 +321,7 @@ object-fit: cover;
 
 
 /* <sec1> */
-#main .sec1 {
+.intro .sec1 {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -163,7 +329,7 @@ object-fit: cover;
 
 
 /* 구독자 박스 */
-#main .sec1 .subscriber-box {
+.intro .sec1 .subscriber-box {
   width: 40%;
   background-color: #FFF4D7;
   border: 2px solid #FFBD3B;
@@ -174,27 +340,27 @@ object-fit: cover;
   font-size: 16px;
 }
 
-#main .sec1 .subscriber-box .subscriber-count {
+.intro .sec1 .subscriber-box .subscriber-count {
   font-weight: bold;
   font-size: clamp(20px, 2.5vw, 25px);
   color: #292929;
 }
 
 /* 큰 제목 */
-#main .sec1 .main-title {
+.intro .sec1 .main-title {
   font-size: clamp(25px, 4vw, 40px);
   color: #121212;
   font-weight: bold;
 }
 
 /* 프로필/키워드 컨테이너 */
-#main .sec1 .profile-count-container {
+.intro .sec1 .profile-count-container {
   display: flex;
   gap: 20px;
 }
 
 /* 프로필 박스 */
-#main .sec1 .profile-box {
+.intro .sec1 .profile-box {
   flex: 7;
   background-color: #FFF7ED;
   border: 2px solid #FFBD3B;
@@ -206,7 +372,7 @@ object-fit: cover;
   gap: 4%;
 }
 
-#main .sec1 .profile-box .profile-img {
+.intro .sec1 .profile-box .profile-img {
   width: clamp(200px, 20vw, 200px);
   height: auto;
   aspect-ratio: 1/1;
@@ -215,95 +381,94 @@ object-fit: cover;
   object-fit: cover;
 }
 
-#main .sec1 .profile-box .profile-img img {
+.intro .sec1 .profile-box .profile-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-#main .sec1 .profile-box .profile-text {
+.intro .sec1 .profile-box .profile-text {
   display: flex;
   flex-direction: column;
 }
 
-#main .sec1 .profile-box .nickname {
+.intro .sec1 .profile-box .nickname {
   font-size: 23px;
   font-weight: bold;
   color: #202020;
 }
 
-#main .sec1 .profile-box .job-title {
+.intro .sec1 .profile-box .job-title {
   font-size: 14px;
   color: #6F6F6F;
 }
 
-#main .sec1 .profile-box .bio {
+.intro .sec1 .profile-box .bio {
   margin-top: 10px;
   color: #202020;
   font-size: 16px;
   line-height: 1.5;
 }
 
-#main .sec1 .profile-box .subscribe-btn{
+.intro .sec1 .profile-box .subscribe-btn{
   margin-bottom: 5px;
 }
 
 
-#main .sec1 .count-box {
+.intro .sec1 .count-box {
   flex: 3;
   display: flex;
   align-items: center;
   padding: 3% 3%;
-  gap: 4%;
   background-color: #Fefefe;
   border: 2px solid #FFBD3B;
   border-radius: 20px;
 }
 
-#main .sec1 .count-left {
+.intro .sec1 .count-left {
   flex: 6;
 }
 
-#main .sec1 .count-text {
+.intro .sec1 .count-text {
   font-size: 15px;
   color: #6F6F6F;
 }
 
-#main .sec1 .count-number {
-  margin-top: 10px;
-  font-size: clamp(25px, 3.5vw, 35px);
+.intro .sec1 .count-number {
+  font-size: clamp(23px, 3.5vw, 35px);
   font-weight: bold;
   color: #202020;
 }
  
-#main .sec1 .count-right {
-  flex: 5;
+.intro .sec1 .count-right {
+  margin-top: 10%;
+  flex: 4;
 }
 
-#main .sec1 .count-today, 
-#main .sec1 .count-yesterday {
-  font-size: 14px;
+.intro .sec1 .count-today, 
+.intro .sec1 .count-yesterday {
+  font-size: clamp(13px, 1vw,15px);
   color: #6F6F6F;
 }
 
-#main .sec1 .count-today-number, 
-#main .sec1 .count-yesterday-number {
+.intro .sec1 .count-today-number, 
+.intro .sec1 .count-yesterday-number {
+  font-size: clamp(13px, 1vw, 16px);
   margin-left: 5%;
-  font-size: 15px;
   font-weight: bold;
   color: #6F6F6F;
 }
 
 
 /* <sec5> */
-#main .sec5 {
+.intro .sec5 {
   display: flex;
   gap: 20px;
   margin-bottom: 100px;
 }
 
 /* 키워드 박스 */
-#main .sec5 .keyword-box {
+.intro .sec5 .keyword-box {
   flex: 2;
   background-color: #Fefefe;
   border: 1px solid #EFEFEF;
@@ -315,27 +480,27 @@ object-fit: cover;
 }
 
 /* 키워드 타이틀 */
-#main .sec5 .keyword-box .keyword-header {
+.intro .sec5 .keyword-box .keyword-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
 }
 
-#main .sec5 .keyword-box .keyword-title {
+.intro .sec5 .keyword-box .keyword-title {
   font-size: 20px;
   font-weight: bold;
   color: #202020;
 }
 
-#main .sec5 .keyword-box .keyword-more {
+.intro .sec5 .keyword-box .keyword-more {
   font-size: 14px;
   color: #FDCC32;
   text-decoration: none;
 }
 
 /* 키워드 버튼 리스트 */
-#main .sec5 .keyword-box .keyword-list {
+.intro .sec5 .keyword-box .keyword-list {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
@@ -343,7 +508,7 @@ object-fit: cover;
 
 
 /* 팔로워 박스 스타일 */
-#main .sec5 .follower-box {
+.intro .sec5 .follower-box {
   flex: 8;
   background-color: #FAFAFA;
   border: 1px solid #EFEFEF;
@@ -353,47 +518,47 @@ object-fit: cover;
   flex-direction: column;
 }
 
-#main .sec5 .follower-box .follower-header {
+.intro .sec5 .follower-box .follower-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
 }
 
-#main .sec5 .follower-box .follower-title {
+.intro .sec5 .follower-box .follower-title {
   font-size: 20px;
   font-weight: bold;
   color: #202020;
 }
 
-#main .sec5 .follower-box .follower-more {
+.intro .sec5 .follower-box .follower-more {
   font-size: 14px;
   color: #FDCC32;
   text-decoration: none;
 }
 
-#main .sec5 .follower-box .follower-info {
+.intro .sec5 .follower-box .follower-info {
   margin-bottom: 16px;
 }
 
-#main .sec5 .follower-box .follower-count {
+.intro .sec5 .follower-box .follower-count {
   font-size: 15px;
   color: #777;
 }
 
 
-#main .sec5 .follower-box .follower-profiles {
+.intro .sec5 .follower-box .follower-profiles {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-#main .sec5 .follower-box .follower-profile {
+.intro .sec5 .follower-box .follower-profile {
   width: calc(20% - 10px);
   text-align: center;
 }
 
-#main .sec5 .follower-box .follower-profile .profile-img {
+.intro .sec5 .follower-box .follower-profile .profile-img {
   width: 90%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
@@ -401,49 +566,82 @@ object-fit: cover;
   margin-bottom: 8px;
 }
 
-#main .sec5 .follower-box .follower-profile .profile-name {
+.intro .sec5 .follower-box .follower-profile .profile-name {
   font-size: clamp(13px,2vw,15px);
   color: #202020;
 }
 
-#main .sec5 .follower-box .follower-profile .profile-date {
+.intro .sec5 .follower-box .follower-profile .profile-date {
   font-size: clamp(9px,1.8vw,15px);
   color: #B0B0B0;
 }
 
 
 
+/* ------푸터 */
+.footer {
+  background-color: #F8F8F8;
+  padding: 50px 7%;
+}
+.footer .footer-contain {
+  margin: 0 auto;
+  max-width: 1176px;
+  /* width: 100%; */
+  /* padding: 50px 7%; */
+  /* padding: 50px 0; */
+}
+.footer .social-icons {
+  display: flex;
+  justify-content:left;
+  gap: 40px;
+}
+.footer .footer-text {
+  font-size: 18px;
+  color: #727272;
+  margin-top: 40px;
+}
+
+
 
 /* 반응형 */
 @media screen and (max-width: 1024px) {
-  #main .sec1 {
+  
+  .intro .sec1 {
     gap: 1%;
   }
-
-  #main .sec1 .subscriber-box {
-    width: 50%;
+  .intro .sec1 .profile-count-container {
+    margin-top: 10px;
   }
 
-  #main .sec5 {
+  .intro .sec1 .subscriber-box {
+    width: 50%;
+  }
+  .intro .sec1 .count-box {
+    padding: 3% 2%;
+  }
+  
+
+  .intro .sec5 {
     flex-direction: column;
   }
 }
 
 @media screen and (max-width: 767px) {
-  #main .sec1 .profile-box .profile-img {
+
+  .intro .sec1 .profile-box .profile-img {
     margin: 0 auto;
     margin-top: 20px;
     width: clamp(120px, 20vw, 130px);
   }
 
-  #main .sec1 .profile-box {
+  .intro .sec1 .profile-box {
     flex: 7;
     display: grid;
     flex-direction: column;
     gap: 3% 3%;
     align-items: center;
   }
-  #main .sec1 .nick-job-container{
+  .intro .sec1 .nick-job-container{
     height: 30px;
     margin: 10px auto;
     display: flex;           
@@ -451,88 +649,95 @@ object-fit: cover;
     gap: 5px;
     align-items: center;
   }
-  #main .sec1 .profile-box .profile-text {
+  .intro .sec1 .profile-box .profile-text {
     line-height: 0.5;
   }
 
- #main .sec1 .count-box {
+  .intro .sec1 .count-box {
     flex: 3;
     flex-direction: column;
     padding: 8% 3%;
   }
-  #main .sec1 .profile-box .profile-text {
+  .intro .sec1 .profile-box .profile-text {
     text-align: center;
     margin: 0 auto;
     width: 80%;
   } 
-  #main .sec1 .count-box .count-right {
+  .intro .sec1 .count-box .count-right {
     width: 100%;
   }
-  #main .sec1 .count-box .count-left{
+  .intro .sec1 .count-box .count-left{
     width: 100%;
   }
-  #main .sec1 .subscriber-box {
+  .intro .sec1 .subscriber-box {
     width: 100%;
     box-sizing: border-box;
-    padding: 0.5% 3%;
+    padding: 2% 3%;
   }
-  #main .sec1 .subscribe-btn {
+  .intro .sec1 .subscribe-btn {
     margin: 0 auto;
   }
-  #main .sec1 .count-number {
+  .intro .sec1 .count-number {
   font-size: 34px;
   }
 
   /* photo-box-container 중앙 정렬 */
-  #main .photo-box-container {
+  .intro .photo-box-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
   }
-  #main .photo-box {
+  .intro .photo-box {
     width: clamp(150px, calc((100% - 20px) / 2), 300px);
     height: 300px;
 
   }
 
-  #main .post-title {
+  .intro .post-title {
     font-size: 1rem; 
   }
 
-  #main .post-date{
+  .intro .post-date{
     font-size: 0.8rem; 
   }
-  #main .sec5 .follower-box .follower-profile .profile-img {
+  .intro .sec5 .follower-box .follower-profile .profile-img {
   width: 100%;
   }
 
-  #main .load-more-btn{
+  .intro .load-more-btn{
     padding: 10px 30px;
     font-size: 0.8rem;
   }
 
 }
 @media screen and (max-width: 480px) {
-  #main .sec1 .profile-box .profile-img{
+  .intro .sec1 .profile-box .profile-img{
     width: 100px;
   }
-  #main .sec1 .profile-box .nickname{
+  .intro .sec1 .profile-box .nickname{
     font-size: 20px;
   }
-  #main .sec1 .profile-box .bio{
+  .intro .sec1 .profile-box .bio{
     font-size: 15px;
   }
-  #main .sec1 .count-box {
+  .intro .sec1 .count-box {
     padding: 10% 3%;
   }
-  #main .sec1 .count-number {
+  .intro .sec1 .count-number {
     font-size: 25px;
-    }
-    #main .photo-box {
+  }
+  .intro .photo-box {
     margin-bottom: -50px;
-    }
+  }
+
+  .footer .social-icons {
+      justify-content: center;
+  }
+  .footer .footer-text {
+        text-align: center;
+  }
 }
 
 
