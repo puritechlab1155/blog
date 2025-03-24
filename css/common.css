@@ -61,85 +61,96 @@ font-family: 'Paperlogy-8ExtraBold', sans-serif;
 }
 
 /* <공통적용> */
+.m-t-20{
+    margin-top: 20px;
+}
+.m-t-40{
+    margin-top: 40px;
+}
+.m-t-50{
+    margin-top: 50px;
+    }
+.m-t-60{
+    margin-top: 60px;
+}
 .m-t-100{
 margin-top: 100px;
 }
-.m-t-50{
-margin-top: 50px;
-}
 
 .btn-01{
-padding: 10px 40px;
-font-size: 1rem;
-cursor: pointer;
-border: none;
-background-color: #FEFBF2;
-color: #FDCC32;
-border-radius: 10px;
-border: 2px solid #FDCC32;
+    padding: 10px 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #FEFEFE;
+    color: #FDCC32;
+    border-radius: 10px;
+    border: 2px solid #FDCC32;
+    font-weight: 600;
 }
-
 .btn-01:hover {
-background-color: #FDCC32;
-color: #ffffff;
+    background-color: #FDCC32;
+    color: #ffffff;
 }
 .btn-01:active {
-background-color: #FDCC32;
-color: #ffffff;
+    background-color: #FDCC32;
+    color: #ffffff;
 }
 .btn-02{
-background-color: #FDCC32;
-color: #202020;
-border: none;
-border-radius: 10px;
-padding: 10px 20px;
-font-weight: bold;
-cursor: pointer;
-height: fit-content;
-min-width: 100px;
-max-width: 120px;
+    background-color: #FDCC32;
+    color: #202020;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 400;
+    cursor: pointer;
+    height: fit-content;
+    min-width: 100px;
+    max-width: 120px;
 }
 .btn-02:hover {
-background-color: #ffffff;
-color: #FDCC32;
-border: 1px solid #FDCC32;
+    background-color: #ffffff;
+    color: #FDCC32;
+    border: 1px solid #FDCC32;
 }
-
 .btn-02:active {
-background-color: #cc9900;
-color: #ffffff;
+    background-color: #cc9900;
+    color: #ffffff;
 }
-
 .btn-03{
-background-color: #FFF3E4;
-color: #202020;
-border: none;
-border-radius: 10px;
-padding: 6px 24px;
-font-size: 14px;
-cursor: pointer;
-white-space: nowrap;
+    background-color: #FFF3E4;
+    color: #202020;
+    border: none;
+    border-radius: 10px;
+    padding: 6px 24px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
 }
-
 .btn-03:hover {
-background-color: #FDCC32; /* 호버 시 배경색 */
-color: #ffffff; /* 호버 시 글자색 */
+    background-color: #FDCC32; /* 호버 시 배경색 */
+    color: #ffffff; /* 호버 시 글자색 */
 }
-
 .btn-03:active {
-background-color: #cc9900; /* 클릭 시 배경색 */
-color: #ffffff; /* 클릭 시 글자색 */
+    background-color: #cc9900; /* 클릭 시 배경색 */
+    color: #ffffff; /* 클릭 시 글자색 */
 }
-
 .radius-20{
-border-radius: 20px;
+    border-radius: 20px;
 }
 .radius-50{
-border-radius: 50px ;
+    border-radius: 50px ;
 }
-
 .yellow{
-color: #FDCC32;
+    color: #FDCC32;
 }
-
+.border-ef {
+    border-radius: 10px;
+    border: 1px solid #EFEFEF;
+    padding: 10px 16px;
+}
+.iconW-24 {
+    width: 24px;
+    height: 24px;
+}
 /* 인풋태그등 스타일 촉화 추가... */
