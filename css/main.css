@@ -1154,6 +1154,13 @@ width: 100%;
     width: 90px;
     padding: 10px 20px;
   }
+  .detail .best-item {
+    gap: 0;
+  }
+  .detail .info .title {
+    font-size: 14px;
+    font-weight: 500;
+  }
 }
 
 

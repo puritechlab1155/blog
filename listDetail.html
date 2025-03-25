@@ -114,7 +114,7 @@
                                     </div>
                                     <div class="reply-input-box hidden">
                                         <div class="reply-input border-ef" contenteditable="true">
-                                            답글을 입력하세요.
+                                            
                                         </div>
 
                                         <div class="btn-bottom">
@@ -149,7 +149,7 @@
                                     </div>
                                     <div class="reply-input-box hidden">
                                         <div class="reply-input border-ef" contenteditable="true">
-                                            답글을 입력하세요.
+                                            
                                         </div>
 
                                         <div class="btn-bottom">
@@ -184,7 +184,7 @@
                                     </div>
                                     <div class="reply-input-box hidden">
                                         <div class="reply-input border-ef" contenteditable="true">
-                                            답글을 입력하세요.
+                                            
                                         </div>
 
                                         <div class="btn-bottom">
@@ -223,9 +223,8 @@
 
                             <!-- 댓글 입력란 -->
                             <div class="input-area">
-                                <!-- <input type="text" placeholder="댓글을 입력해 주세요." class="border-ef comment-input"> -->
                                 <div class="comment-input border-ef" contenteditable="true">
-                                    댓글을 입력해 주세요.
+                                   
                                 </div>
                                 <div class="input-area-btn">
                                     <label class="custom-checkbox">
@@ -452,24 +451,43 @@
             document.getElementById("reportSuccessModal").classList.add("hidden");
         }
 
-        // 답글 ........................텍스트 안지워짐
+        // 답글 부분
         const replyInput = document.querySelector('.reply-input');
 
-replyInput.addEventListener('focus', () => {
-  if (replyInput.textContent === '답글을 입력하세요.') {
-    replyInput.textContent = ''; // 입력 시작 시 텍스트 제거
-  }
-});
+        // 초기 텍스트 설정
+        replyInput.textContent = '답글을 입력하세요.';
 
-replyInput.addEventListener('blur', () => {
-  if (replyInput.textContent === '') {
-    replyInput.textContent = '답글을 입력하세요.'; // 입력 내용이 없을 경우 다시 표시
-  }
-});
+        replyInput.addEventListener('focus', () => {
+            if (replyInput.textContent === '답글을 입력하세요.') {
+                replyInput.textContent = ''; // 입력 시작 시 텍스트 제거
+            }
+        });
+
+        replyInput.addEventListener('blur', () => {
+            if (replyInput.textContent === '') {
+                replyInput.textContent = '답글을 입력하세요.'; // 입력 내용이 없을 경우 다시 표시
+            }
+        });
 
 
-console.log(replyInput);
-console.log(replyInput.eventListeners);
+        //댓글 부분
+        const commentInput = document.querySelector('.comment-input');
+
+        // 초기 텍스트 설정
+        commentInput.textContent = '댓글을 입력해 주세요.';
+
+        commentInput.addEventListener('focus', () => {
+            if (commentInput.textContent === '댓글을 입력해 주세요.') {
+                commentInput.textContent = ''; // 입력 시작 시 텍스트 제거
+            }
+        });
+
+        commentInput.addEventListener('blur', () => {
+            if (commentInput.textContent === '') {
+                commentInput.textContent = '댓글을 입력해 주세요.'; // 입력 내용이 없을 경우 다시 표시
+            }
+        });
+
 
     </script>
 
