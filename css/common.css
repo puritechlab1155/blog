@@ -91,6 +91,9 @@ input {
 label {
     display: block;
 }
+textarea {
+    resize: none;
+}
 /* 체크박스 커스텀 */
 .custom-checkbox {
     display: inline-block;
@@ -167,6 +170,9 @@ label {
 /* <공통적용> */
 .m-t-20{
     margin-top: 20px;
+}
+.m-t-30{
+    margin-top: 30px;
 }
 .m-t-40{
     margin-top: 40px;

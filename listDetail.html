@@ -113,10 +113,7 @@
                                         </button>
                                     </div>
                                     <div class="reply-input-box hidden">
-                                        <div class="reply-input border-ef" contenteditable="true">
-                                            
-                                        </div>
-
+                                        <textarea class="reply-input border-ef" placeholder="답글을 입력해 주세요."></textarea>
                                         <div class="btn-bottom">
                                             <button type="button" class="reply-submit btn-02">등록</button>
                                             <button type="button" class="reply-cancel btn-02" onclick="hideReplyInput(this)">취소</button>
@@ -127,8 +124,9 @@
                                 <button type="button" class="more border-ef" onclick="toggleMoreMenu(this)">
                                     <img class="more-icon iconW-24" src="/img/detail/more.png" alt="더보기 아이콘">
                                 </button>
-                                <div class="more-menu hidden">
+                                <div class="more-menu">
                                     <button type="button" class="report">신고하기</button>
+                                    <button type="button" class="del">삭제하기</button> <!-- 삭제하기는 본인이 작성한 게시글에만 보여지도록 / 신고하기와 동일하게 모달 띄우기-->
                                 </div>
 
                             </div>
@@ -136,7 +134,7 @@
                             <div class="comment-box">
                                 <img class="user-img" src="/img/detail/user-img.png" alt="프로필 이미지">
                                 <div class="comment-content">
-                                    <span class="user-name">닉네임1</span>
+                                    <span class="user-name">닉네임2</span>
                                     <div class="comment-meta">2025.03.19</div>
                                     <span class="comment comment-text">
                                         프렌치 토스트는 아침 식사로 제격인 간단한 디저트입니다. 우선 계란 두 개를 풀어준 후 우유와 설탕을 넣고 잘 섞어줍니다. 여기에 바닐라 익스트랙과 약간의 소금을 추가하면 맛이 한층 더 풍부해집니다. 식빵을 준비한 계란 물에 적셔서 팬에 버터를 녹이고 중불에서 구워줍니다. 빵 양면이 노릇노릇해질 때까지 천천히 구워야 합니다. 구운 프렌치 토스트 위에 메이플 시럽이나 꿀을 뿌리고, 신선한 과일을 곁들여 주세요. 간단하면서도 특별한 아침 식사가 완성됩니다.
@@ -147,62 +145,46 @@
                                             답글 달기
                                         </button>
                                     </div>
-                                    <div class="reply-input-box hidden">
-                                        <div class="reply-input border-ef" contenteditable="true">
-                                            
+                                    <!-- 답글 -->
+                                    <div class="comment-box m-t-30">
+                                        <img class="user-img" src="/img/detail/user-img.png" alt="프로필 이미지">
+                                        <div class="comment-content">
+                                            <span class="user-name">닉네임3</span>
+                                            <div class="comment-meta">2025.03.19</div>
+                                            <span class="comment comment-text">
+                                                프렌치 토스트는 아침 식사로 제격인 간단한 디저트입니다. 우선 계란 두 개를 풀어준 후 우유와 설탕을 넣고 잘 섞어줍니다. 여기에 바닐라 익스트랙과 약간의 소금을 추가하면 맛이 한층 더 풍부해집니다. 식빵을 준비한 계란 물에 적셔서 팬에 버터를 녹이고 중불에서 구워줍니다. 빵 양면이 노릇노릇해질 때까지 천천히 구워야 합니다. 구운 프렌치 토스트 위에 메이플 시럽이나 꿀을 뿌리고, 신선한 과일을 곁들여 주세요. 간단하면서도 특별한 아침 식사가 완성됩니다.
+                                            </span>
+                                            <div class="btn-bottom">
+                                                <button type="button" class="f-14-b read-more" onclick="toggleComment(this)">자세히 보기</button>
+                                            </div>
                                         </div>
-
-                                        <div class="btn-bottom">
-                                            <button type="button" class="reply-submit btn-02">등록</button>
-                                            <button type="button" class="reply-cancel btn-02" onclick="hideReplyInput(this)">취소</button>
+                                        <!-- 더보기 아이콘 & 신고하기 -->
+                                        <div class="more-contain">
+                                            <button type="button" class="more border-ef" onclick="toggleMoreMenu(this)">
+                                                <img class="more-icon iconW-24" src="/img/detail/more.png" alt="더보기 아이콘">
+                                            </button>
+                                            <div class="more-menu">
+                                                <button type="button" class="report">신고하기</button>
+                                                <button type="button" class="del">삭제하기</button> <!-- 삭제하기는 본인이 작성한 게시글에만 보여지도록 / 신고하기와 동일하게 모달 띄우기-->
+                                            </div>
                                         </div>
                                     </div>
+
+
                                 </div>
                                 <!-- 더보기 아이콘 & 신고하기 -->
-                                <button type="button" class="more border-ef" onclick="toggleMoreMenu(this)">
-                                    <img class="more-icon iconW-24" src="/img/detail/more.png" alt="더보기 아이콘">
-                                </button>
-                                <div class="more-menu hidden">
-                                    <button type="button" class="report">신고하기</button>
-                                </div>
-
-                            </div>
-                            <!-- 댓글3 -->
-                            <div class="comment-box">
-                                <img class="user-img" src="/img/detail/user-img.png" alt="프로필 이미지">
-                                <div class="comment-content">
-                                    <span class="user-name">닉네임1</span>
-                                    <div class="comment-meta">2025.03.19</div>
-                                    <span class="comment comment-text">
-                                        프렌치 토스트는 아침 식사로 제격인 간단한 디저트입니다. 우선 계란 두 개를 풀어준 후 우유와 설탕을 넣고 잘 섞어줍니다. 여기에 바닐라 익스트랙과 약간의 소금을 추가하면 맛이 한층 더 풍부해집니다. 식빵을 준비한 계란 물에 적셔서 팬에 버터를 녹이고 중불에서 구워줍니다. 빵 양면이 노릇노릇해질 때까지 천천히 구워야 합니다. 구운 프렌치 토스트 위에 메이플 시럽이나 꿀을 뿌리고, 신선한 과일을 곁들여 주세요. 간단하면서도 특별한 아침 식사가 완성됩니다.
-                                    </span>
-                                    <div class="btn-bottom">
-                                        <button type="button" class="f-14-b read-more" onclick="toggleComment(this)">자세히 보기</button>
-                                        <button type="button" class="f-14-b reply">
-                                            답글 달기
-                                        </button>
-                                    </div>
-                                    <div class="reply-input-box hidden">
-                                        <div class="reply-input border-ef" contenteditable="true">
-                                            
-                                        </div>
-
-                                        <div class="btn-bottom">
-                                            <button type="button" class="reply-submit btn-02">등록</button>
-                                            <button type="button" class="reply-cancel btn-02" onclick="hideReplyInput(this)">취소</button>
-                                        </div>
+                                <div class="more-contain">
+                                    <button type="button" class="more border-ef" onclick="toggleMoreMenu(this)">
+                                        <img class="more-icon iconW-24" src="/img/detail/more.png" alt="더보기 아이콘">
+                                    </button>
+                                    <div class="more-menu">
+                                        <button type="button" class="report">신고하기</button>
+                                        <button type="button" class="del">삭제하기</button> <!-- 삭제하기는 본인이 작성한 게시글에만 보여지도록 / 신고하기와 동일하게 모달 띄우기-->
                                     </div>
                                 </div>
-                                <!-- 더보기 아이콘 & 신고하기 -->
-                                <button type="button" class="more border-ef" onclick="toggleMoreMenu(this)">
-                                    <img class="more-icon iconW-24" src="/img/detail/more.png" alt="더보기 아이콘">
-                                </button>
-                                <div class="more-menu hidden">
-                                    <button type="button" class="report">신고하기</button>
-                                </div>
 
-                            </div>
 
+                            </div>                           
                             <!-- 신고 모달 -->
                             <div id="reportModal" class="modal hidden">
                                 <div class="modal-content">
@@ -220,12 +202,20 @@
                                     <button type="button" class="close m-t-40 btn-01 w-125" onclick="closeReportSuccessModal()">확인</button>
                                 </div>
                             </div>
+                            <!-- 삭제 모달 -->
+                            <div id="reportModal" class="modal hidden">
+                                <div class="modal-content">
+                                    <p class="text"><b>정말로 삭제하시겠습니까?</b></p>
+                                    <div class="m-t-40">
+                                        <button type="button" class="confirm btn-01 w-125" onclick="confirmReport()">예</button>
+                                        <button type="button" class="cancel btn-01 w-125" onclick="closeReportModal()">아니요</button>
+                                    </div>
+                                </div>
+                            </div>
 
                             <!-- 댓글 입력란 -->
                             <div class="input-area">
-                                <div class="comment-input border-ef" contenteditable="true">
-                                   
-                                </div>
+                                <textarea class="comment-input border-ef" placeholder="댓글을 입력해 주세요."></textarea>
                                 <div class="input-area-btn">
                                     <label class="custom-checkbox">
                                         <input type="checkbox">
@@ -451,42 +441,7 @@
             document.getElementById("reportSuccessModal").classList.add("hidden");
         }
 
-        // 답글 부분
-        const replyInput = document.querySelector('.reply-input');
 
-        // 초기 텍스트 설정
-        replyInput.textContent = '답글을 입력하세요.';
-
-        replyInput.addEventListener('focus', () => {
-            if (replyInput.textContent === '답글을 입력하세요.') {
-                replyInput.textContent = ''; // 입력 시작 시 텍스트 제거
-            }
-        });
-
-        replyInput.addEventListener('blur', () => {
-            if (replyInput.textContent === '') {
-                replyInput.textContent = '답글을 입력하세요.'; // 입력 내용이 없을 경우 다시 표시
-            }
-        });
-
-
-        //댓글 부분
-        const commentInput = document.querySelector('.comment-input');
-
-        // 초기 텍스트 설정
-        commentInput.textContent = '댓글을 입력해 주세요.';
-
-        commentInput.addEventListener('focus', () => {
-            if (commentInput.textContent === '댓글을 입력해 주세요.') {
-                commentInput.textContent = ''; // 입력 시작 시 텍스트 제거
-            }
-        });
-
-        commentInput.addEventListener('blur', () => {
-            if (commentInput.textContent === '') {
-                commentInput.textContent = '댓글을 입력해 주세요.'; // 입력 내용이 없을 경우 다시 표시
-            }
-        });
 
 
     </script>

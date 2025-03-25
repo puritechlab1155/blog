@@ -712,19 +712,20 @@ color: #afafaf;
   position: absolute;
   background: rgba(0, 0, 0, 0.8);
   color: white;
-  padding: 8px 12px;
+  padding: 10px 0;
   border-radius: 5px;
   top: 61px;
   right: 1px;
   display: none;
 }
-.detail .more-menu .report {
+.detail .more-menu .report,.del {
   color: #fff;
-  /* cursor: pointer; */
+  width: 100%;
+  line-height: 2;
 }
-.detail .more-menu.hidden {
+/* .detail .more-menu.hidden {
   display: none;
-}
+} */
 .detail .more-menu.visible {
   display: block;
 }
