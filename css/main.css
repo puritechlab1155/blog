@@ -552,7 +552,7 @@ color: #afafaf;
 .detail .f-14-b {
   font-size: 14px;
   color: #AFAFAF;
-  font-weight: bold;
+  font-weight: 600;
 }
 .detail .container { 
   display: flex; 
@@ -581,10 +581,17 @@ color: #afafaf;
   color: #AFAFAF;
   font-size: 14px;
 }
-.detail .sidebar { width: 34%; padding-top: 12%;}
-.detail .post-title { font-size: 24px; font-weight: bold; }
-.detail .post-meta { color: gray; font-size: 14px; }
-.detail .post-body { margin: 20px 0; }
+.detail .sidebar { 
+  width: 34%; 
+  padding-top: 14%;
+}
+.detail .post-title { 
+  font-size: 24px; 
+  font-weight: bold; 
+}
+.detail .post-body { 
+  margin: 20px 0; 
+}
 .detail .btn-container {
   display: flex; 
   justify-content: space-between;
@@ -768,7 +775,8 @@ color: #afafaf;
   margin-top: 10px; 
   width: 100%;
 }
-.detail .comment-list .input-area .comment-input { 
+.detail .comment-list .input-area .comment-input,
+.detail .comment-content .reply-input-box .reply-input  { 
   margin-top: 10px; 
   width: 100%;
   height: 150px;
@@ -797,6 +805,19 @@ color: #afafaf;
 .detail .comment-list .input-area .input-area-btn .regist-btn {
   margin-left: 30px;
 }
+/* 답글 */
+.detail .reply-input-container {
+  display: none;
+  margin-top: 20px;
+}
+.detail .comment-box .reply-input-box .btn-bottom {
+  float: right;
+  margin: 20px 0;
+}
+.detail .comment-box .reply-input-box .btn-bottom .reply-submit {
+  margin-right: 30px;
+}
+
 /* 구독 */
 .detail .blog-author-card {
   clear: both;
