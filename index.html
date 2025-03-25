@@ -21,10 +21,11 @@
         <div class="header-right">
             <div class="search-container">
                 <input type="text" placeholder="키워드를 입력하세요." class="search-input"/>
-                <button type="button" class="close-icon"><img src="img/common/close.png" alt="돋보기 이미지"></button>
+                <button type="button" class="search-submit"><img src="img/common/search2.png" alt="돋보기 이미지"></button>
             </div>
-            <button type="button" class="search-icon" id="searchBtn">
-                <img src="img/common/search.png" alt="돋보기 이미지">
+            <button type="button" class="icon-area">
+                <img src="img/common/search.png" alt="돋보기 이미지" class="search-icon">
+                <img src="img/common/close.png" alt="돋보기 이미지" class="close-icon">
             </button>
             <button type="button" class="ham-box" id="menuBtn">
                 <span class="ham"></span>
@@ -512,23 +513,23 @@
 
 <script>
 
-const searchBtn = document.querySelector('.search-icon');  // search icon 버튼
-const searchContainer = document.querySelector('.search-container'); // search container
-const closeBtn = document.querySelector('.close-icon');  // X 버튼
-const searchInput = document.querySelector('.search-input');
+// const searchBtn = document.querySelector('.search-icon');  // search icon 버튼
+// const searchContainer = document.querySelector('.search-container'); // search container
+// const closeBtn = document.querySelector('.close-icon');  // X 버튼
+// const searchInput = document.querySelector('.search-input');
 
-// 검색 아이콘 클릭 시 검색창 열기
-searchBtn.addEventListener('click', () => {
-  searchContainer.classList.add('active');
-  searchBtn.style.display = 'none'; // 검색 아이콘 숨기기
-});
+// // 검색 아이콘 클릭 시 검색창 열기
+// searchBtn.addEventListener('click', () => {
+//   searchContainer.classList.add('active');
+//   searchBtn.style.display = 'none'; // 검색 아이콘 숨기기
+// });
 
-// X 버튼 클릭 시 검색창 닫기
-closeBtn.addEventListener('click', () => {
-  searchContainer.classList.remove('active');
-  searchBtn.style.display = 'block'; // 검색 아이콘 다시 보이기
-  searchInput.value = '';
-});
+// // X 버튼 클릭 시 검색창 닫기
+// closeBtn.addEventListener('click', () => {
+//   searchContainer.classList.remove('active');
+//   searchBtn.style.display = 'block'; // 검색 아이콘 다시 보이기
+//   searchInput.value = '';
+// });
 
     // // 모든 섹션을 선택
     // const sections = document.querySelectorAll('.sec2, .sec3, .sec4');
