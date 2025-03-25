@@ -567,9 +567,7 @@ color: #afafaf;
   font-weight: 700;
   font-size: 44px;
   line-height: 140%;
-  /* font-family: 'Paperlogy-7Bold'; */
   font-family: 'Paperlogy';
-  /* font-family: 'Paperlogy-8ExtraBold', sans-serif; */
 }
 .detail .detail-content .writer { 
   color: #727272;
@@ -606,7 +604,6 @@ color: #afafaf;
   font-size: 18px;
 }
 .detail .post-body .post-img {
-  /* max-width: 700px; */
   width: 100%;
   border-radius: 20px;
 }
@@ -780,16 +777,13 @@ color: #afafaf;
   margin-top: 10px; 
   width: 100%;
   height: 150px;
-  padding-top: 5px; /* 플레이스홀더와 입력 텍스트를 위로 올리기 */
-  line-height: normal; /* 기본 줄 높이 유지 */
-  vertical-align: top; /* 커서를 상단 정렬 */
+  padding-top: 10px; /* 플레이스홀더와 입력 텍스트를 위로 올리기 */
+  overflow: scroll;
+  color: #AFAFAF;
 }
-.detail .comment-list .input-area .comment-input::placeholder {
-  position: absolute; /* 기본적으로 position 사용 불가 */
-  top: 5px; /* 위쪽 여백 */
-  text-indent: 5px; /* 왼쪽 여백 */
-  color: #AFAFAF; /* 플레이스홀더 색상 */
-  padding-top: 15px;
+.detail .comment-input:focus, .detail .reply-input:focus {
+  border: 2px solid #FDCC32; /* 클릭 시 테두리 스타일 변경 */
+  outline: none; /* 기본 outline 제거 (선택 사항) */
 }
 .detail .comment-list .input-area .input-area-btn {
   float: right;
@@ -799,9 +793,7 @@ color: #afafaf;
 .detail .comment-list .input-area .input-area-btn .secret-check {
   margin-right: 15px;
 }
-.detail .comment-list .input-area .input-area-btn .secret-check {
-  margin-right: 5px;
-}
+/*  */
 .detail .comment-list .input-area .input-area-btn .regist-btn {
   margin-left: 30px;
 }
@@ -909,7 +901,11 @@ color: #afafaf;
   color: #202020;
   margin-bottom: 5px;
 }
-.detail .info .date {
+.detail .info .info-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.detail .info .date, .detail .info .category {
   font-size: 14px;
   color: #AFAFAF;
 }
@@ -972,6 +968,7 @@ margin-top: 40px;
 }
 }
 @media screen and (max-width: 960px) {
+  /* 2. listDetail */
   .detail .container {
     flex-wrap: wrap;
   }
@@ -981,9 +978,13 @@ margin-top: 40px;
   }
   .detail .sidebar {
     width: 100%;
+    padding-top: 0;
   }
   .detail .best-item {
     gap: 30px;
+  }
+  .detail .info .info-bottom {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1105,41 +1106,54 @@ width: 100%;
 
 }
 @media screen and (max-width: 480px) {
-.header .header-right .search-container.active {
-  width: 320px;
+  .header .header-right .search-container.active {
+    width: 320px;
+    }
+  .intro .sec1 .profile-box .profile-img{
+    width: 100px;
   }
-.intro .sec1 .profile-box .profile-img{
-  width: 100px;
-}
-.intro .sec1 .profile-box .nickname{
-  font-size: 20px;
-}
-.intro .sec1 .profile-box .bio{
-  font-size: 15px;
-}
-.intro .sec1 .count-box {
-  padding: 20% 3%;
-}
-.intro .sec1 .count-number {
-  font-size: 20px;
-}
-.intro .photo-box {
-  margin-bottom: -60px;
-}
-.intro .post-date {
-  margin-top: -3px;
-}
+  .intro .sec1 .profile-box .nickname{
+    font-size: 20px;
+  }
+  .intro .sec1 .profile-box .bio{
+    font-size: 15px;
+  }
+  .intro .sec1 .count-box {
+    padding: 20% 3%;
+  }
+  .intro .sec1 .count-number {
+    font-size: 20px;
+  }
+  .intro .photo-box {
+    margin-bottom: -60px;
+  }
+  .intro .post-date {
+    margin-top: -3px;
+  }
 
-.intro .sec1 .count-today, 
-.intro .sec1 .count-yesterday {
-  font-size: 12px;
-}
+  .intro .sec1 .count-today, 
+  .intro .sec1 .count-yesterday {
+    font-size: 12px;
+  }
 
-.intro .sec1 .count-today-number, 
-.intro .sec1 .count-yesterday-number {
-  font-size: 12px;
-}
-
+  .intro .sec1 .count-today-number, 
+  .intro .sec1 .count-yesterday-number {
+    font-size: 12px;
+  }
+  /* 2 */
+  .detail .m-t-50 {
+    margin-top: 20px;
+  }
+  .detail .m-t-60 {
+    margin-top: 30px;
+  }
+  .detail .comment-box .reply-input-box .btn-bottom .reply-submit {
+    margin-right: 10px;
+  }
+  .detail .modal .w-125 {
+    width: 90px;
+    padding: 10px 20px;
+  }
 }
 
 
