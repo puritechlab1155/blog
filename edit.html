@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>블로그 게시글 작성</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="header-contain">
+            <h1>
+                <a class="logo" href="index.html">BLOG SITE</a>
+            </h1>
+            <div class="header-right">
+                <div class="search-container">
+                    <input type="text" placeholder="키워드를 입력하세요." class="search-input"/>
+                    <button type="button" class="search-submit"><img src="img/common/search2.png" alt="돋보기 이미지"></button>
+                </div>
+                <button type="button" class="icon-area">
+                    <img src="img/common/search.png" alt="돋보기 이미지" class="search-icon">
+                    <img src="img/common/close.png" alt="돋보기 이미지" class="close-icon">
+                </button>
+                <button type="button" class="ham-box" id="menuBtn">
+                    <span class="ham"></span>
+                    <span class="ham"></span>
+                    <span class="ham"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- 메뉴 패널 -->
+    <div class="menu-panel" id="menuPanel">
+        <ul class="menu-list-box">
+            <a href="#"><li class="panel-list">About</li></a>
+            <a href="#"><li class="panel-list">Home</li></a>
+            <a href="#"><li class="panel-list">Blog</li></a>
+            <a href="#"><li class="panel-list">Contact</li></a>
+        </ul>
+    </div><!-- 여기까지 메뉴 패널 -->
+
+
+    <div class="content-wrap">
+        <!-- 컨텐츠 시작 -->
+        <div id="main">
+            <div class="edit m-t-100">
+
+                <div class="container">
+                    <div class="icon-bar">
+                        <button type="button" class="00-btn icon-btn01">
+                            <div class="icon-bg">
+                                <img src="img/edit/photo-icon.png" alt="사진 첨부 아이콘">
+                            </div>
+                            <span class="icon-text">사진 첨부</span>
+                        </button>
+                        <button type="button" class="00-btn icon-btn01">
+                            <div class="icon-bg">
+                                <img src="img/edit/video-icon.png" alt="영상 첨부 아이콘">
+                            </div>
+                            <span class="icon-text">영상 첨부</span>
+                        </button>
+                        <button type="button" class="00-btn icon-btn01">
+                            <div class="icon-bg">
+                                <img src="img/edit/link-icon.png" alt="링크 아이콘">
+                            </div>
+                            <span class="icon-text">링크</span>
+                        </button>
+                        <button type="button" class="00-btn icon-btn01">
+                            <div class="icon-bg">
+                                <img src="img/edit/place-icon.png" alt="장소 아이콘">
+                            </div>
+                            <span class="icon-text">장소</span>
+                        </button>
+                        <button type="button" class="00-btn icon-btn01">
+                            <div class="icon-bg">
+                                <img src="img/edit/file-icon.png" alt="파일 첨부 아이콘">
+                            </div>
+                            <span class="icon-text">파일 첨부</span>
+                        </button>
+                    </div>
+                    <div class="content">
+                        <!-- 왼쪽 -->
+                        <div class="left-panel border-ef">
+                            <input type="text" placeholder="제목을 작성해 주세요.">
+                            <div class="text-area" contenteditable="true">
+                            초봄이 다가오며 얼었던 땅이 녹아 내리고, 잔디 위에 따스한 햇살이 스며듭니다. 차가운 공기는 어느새 열은 미풍으로 변해 가며, 나뭇가지 끝에는 작은 새싹이 모습을 드러냅니다. 이윽고 나무들은 조금씩 연두 빛을 띠기 시작하고, 기다란 가지는 새로운 생명을 향해 뻗어 갑니다. 봄은 언제나 그러하듯 천천히, 조용히 다가오지만, 그 변화는 미세하면서도 놀랍도록 분명합니다. 사람들은 이런 변화를 알아차리기 위해 어느새 걸음을 늦추고, 자연의 속삭임에 귀를 기울입니다. 숲속에 들어서면 사방에서 울려 퍼지는 새들의 노랫소리가 귓가를 간지럽히고, 강가에는 물고기들이 평화롭게 유영하며 봄을 맞이하고 있습니다. 어린 시절, 봄은 늘 짧고 아쉬운 계절이었습니다.
+                            </div>
+                        </div>
+                        <!-- 오른쪽 -->
+                        <div class="right-panel">
+                            <select>
+                            <option>나눔 바른 고딕</option>
+                            <option>굴림</option>
+                            <option>돋움</option>
+                            </select>
+                            <select>
+                            <option>본문 1</option>
+                            <option>제목 1</option>
+                            <option>제목 2</option>
+                            </select>
+                            <button>B</button>
+                            <button>U</button>
+                            <button>S</button>
+                            <button>T</button>
+                            <button>T</button>
+                            <button>≡</button>
+                            <button>미리 보기</button>
+                            <button>임시 저장</button>
+                            <button class="complete">완료</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div><!-- 여기까지 컨텐츠 -->
+    </div>
+
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer-contain">
+            <!-- 소셜 아이콘 -->
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                     <img src="/img/common/facebook.png" alt="facebook">
+                </a>
+                <a href="https://www.spacex.com" target="_blank">
+                    <img src="/img/common/xmark.png" alt="xmark">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="/img/common/instagram.png" alt="instagram">
+                </a>
+                <a href="https://blog.naver.com" target="_blank">
+                    <img src="/img/common/blogger.png" alt="blogger">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="/img/common/youtube.png" alt="youtube">
+                </a>
+                <a href="mailto:example@email.com">
+                    <img src="/img/common/email.png" alt="email">
+                </a>
+            </div>
+           
+            <div class="footer-text">
+                BlogStory Ⓒ 2025 Magazine Lab
+            </div>
+        
+        </div>
+    </footer>
+    
+    <script src="/js/script.js"></script>
+
+    <script>
+        function formatText(command) {
+            document.execCommand(command, false, null);
+        }
+    </script>
+
+</body>
+</html>
