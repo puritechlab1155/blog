@@ -1,232 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>블로그 세부페이지</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/main.css">
-
-
-
-  <style>
-    .detail .f-14-b {
-        font-size: 14px;
-        color: #AFAFAF;
-        font-weight: bold;
-    }
-    .detail .container { 
-        display: flex; 
-        width: 100%; 
-    }
-    .detail .detail-content { 
-        width: 70%; 
-        margin-right: 50px;
-        box-sizing: content-box;
-    }
-    .detail .detail-content .post-title { 
-        font-weight: 700;
-        font-size: 44px;
-        line-height: 140%;
-    }
-    .detail .detail-content .writer { 
-        color: #727272;
-        font-weight: bold;
-        font-size: 14px;
-        margin-right: 10px;
-    }
-    .detail .detail-content .date { 
-        color: #AFAFAF;
-        font-size: 14px;
-    }
-    .detail .sidebar { width: 30%; padding: 20px; }
-    .detail .post-title { font-size: 24px; font-weight: bold; }
-    .detail .post-meta { color: gray; font-size: 14px; }
-    .detail .post-body { margin: 20px 0; }
-    .detail .btn-container {
-        display: flex; 
-        justify-content: space-between;
-        vertical-align: middle;
-        gap: 10px; 
-        padding-bottom: 27px;
-        border-bottom: 1px solid #D9D9D9;
-    }
-    .detail .btn-container .keyword-list {
-        display: flex; 
-        gap: 10px; 
-    }
-    .detail .btn-container .btn-box {
-        display: flex; 
-        gap: 20px; 
-    }
-    .detail .btn-container .like,.share {
-        display: flex; 
-        justify-self: center;
-        gap: 8px; 
-        align-items: center;
-    }
-    .detail .btn-container .like-total,.share-total {
-        font-size: 18px;
-        color: #727272;
-        font-weight: 500;
-    }
-    .detail .btn-container .like-change {
-        
-    }
-    /* 댓글 */
-    .detail .comment-list {
-        
-    }
-    .detail .comment-list .list-total{ 
-        font-size: 18px;
-    }
-    .detail .comment-list .comment-box { 
-        border-bottom: 1px solid #EFEFEF; 
-        padding: 14px 0; 
-        display: flex; 
-        gap: 10px; 
-        position: relative;
-    }
-    .detail .comment-list .comment-box .user-img { 
-        width: 40px; 
-        height: 40px; 
-        border-radius: 50%; 
-    }
-    .detail .comment-list .comment-content { 
-        flex: 1; 
-    }
-    .detail .comment-list .user-name { 
-        font-size: 18px; 
-        color: #202020; 
-        font-weight: bold;
-    }   
-    .detail .comment-list .comment-meta { 
-        font-size: 14px; 
-        color: #AFAFAF; 
-    }
-    .detail .comment-list .comment-box .comment { 
-        display: -webkit-box;
-        -webkit-line-clamp: 3; /* 최대 3줄까지만 표시 */
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-height: 4.5em; 
-        line-height: 1.5em; 
-        margin-top: 12px;
-        color: #727272;
-        font-size: 18px;
-    }
-    .detail .comment-list .comment-box .expanded {
-        display: -webkit-box;
-        -webkit-line-clamp: unset;
-        -webkit-box-orient: vertical;
-        max-height: none;
-        white-space: normal;
-    }
-    .detail.comment-text {
-        display: block;
-        overflow: hidden;
-        max-height: 50px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    .expanded {
-        max-height: none;
-        white-space: normal;
-    }
-    .detail .comment-list .comment-box .btn-bottom {
-        margin-top: 10px;
-    }
-    .detail .comment-list .comment-box .btn-bottom .read-more {
-        margin-right: 30px;
-    }
-    .detail .comment-list .more{ 
-        width: 48px;
-        height: 48px;
-        padding: 0;
-    }
-
-    /* 신고하기 */
-    .detail .more-menu {
-        position: absolute;
-        background: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 8px 12px;
-        border-radius: 5px;
-        top: 61px;
-        right: 1px;
-        display: none;
-    }
-    .detail .more-menu .report {
-        color: #fff;
-        /* cursor: pointer; */
-    }
-    .detail .more-menu.hidden {
-        display: none;
-    }
-    .detail .more-menu.visible {
-        display: block;
-    }
-    /* 신고 모달부분 */
-    .detail .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .detail .modal-content {
-        max-width: 400px;
-        width: 100%;
-        background: white;
-        padding: 50px;
-        border-radius: 5px;
-        text-align: center;
-    }
-    .detail .modal-content {
-        background: white;
-        padding: 50px;
-        border-radius: 5px;
-        text-align: center;
-    }
-    .detail .modal.hidden {
-        display: none;
-    }
-    .detail .modal.hidden {
-        display: none;
-    }
-    .detail .modal .text {
-        font-size: 18px;
-    }
-    .detail .modal .w-125 {
-        width: 125px;
-        margin-right: 20px;
-    }
-
-
-.input-area { margin-top: 10px; }
-/*  */
-    .detail .posts-list { margin-top: 20px; }
-    .detail .post-item { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-    .detail .post-item img { width: 50px; height: 50px; object-fit: cover; border-radius: 5px; }
-    .detail .post-body .text {
-        line-height: 200%;
-        color: #727272;
-        font-size: 18px;
-    }
-    .detail .post-body .post-img {
-        max-width: 700px;
-        width: 100%;
-        border-radius: 20px;
-    }
-</style>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>블로그 세부페이지</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <header class="header">
@@ -235,11 +16,13 @@
                 <a class="logo" href="index.html">BLOG SITE</a>
             </h1>
             <div class="header-right">
-                <div class="search-container" id="searchContainer">
-                    <input type="text" placeholder="검색어를 입력해주세요." class="search-input" />
+                <div class="search-container">
+                    <input type="text" placeholder="키워드를 입력하세요." class="search-input"/>
+                    <button type="button" class="search-submit"><img src="img/common/search2.png" alt="돋보기 이미지"></button>
                 </div>
-                <button type="button" class="search-icon" id="searchBtn">
-                    <img src="img/common/search.png" alt="돋보기 이미지">
+                <button type="button" class="icon-area">
+                    <img src="img/common/search.png" alt="돋보기 이미지" class="search-icon">
+                    <img src="img/common/close.png" alt="돋보기 이미지" class="close-icon">
                 </button>
                 <button type="button" class="ham-box" id="menuBtn">
                     <span class="ham"></span>
@@ -248,7 +31,7 @@
                 </button>
             </div>
         </div>
-    </header>
+      </header>
     <!-- 메뉴 패널 -->
     <div class="menu-panel" id="menuPanel">
         <ul class="menu-list-box">
@@ -259,19 +42,15 @@
         </ul>
     </div><!-- 여기까지 메뉴 패널 -->
 
-
     <div class="content-wrap">
         <!-- 컨텐츠 시작 -->
         <div id="main">
             <div class="detail m-t-100">
                 <!-- 여기서부터 -->
-
-
-
                 <div class="container">
                     <!-- 1단: 게시글 상세 -->
                     <div class="detail-content">
-                        <div class="post-title yellow">게시글 제목</div>
+                        <div class="post-title yellow">블로그 제목 </div>
                         <div class="post-meta m-t-60">
                             <span class="writer">맛거리</span>
                             <span class="date">2025. 03. 19</span>
@@ -297,11 +76,12 @@
                         <!-- 버튼 -->
                         <div class="btn-container m-t-50">
                             <div class="keyword-list">
-                                <button type="button" class="keyword-btn btn-03 radius-20">전국 카페</button>
-                                <button type="button" class="keyword-btn btn-03 radius-20">카페 추천</button>
-                                <button type="button" class="keyword-btn btn-03 radius-20">분좋카</button>
-                                <button type="button" class="keyword-btn btn-03 radius-20">맛집</button>
+                                <div class="keyword-btn btn-03 radius-20 h-34">전국 카페</div>
+                                <div class="keyword-btn btn-03 radius-20 h-34">카페 추천</div>
+                                <div class="keyword-btn btn-03 radius-20 h-34">분좋카</div>
+                                <div class="keyword-btn btn-03 radius-20 h-34">맛집</div>
                             </div>
+
                             <div class="btn-box">
                                 <button class="like border-ef" type="button">
                                     <img class="like-change iconW-24" src="/img/detail/like-before.png" alt="하트 아이콘">
@@ -339,6 +119,51 @@
                                     <button type="button" class="report">신고하기</button>
                                 </div>
                             </div>
+                            <!-- 댓글2 -->
+                            <div class="comment-box">
+                                <img class="user-img" src="/img/detail/user-img.png" alt="프로필 이미지">
+                                <div class="comment-content">
+                                    <span class="user-name">닉네임1</span>
+                                    <div class="comment-meta">2025.03.19</div>
+                                    <span class="comment comment-text">
+                                        프렌치 토스트는 아침 식사로 제격인 간단한 디저트입니다. 우선 계란 두 개를 풀어준 후 우유와 설탕을 넣고 잘 섞어줍니다. 여기에 바닐라 익스트랙과 약간의 소금을 추가하면 맛이 한층 더 풍부해집니다. 식빵을 준비한 계란 물에 적셔서 팬에 버터를 녹이고 중불에서 구워줍니다. 빵 양면이 노릇노릇해질 때까지 천천히 구워야 합니다. 구운 프렌치 토스트 위에 메이플 시럽이나 꿀을 뿌리고, 신선한 과일을 곁들여 주세요. 간단하면서도 특별한 아침 식사가 완성됩니다.
+                                    </span>
+                                    <div class="btn-bottom">
+                                        <button type="button" class="f-14-b read-more" onclick="toggleComment(this)">자세히 보기</button>
+                                        <button type="button" class="f-14-b reply">답글 달기</button>
+                                    </div>
+                                </div>
+                                <!-- 더보기 아이콘 & 신고하기 -->
+                                <button type="button" class="more border-ef" onclick="toggleMoreMenu(this)">
+                                    <img class="more-icon iconW-24" src="/img/detail/more.png" alt="더보기 아이콘">
+                                </button>
+                                <div class="more-menu hidden">
+                                    <button type="button" class="report">신고하기</button>
+                                </div>
+                            </div>
+                            <!-- 댓글3 -->
+                            <div class="comment-box">
+                                <img class="user-img" src="/img/detail/user-img.png" alt="프로필 이미지">
+                                <div class="comment-content">
+                                    <span class="user-name">닉네임1</span>
+                                    <div class="comment-meta">2025.03.19</div>
+                                    <span class="comment comment-text">
+                                        프렌치 토스트는 아침 식사로 제격인 간단한 디저트입니다. 우선 계란 두 개를 풀어준 후 우유와 설탕을 넣고 잘 섞어줍니다. 여기에 바닐라 익스트랙과 약간의 소금을 추가하면 맛이 한층 더 풍부해집니다. 식빵을 준비한 계란 물에 적셔서 팬에 버터를 녹이고 중불에서 구워줍니다. 빵 양면이 노릇노릇해질 때까지 천천히 구워야 합니다. 구운 프렌치 토스트 위에 메이플 시럽이나 꿀을 뿌리고, 신선한 과일을 곁들여 주세요. 간단하면서도 특별한 아침 식사가 완성됩니다.
+                                    </span>
+                                    <div class="btn-bottom">
+                                        <button type="button" class="f-14-b read-more" onclick="toggleComment(this)">자세히 보기</button>
+                                        <button type="button" class="f-14-b reply">답글 달기</button>
+                                    </div>
+                                </div>
+                                <!-- 더보기 아이콘 & 신고하기 -->
+                                <button type="button" class="more border-ef" onclick="toggleMoreMenu(this)">
+                                    <img class="more-icon iconW-24" src="/img/detail/more.png" alt="더보기 아이콘">
+                                </button>
+                                <div class="more-menu hidden">
+                                    <button type="button" class="report">신고하기</button>
+                                </div>
+                            </div>
+
                             <!-- 신고 모달 -->
                             <div id="reportModal" class="modal hidden">
                                 <div class="modal-content">
@@ -357,48 +182,112 @@
                                 </div>
                             </div>
 
-                            <!-- <div class="comment">댓글 2</div>
-                            <div class="comment">댓글 3</div> -->
-                            
+                            <!-- 댓글 입력란 -->
                             <div class="input-area">
-                                <input type="text" placeholder="댓글을 입력하세요" style="width: 80%;">
-                                <input type="checkbox"> 비밀글
-                                <button>등록하기</button>
-                                <button type="button" class="subscribe-btn btn-02 radius-20">구독하기</button>
-
+                                <input type="text" placeholder="댓글을 입력해 주세요." class="border-ef comment-input">
+                                <div class="input-area-btn">
+                                    <input type="checkbox" class="secret-check"> 비밀글
+                                    <button type="button" class="regist-btn btn-02">등록하기</button>
+                                </div>
                             </div>
+
+                            <!-- 구독 -->
+                            <div class="blog-author-card">
+                                <div class="author-info">
+                                    <img class="profile-img" src="/img/detail/user-img1.png" alt="프로필 이미지">
+                                    <div class="author-details">
+                                        <div class="author-name">
+                                            <span class="name">블로그 작가 이름</span>
+                                        </div>
+                                        <div class="category">뱃지 + #카테고리 분야</div>
+                                    </div>
+                                </div>
+                                <p class="author-description">
+                                    일상템들 블로그는 축제와 국내여행, 해외여행의 볼거리와 먹을거리, 놀거리를 알려드립니다.  
+                                    그리고 좋은 여행지와 카페, 맛집을 엄선하여 추천합니다.
+                                </p>
+                                <button class="subscribe-btn btn-02">구독하기</button>
+                            </div>
+
                         </div>
                     </div>
                     
                     <!-- 2단: 최신글 / 인기글 -->
                     <div class="sidebar">
-                        <h3>최신 글</h3>
-                        <div class="posts-list">
-                            <div class="post-item">
-                                <img src="thumb1.jpg" alt="썸네일">
-                                <div>최신글 제목 1<br><small>2025-03-24</small></div>
+                        <!-- BEST3 -->
+                        <div class="best-list">
+                            <h2 class="sidebar-title">BEST3</h2>
+                            <div class="best-item">
+                                <div class="thumbnail">
+                                    <img src="/img/detail/best1.png" alt="음식 이미지">
+                                    <span class="rank">1</span>
+                                </div>
+                                <div class="info">
+                                    <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                    <p class="date">2025.03.19</p>
+                                </div>
                             </div>
-                            <div class="post-item">
-                                <img src="thumb2.jpg" alt="썸네일">
-                                <div>최신글 제목 2<br><small>2025-03-23</small></div>
-                            </div>
-                        </div>
                         
-                        <h3>인기 글</h3>
-                        <div class="posts-list">
-                            <div class="post-item">
-                                <img src="thumb3.jpg" alt="썸네일">
-                                <div>인기글 제목 1<br><small>2025-03-20</small></div>
+                            <div class="best-item">
+                                <div class="thumbnail">
+                                    <img src="/img/detail/best1.png" alt="음식 이미지">
+                                    <span class="rank">2</span>
+                                </div>
+                                <div class="info">
+                                    <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                    <p class="date">2025.03.16</p>
+                                </div>
                             </div>
-                            <div class="post-item">
-                                <img src="thumb4.jpg" alt="썸네일">
-                                <div>인기글 제목 2<br><small>2025-03-18</small></div>
+                        
+                            <div class="best-item">
+                                <div class="thumbnail">
+                                    <img src="/img/detail/best1.png" alt="음식 이미지">
+                                    <span class="rank">3</span>
+                                </div>
+                                <div class="info">
+                                    <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                    <p class="date">2025.03.19</p>
+                                </div>
                             </div>
                         </div>
+                      
+                        <!-- 최근글 -->
+                        <div class="latest-list m-t-90">
+                            <h2 class="sidebar-title">최근글</h2>
+                            <div class="best-item">
+                                <div class="thumbnail">
+                                    <img src="/img/detail/best1.png" alt="음식 이미지">
+                                </div>
+                                <div class="info">
+                                    <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                    <p class="date">2025.03.19</p>
+                                </div>
+                            </div>
+                        
+                            <div class="best-item">
+                                <div class="thumbnail">
+                                    <img src="/img/detail/best1.png" alt="음식 이미지">
+                                </div>
+                                <div class="info">
+                                    <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                    <p class="date">2025.03.16</p>
+                                </div>
+                            </div>
+                        
+                            <div class="best-item">
+                                <div class="thumbnail">
+                                    <img src="/img/detail/best1.png" alt="음식 이미지">
+                                </div>
+                                <div class="info">
+                                    <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                    <p class="date">2025.03.19</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
-
-
 
             </div>
         </div><!-- 여기까지 컨텐츠 -->
