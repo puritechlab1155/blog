@@ -215,7 +215,7 @@
     text-align: center;
 }
 
-/* .user-auth .keep_login {
+.user-auth .keep_login {
     width: fit-content;
     text-align: left;
     font-size: 16px;
@@ -241,9 +241,9 @@
     vertical-align: -5px;
     margin-right: 9px;
     cursor: pointer;
-} */
+}
 
-.user-auth .user_account {
+.user-auth ul.user_account {
     max-width: 580px;
     margin: 57px auto 0;
     gap: 16px 0;
@@ -253,13 +253,13 @@
     align-items: center;
 }
 
-.user-auth .user_account li {
+.user-auth ul.user_account li {
     flex: 1;
     min-width: 80px;
     position: relative;
 }
 
-.user-auth .user_account li::after {
+.user-auth ul.user_account li::after {
     content: "";
     display: inline-block;
     width: 3px;
@@ -271,17 +271,17 @@
     transform: translateY(-50%);
 }
 
-.user-auth .user_account li:last-child::after {
+.user-auth ul.user_account li:last-child::after {
     content: "";
     display: none;
 }
 
-.user-auth .user_account a {
+.user-auth ul.user_account a {
     font-size: 16px;
     color: #868686;
     font-weight: 400;
 }
-.user-auth .user_account a:hover {
+.user-auth ul.user_account a:hover {
     color: #FDCC32;
 }
 
@@ -332,7 +332,7 @@
     border-radius: 14px;
 }
 
-.user-auth-wrap .keep-wrap .user-auth-label {
+.user-auth-wrap .keep-wrap label {
     width: fit-content;
     display: flex;
     align-items: center;
@@ -340,7 +340,7 @@
     font-weight: 600;
 }
 
-.user-auth-wrap .keep-wrap .checkBox-img {
+.user-auth-wrap .keep-wrap .checkBox svg {
     margin-right: 10px;
     float: left;
     cursor: pointer;
@@ -556,7 +556,7 @@
         font-size: 14px;
     }
 
-    .user-auth .user_account a {
+    .user-auth ul.user_account a {
         font-size: 14px;
     }
 
@@ -564,7 +564,7 @@
         font-size: 14px;
     }
 
-    .user-auth .user_account li::after {
+    .user-auth ul.user_account li::after {
         width: 2px;
         height: 30px;
     }
