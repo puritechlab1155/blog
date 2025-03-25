@@ -1,0 +1,641 @@
+
+.user-btn {
+    width: 100%;
+    border-radius: 10px;
+    padding: 17.5px 0;
+    margin-bottom: 12px;
+    color: #202020;
+    background: #FDCC32;
+    font-size: 17px;
+}
+.user-btn:hover{
+    background: #FBC02D;
+    color: #202020;
+}
+
+.user-auth .login-wrap {
+    background-color: #FAFAFA;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.user-auth .user-auth-wrap {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    margin-top: max(5vw, 80px);
+    margin-bottom: 238px;
+    text-align: center;
+}
+
+.user-auth .user-auth-wrap .main-title {
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -0.36px;
+    font-style: normal;
+}
+
+
+
+
+.tab-view {
+    display: flex;
+    max-width: 452px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.video-tab {
+    max-width: 100%;
+}
+
+.tab-view li {
+    flex: 1;
+    padding: 17px 0;
+    font-size: 18px;
+    border-bottom: 2px solid;
+}
+
+.tab-view .tab-active {
+    color: #5228F4;
+    border-color: #5228F4;
+}
+
+.tab-view .tab-disb {
+    color: #CECECE;
+    border: none;
+}
+
+.tab-view .tab-item {
+    text-align: center;
+}
+
+.tab-view .tab-item .tab-link {
+    color: #CECECE;
+}
+
+
+
+.user-auth .user-auth-wrap .guide-title {
+    font-size: 18px;
+    margin: 40px 0;
+}
+
+.user-auth .user-auth-wrap .guide-title span {
+    display: block;
+    line-height: 160%;
+    margin-top: 14px;
+    color: #868686;
+    font-size: 16px;
+}
+
+.user-auth .user-auth-wrap .input_wrap {
+    margin-top: 30px;
+}
+
+.user-auth .find-wrap .input_wrap {
+    margin: 0;
+}
+
+.user-auth .input_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-auth .residentNum-input {
+    gap: 23px;
+    justify-content: start;
+}
+
+.user-auth .input_container label {
+flex: 1;
+}
+
+.user-auth .input_container .resident-label {
+flex: inherit;
+}
+
+.user-auth .input_container input {
+    width: 100%;
+    padding: 15px 16px;
+    box-sizing: border-box;
+    border: 1px solid #D9D9D9;
+    font-size: 18px;
+    font-weight: 400;
+    color: #292929;
+    letter-spacing: -0.36px;
+}
+
+.user-auth .input_container input:focus {
+    outline: 1px solid #FDCC32;
+}
+
+.user-auth .input_container input::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: #CECECE;
+}
+
+.user-auth .input_wrap .password_container {
+    display: block;
+    position: relative;
+}
+
+.user-auth .input_wrap .before-residentNum {
+    max-width: 263px;
+}
+
+.user-auth .input_wrap .after-residentNum {
+    max-width: 75px;
+    text-align: center;
+}
+
+.user-auth .keep_login {
+    width: fit-content;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.36px;
+    color: #999;
+}
+
+.user-auth .keep_login input[type="checkbox"] {
+    display: none;
+}
+
+.user-auth .keep_login input[type="checkbox"]:checked+label span.checkBox rect {
+    fill: #0A387C;
+}
+
+.user-auth label[for="keepLogin"] {
+    cursor: pointer;
+}
+
+.user-auth .keep_login span.checkBox {
+    display: inline-block;
+    vertical-align: -5px;
+    margin-right: 9px;
+    cursor: pointer;
+}
+
+.user-auth ul.user_account {
+    max-width: 580px;
+    margin: 0 auto;
+    margin-top: 57px;
+    gap: 16px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-auth ul.user_account li {
+    flex: 1;
+    min-width: 80px;
+    position: relative;
+}
+
+.user-auth ul.user_account li::after {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 36px;
+    background: #EEEEEE;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.user-auth ul.user_account li:last-child::after {
+    content: "";
+    display: none;
+}
+
+.user-auth ul.user_account a {
+    font-size: 16px;
+    color: #868686;
+    font-weight: 400;
+}
+.user-auth ul.user_account a:hover {
+    color: #FDCC32;
+}
+
+.user-auth .user-auth-wrap .btn_wrap {
+    margin-top: 20px;
+}
+
+.user-auth .find-result-wrap .btn_wrap {
+    margin-top: max(7vw, 60px);
+}
+
+.user-auth .eyeBtn {
+    position: absolute;
+    top: 55%;
+    right: 16px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.user-auth .input_container button {
+    width: 140px;
+    padding: 16px 0;
+}
+
+.user-auth .focusBtn {
+    background: #FAF9FE;
+    border-color: #5228F4;
+    color: #5228F4;
+}
+
+.user-auth .n-focusBtn {
+    border-color: #D3D3D3;
+    color: #D3D3D3;
+    background: #FAFAFA;
+}
+
+
+.find-result-wrap .id-result {
+    padding: 29.5px 20px;
+    background: #FAF9FE;
+    border: 1px solid #EFEAFF;
+    border-radius: 10px;
+}
+
+.find-result-wrap .id-result b {
+    color: #5228F4;
+}
+
+.user-auth-wrap .all-check {
+    padding: 20px 28px;
+    color: #5228F4;
+}
+
+.user-auth-wrap .keep-wrap {
+    overflow: hidden;
+    background: #FAF9FE;
+    border: 1px solid #EFEAFF;
+    border-radius: 14px;
+}
+
+.user-auth-wrap .keep-wrap label {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.user-auth-wrap .keep-wrap .checkBox svg {
+    margin-right: 10px;
+    float: left;
+    cursor: pointer;
+}
+
+.user-auth-wrap .separate-check {
+    padding: 20px 0;
+}
+
+.user-auth-wrap .separate-item {
+    padding: 18px 0;
+}
+
+.user-auth-wrap .separate-agree {
+    padding: 0 28px;
+    margin-bottom: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-auth-wrap .separate-agree .drop-icon {
+    padding: 4px 6px;
+    cursor: pointer;
+    transform: rotate(-90deg);
+    transition: all 0.1s linear;
+}
+
+.user-auth-wrap .separate-agree .drop-icon img {
+    float: left;
+}
+
+.user-auth-wrap .separate-agree .necessity {
+    margin-left: 4px;   
+}
+
+.user-auth-wrap .separate-check .terms-content {
+    padding: 0 28px;
+    height: 242px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.user-auth-wrap .separate-check .terms-content p {
+    line-height: 160%;
+}
+
+.user-auth-wrap .separate-check .terms-content p span {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.register-form .user-auth-wrap .guide-title {
+    margin: 40px 0 20px;
+}
+
+.register-form .guide-title span {
+    margin-bottom: 40px;
+}
+
+.register-form .user-auth-wrap .input_wrap {
+    margin-top: 0;
+}
+
+.register-finish .main-title {
+    font-size: clamp(28px, 4vw, 50px);
+    font-weight: 600;
+    letter-spacing: -0.36px;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: clamp(20px, 5vw, 40px);
+}
+
+.register-finish .img_wrap {
+    width: 100%;
+    max-width: 250px;
+    margin: clamp(20px, 5vw, 40px) auto;
+}
+
+.register-finish .img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.register-finish .textContainer {
+    margin: 30px auto 50px;
+    font-size: clamp(18px, 1vw, 22px);
+    line-height: 1.5;
+    text-align: center;
+}
+
+.register-finish .btn_wrap {
+    display: flex;
+    gap: 20px;
+}
+
+.register-finish .btn-container {
+    flex: 1;
+}
+
+.register-finish .homeBtn {
+    width: 100%;
+    padding: 17.5px 0;
+    margin-bottom: 12px;
+    color: #5228F4;
+    background: #fafafa;
+}
+
+.info .title {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.info .main-text {
+    font-size: 20px;
+}
+
+.info .gray-text {
+    display: block;
+    line-height: 160%;
+    margin-top: 14px;
+    color: #868686;
+    font-size: 16px;
+}
+
+.info .quitBtn {
+    background: #FAF9FE;
+    border-color: #5228F4;
+    color: #5228F4;
+    width: 90%;
+    padding: 17.5px 0;
+}
+
+.info .changeBtn {
+    background: #5228F4;
+    border-color: #FAF9FE;
+    color: #FAF9FE;
+    width: 100%;
+    padding: 17.5px 0;
+}
+
+.info .input_wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.info .input_container {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.info .input_container span {
+    width: 15%;
+    margin-right: 5px;
+    text-align: right;
+}
+
+.info .input_container .input_title input {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+    .user-auth .user-auth-wrap .input_wrap{
+        margin-top: 50px;
+    }
+    .user-auth .input_container input {
+        padding: 13px 13px;
+        font-size: 18px;
+    }
+    .user-btn{
+     padding: 15px 0;
+    }
+    .user-auth .user-auth-wrap .main-title {
+        font-size: 45px;
+    }
+
+    .find-pw .mob-br {
+        display: block;
+    }
+
+    .user-auth .residentNum-input {
+        gap: 16px;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .user-auth .input_container input {
+        padding: 9px 13px;
+        font-size: 15px;
+    }
+    .user-btn {
+        padding: 10px 0;
+    }
+    .user-auth .user-auth-wrap .main-title {
+        font-size: 35px;
+    }
+
+    .user-auth .login-wrap {
+        padding: 30px 20px;
+    }
+
+    .user-auth .input_container input::placeholder {
+        font-size: 14px;
+    }
+
+    .user-auth ul.user_account a {
+        font-size: 14px;
+    }
+
+    .user-auth button {
+        font-size: 14px;
+    }
+
+    .user-auth ul.user_account li::after {
+        width: 2px;
+        height: 30px;
+    }
+
+    .user-auth .user-auth-wrap .tab-view li {
+        font-size: 14px;
+        padding: 16px 0;
+    }
+
+    .user-auth .input_container button {
+        width: 102px;
+    }
+
+    .user-auth .user-auth-wrap .guide-title {
+        font-size: 14px;
+        margin: 30px 0;
+    }
+
+    .user-auth .user-auth-wrap .guide-title .mob-br {
+        display: block;
+    }
+
+    .find-result-wrap .id-result {
+        font-size: 14px;
+    }
+
+    .user-auth-wrap .keep-wrap label {
+        font-size: 16px
+    }
+
+    .user-auth-wrap .separate-check .terms-content {
+        font-size: 14px;
+    }
+
+    .user-auth-wrap .separate-check .terms-content p span {
+        font-size: 10px;
+    }
+
+    .user-auth-wrap .separate-agree .drop-icon img {
+        transform: scale(0.8);
+    }
+
+    .register-finish .img_wrap {
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .register-finish .textContainer {
+        margin: 10px auto 30px;
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .register-finish .btn_wrap {
+        gap: 10px;
+    }
+
+    .info {
+        width: 90%;
+    }
+
+    .info .changeBtn {
+        padding: 15px 0;
+    }
+
+    .info .title {
+        font-size: 28px;
+    }
+
+    .info .main-text {
+        font-size: 15px;
+    }
+
+    .info .gray-text {
+        font-size: 14px;
+    }
+
+    .info .main-text .mob-br {
+        display: block;
+    }
+
+    .info .pop-text {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .info .quitModal .pop-inner {
+        width: 80%;
+        padding: 10px 30px;
+    }
+
+    .info .changeModal .pop-inner {
+        width: 80%;
+        padding: 10px 20px;
+    }
+
+    .info .quitModal .mob-br {
+        display: block;
+    }
+
+    .info .quitModal .quit-text {
+        font-size: 12px;
+    }
+
+    .info .popBtn-wrap {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .info .quitModal button {
+        border-radius: 10px;
+        padding: 5px 8x;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .info .catagory {
+        font-size: 14px;
+    }
+
+    .info .input_container {
+        gap: 10px;
+    }
+
+    .info .input_container span {
+        margin-right: 0px;
+    }
+}

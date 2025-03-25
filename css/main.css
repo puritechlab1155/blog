@@ -43,8 +43,8 @@ visibility: visible;
 opacity: 0;  
 }
 .header .header-right .search-container.active {
-width: 500px;
-opacity: 1;
+  width: 550px;
+  opacity: 1;
 }
 
 .header .header-right .search-input {
@@ -966,6 +966,9 @@ margin-top: 40px;
   }
 }
 @media screen and (max-width: 767px) {
+.header .header-right .search-container.active {
+  width: 420px;
+  }
 
 .intro .sec1 .profile-box .profile-img {
   margin: 0 auto;
@@ -1081,6 +1084,9 @@ width: 100%;
 
 }
 @media screen and (max-width: 480px) {
+.header .header-right .search-container.active {
+  width: 320px;
+  }
 .intro .sec1 .profile-box .profile-img{
   width: 100px;
 }
