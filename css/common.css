@@ -1,19 +1,56 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 @font-face {
     font-family: 'Paperlogy-8ExtraBold';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
     font-style: normal;
 }
+@supports (-webkit-touch-callout: none) {
+    .Paperlogy-text {
+        font-weight: 10;  /* 사파리에서만 폰트 웨이트 낮추기 */
+    }
+}
+@supports (-webkit-appearance:none) {
+    input {
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      appearance: none !important;
+    }
+  }
+
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input::-webkit-contacts-auto-fill-button {
+  visibility: hidden !important;
+  display: none !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  right: 0 !important;
+}
+
+input::-webkit-credentials-auto-fill-button {
+  visibility: hidden !important;
+  display: none !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  right: 0 !important;
+}
+
 * {
-    font-family: 'Pretendard Variable';
+    font-family: 'Pretendard Variable', sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     letter-spacing: -0.25px;
     line-height: 158%;
 }
+
 body {
     background-color: #FEFEFE; 
     color: #333;
@@ -57,7 +94,11 @@ label {
 
 
 .paperlogy {
-font-family: 'Paperlogy-8ExtraBold', sans-serif;
+    font-family: 'Paperlogy-8ExtraBold', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-weight: 500;
 }
 
 /* <공통적용> */
@@ -71,6 +112,9 @@ font-family: 'Paperlogy-8ExtraBold', sans-serif;
     margin-top: 50px;
     }
 .m-t-60{
+    margin-top: 60px;
+}
+.m-t-90{
     margin-top: 60px;
 }
 .m-t-100{
