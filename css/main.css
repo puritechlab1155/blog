@@ -503,6 +503,7 @@ color: #202020;
 font-size: 14px;
 color: #FDCC32;
 text-decoration: none;
+cursor: pointer;
 }
 
 .intro .sec5 .follower-box .follower-info {

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/0321main.css">
+  <link rel="stylesheet" href="/css/main.css">
 
 </head>
 <body>
@@ -17,11 +17,13 @@
                 <a class="logo" href="index.html">BLOG SITE</a>
             </h1>
             <div class="header-right">
-                <div class="search-container" id="searchContainer">
-                    <input type="text" placeholder="검색어를 입력해주세요." class="search-input" />
+                <div class="search-container">
+                    <input type="text" placeholder="키워드를 입력하세요." class="search-input"/>
+                    <button type="button" class="search-submit"><img src="img/common/search2.png" alt="돋보기 이미지"></button>
                 </div>
-                <button type="button" class="search-icon" id="searchBtn">
-                    <img src="img/common/search.png" alt="돋보기 이미지">
+                <button type="button" class="icon-area">
+                    <img src="img/common/search.png" alt="돋보기 이미지" class="search-icon">
+                    <img src="img/common/close.png" alt="돋보기 이미지" class="close-icon">
                 </button>
                 <button type="button" class="ham-box" id="menuBtn">
                     <span class="ham"></span>
@@ -30,7 +32,7 @@
                 </button>
             </div>
         </div>
-    </header>
+      </header>
     <!-- 메뉴 패널 -->
     <div class="menu-panel" id="menuPanel">
         <ul class="menu-list-box">
