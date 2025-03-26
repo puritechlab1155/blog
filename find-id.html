@@ -67,7 +67,7 @@
                             <label for="phone" class="label-flex">
                                 <input class="input-01" type="tel" id="phone" placeholder="휴대전화">
                             </label>
-                            <button class="btn-01" type="button">인증번호 전송</button>
+                            <button class="codeBtn btn-01" type="button">인증번호 전송</button>
                         </div>
                         <div class="input_container m-t-20">
                             <label for="code" class="label-flex">
@@ -161,47 +161,7 @@
                     });
                 });
 
-            // -- 인증번호 입력란 포커스 시 확인 버튼 활성화 스타일
-            const NfocusBtn = document.querySelector(".n-focusBtn");
-            const codeInput = document.querySelector("#code");
 
-            codeInput.addEventListener("focus", function () {
-                NfocusBtn.style.borderColor = "#5228F4";
-                NfocusBtn.style.color = "#5228F4";
-                NfocusBtn.style.background = "#FAFAFA";
-            });
-
-            codeInput.addEventListener("blur", function () {
-                if (codeInput.value.length === 0) {
-                    NfocusBtn.style.borderColor = ""; // 기본값으로 되돌리기
-                    NfocusBtn.style.color = "";
-                    NfocusBtn.style.background = "";
-                }
-            });
-
-            // -- 인증번호 입력 시 확인 버튼 스타일 변경
-            codeInput.addEventListener("input", function () {
-                if (codeInput.value.length > 0) {
-                    checkBtn.style.borderColor = "#5228F4";
-                    checkBtn.style.color = "#5228F4";
-                    checkBtn.style.background = "#FAFAFA";
-                } else {
-                    checkBtn.style.borderColor = "";
-                    checkBtn.style.color = "";
-                    checkBtn.style.background = "";
-                }
-            });
-
-            // -- 휴대전화, 인증번호 인풋 숫자만 입력
-            document
-                .querySelectorAll("#phone, #code")
-                .forEach((input) => {
-                    input.addEventListener("input", function () {
-                        this.value = this
-                            .value
-                            .replace(/[^0-9]/g, ""); // 숫자만 입력 가능
-                    });
-                });
         </script>
     </body>
 </html>

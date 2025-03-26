@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Blog | 내 정보</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/login.css">
+
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-contain">
+                <h1>
+                    <a class="logo" href="index.html">BLOG SITE</a>
+                </h1>
+                <div class="header-right">
+                    <div class="search-container">
+                        <input type="text" placeholder="키워드를 입력하세요." class="search-input"/>
+                        <button type="button" class="search-submit"><img src="img/common/search2.png" alt="돋보기 이미지"></button>
+                    </div>
+                    <button type="button" class="icon-area">
+                        <img src="img/common/search.png" alt="돋보기 이미지" class="search-icon">
+                        <img src="img/common/close.png" alt="돋보기 이미지" class="close-icon">
+                    </button>
+                    <button type="button" class="ham-box" id="menuBtn">
+                        <span class="ham"></span>
+                        <span class="ham"></span>
+                        <span class="ham"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- 메뉴 패널 -->
+        <!-- 메뉴 패널 -->
+        <div class="menu-panel" id="menuPanel">
+            <ul class="menu-list-box">
+                <a href="index.html">
+                    <li class="panel-list">Home</li>
+                </a>
+                <a href="edit.html">
+                    <li class="panel-list">Edit</li>
+                </a>
+                <a href="myInfo.html">
+                    <li class="panel-list">My Info</li>
+                </a>
+                <a class="log-in" href="login.html">
+                    <li class="panel-list">Log In</li>
+                </a>
+                <!-- 로그아웃 상태시 노출 -->
+                <a class="log-out" href="#">
+                    <li class="panel-list">Log Out</li>
+                </a>
+                <!-- 로그인 상태시 노출 -->
+            </ul>
+        </div>
+        <!-- 여기까지 메뉴 패널 -->
+
+        <div class="content-wrap">
+            <!-- 컨텐츠 시작 -->
+            <div id="main" class="user-auth">
+                <div class="user-auth-wrap info">
+                    <h3 class="main-title paperlogy">내 정보</h3>
+                    <span class="guide-title m-top20">
+                        수정할 정보를 선택하여 변경해주세요.
+                        <br>
+                        개인정보보호를 위하여 <br class="mob-br"> 기존의 비밀번호를 한번 더 입력해주세요.</span>
+                    <div class="profile">
+                        <div class="my_img">
+                            <img src="img/myInfo/profile.png" alt="내 프로필 이미지">
+                        </div>
+                        <div class="editBtn">
+                            <button type="button" id="editButton" class="edit-Btn">
+                                <img class="camera" src="img/myInfo/camera.svg" alt="카메라 아이콘">
+                                <div class="edit-text">편집</div>
+                            </button>
+                            <input class="file-input" type="file" id="fileInput" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="input_wrap m-t-40">
+                        <div class="input_container">
+                            <span class="category">닉네임</span>
+                            <label for="nickname" class="input_title">
+                                <input class="input-01" type="text" id="nickname">
+                            </label>
+                            <button class="btn-02" type="button" onclick="showModal('changeModal')">변경하기</button>
+                        </div>
+                        <div class="input_container m-t-20">
+                            <span class="category">아이디</span>
+                            <label for="id" class="input_title">
+                                <input class="input-01" type="text" id="id">
+                            </label>
+                            <button class="btn-02" type="button" onclick="showModal('changeModal')">변경하기</button>
+                        </div>
+                        <div class="input_container m-t-20">
+                            <span class="category">비밀번호</span>
+                            <label for="pw" class="input_title">
+                                <input class="input-01" type="password" id="pw">
+                            </label>
+                            <button class="btn-02" type="button" onclick="showModal('changeModal')">변경하기</button>
+                        </div>
+                    </div>
+                    <div class="btn_wrap m-t-50">
+                        <button type="button" class="btn-01" onclick="showModal('quitModal')">탈퇴하기</button>
+                    </div>
+                </div>
+                <!-- 탈퇴하기 클릭 확인 모달창 -->
+                <div class="refresh-check-pop pop-wrap hide-pop quitModal">
+                    <div class="pop-inner">
+                        <p class="pop-text">
+                            탈퇴하시겠습니까?
+                            <span class="pop-text-caption quit-text">탈퇴하시면 진행중인
+                                <br class="mob-br">모든 소스가 사라집니다.</span>
+                        </p>
+                        <div class="popBtn-wrap">
+                            <div class="popBtn01 popBtn-item">
+                                <button class="btn-01" type="button" onclick="closeModal()">돌아가기</button>
+                            </div>
+                            <div class="popBtn02 popBtn-item">
+                                <button class="btn-02" type="button">탈퇴하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 변경하기 클릭 확인 모달창 -->
+                <div class="refresh-check-pop pop-wrap hide-pop changeModal">
+                    <div class="pop-inner">
+                        <p class="pop-text">
+                            비밀번호 확인
+                        </p>
+                        <div class="input_container m-t-20">
+                            <label for="pw" class="input_title">
+                                <input class="input-01" type="password" id="pw" placeholder="기존 비밀번호 입력">
+                            </label>
+                        </div>
+                        <div class="popBtn-wrap">
+                            <div class="popBtn02 popBtn-item">
+                                <button class="btn-02" type="button" onclick="closeModal()">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 여기까지 컨텐츠 -->
+
+        <!-- 푸터 -->
+        <footer class="footer">
+            <div class="footer-contain">
+                <!-- 소셜 아이콘 -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="/img/common/facebook.png" alt="facebook">
+                    </a>
+                    <a href="https://www.spacex.com" target="_blank">
+                        <img src="/img/common/xmark.png" alt="xmark">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="/img/common/instagram.png" alt="instagram">
+                    </a>
+                    <a href="https://blog.naver.com" target="_blank">
+                        <img src="/img/common/blogger.png" alt="blogger">
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank">
+                        <img src="/img/common/youtube.png" alt="youtube">
+                    </a>
+                    <a href="mailto:example@email.com">
+                        <img src="/img/common/email.png" alt="email">
+                    </a>
+                </div>
+
+                <div class="footer-text">
+                    BlogStory Ⓒ 2025 Magazine Lab
+                </div>
+
+            </div>
+        </footer>
+
+        <script src="/js/script.js"></script>
+
+        <script>
+
+            // 내 정보 수정 프로필 이미지 편집 클릭 시 파일 로드
+            document
+                .getElementById('editButton')
+                .addEventListener('click', function () {
+                    document
+                        .getElementById('fileInput')
+                        .click(); // 파일 입력 클릭
+                });
+
+            // 파일이 선택되었을 때의 이벤트 처리
+            document
+                .getElementById('fileInput')
+                .addEventListener('change', function (event) {
+                    const file = event
+                        .target
+                        .files[0]; // 선택된 파일
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            // 이미지 미리보기 또는 다른 작업을 여기에 추가
+                            console.log(e.target.result); // 선택한 이미지의 데이터 URL
+
+                            // .my_img > img 요소의 src 속성을 선택한 이미지의 데이터 URL로 업데이트
+                            document
+                                .querySelector('.my_img > img')
+                                .src = e.target.result;
+                        }
+                        reader.readAsDataURL(file); // 파일을 데이터 URL로 읽기
+                    }
+                });
+            // 모달 열기
+            function showModal(modalClass) {
+                // 모든 모달을 닫고, 해당 class를 가진 모달만 열기
+                document
+                    .querySelectorAll('.refresh-check-pop')
+                    .forEach(modal => {
+                        modal
+                            .classList
+                            .add('hide-pop');
+                    });
+
+                // 전달받은 class를 가진 모달을 열기
+                document
+                    .querySelector(`.${modalClass}`)
+                    .classList
+                    .remove('hide-pop');
+            }
+
+            // 모달 닫기
+            function closeModal() {
+                // 모든 모달을 닫기
+                document
+                    .querySelectorAll('.refresh-check-pop')
+                    .forEach(modal => {
+                        modal
+                            .classList
+                            .add('hide-pop');
+                    });
+            }
+        </script>
+
+    </body>
+</html>

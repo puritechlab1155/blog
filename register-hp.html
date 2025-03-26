@@ -67,7 +67,7 @@
                             <label for="phone" class="input_title label-flex">
                                 <input class="input-01" type="tel" id="phone" placeholder="휴대전화">
                             </label>
-                            <button class="btn-01" type="button">인증번호 전송</button>
+                            <button class="codeBtn btn-01" type="button">인증번호 전송</button>
                         </div>
                         <div class="input_container m-t-20">
                             <label for="code" class="password_container label-flex">
@@ -149,9 +149,9 @@
                                 btn.textContent = "인증번호 받기";
                                 countdowns.delete(btn);
 
-                                // 타이머 종료 후 .NfocusBtn 스타일 원래대로 복구 (선택 사항)
-                                if (NfocusBtn) {
-                                    NfocusBtn
+                                // 타이머 종료 후 .checkBtn 스타일 원래대로 복구 (선택 사항)
+                                if (checkBtn) {
+                                    checkBtn
                                         .classList
                                         .remove("codeBtn");
                                 }
@@ -161,37 +161,6 @@
                         countdowns.set(btn, countdown);
                     });
                 });
-
-            // -- 인증번호 입력란 포커스 시 확인 버튼 활성화 스타일
-            const NfocusBtn = document.querySelector(".n-focusBtn");
-            const codeInput = document.querySelector("#code");
-
-            codeInput.addEventListener("focus", function () {
-                NfocusBtn.style.borderColor = "#5228F4";
-                NfocusBtn.style.color = "#5228F4";
-                NfocusBtn.style.background = "#FAFAFA";
-            });
-
-            codeInput.addEventListener("blur", function () {
-                if (codeInput.value.length === 0) {
-                    NfocusBtn.style.borderColor = ""; // 기본값으로 되돌리기
-                    NfocusBtn.style.color = "";
-                    NfocusBtn.style.background = "";
-                }
-            });
-
-            // -- 인증번호 입력 시 확인 버튼 스타일 변경
-            codeInput.addEventListener("input", function () {
-                if (codeInput.value.length > 0) {
-                    NfocusBtn.style.borderColor = "#5228F4";
-                    NfocusBtn.style.color = "#5228F4";
-                    NfocusBtn.style.background = "#FAFAFA";
-                } else {
-                    NfocusBtn.style.borderColor = "";
-                    NfocusBtn.style.color = "";
-                    NfocusBtn.style.background = "";
-                }
-            });
 
             // -- 휴대전화, 인증번호 인풋 숫자만 입력
             document
