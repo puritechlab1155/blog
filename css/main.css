@@ -24,7 +24,9 @@
 }
 .header .logo {
   font-weight: bold;
-  color: #FDCC32; /* 노란색 */
+  color: #FDCC32; 
+  font-family: 'Paperlogy';
+  font-weight: 700;
 }
 .header .header-right {
   display: flex;
@@ -163,6 +165,8 @@ cursor: default;
   font-weight: bold;
   text-align: center;
   line-height: 160%;
+  font-family: 'Paperlogy';
+  font-weight: 700;
 }
 .menu-panel .panel-list:hover {
   background-color: #FDCC32;
