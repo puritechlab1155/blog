@@ -1022,11 +1022,7 @@ color: #afafaf;
 .edit .right-panel .w-r {
   width: 62%;
 }
-.edit .right-panel select,
-.edit .right-panel button {
-  margin-bottom: 10px;
-  padding: 8px 12px;
-}
+
 .edit .right-panel .complete {
   background-color: #ffeb3b;
   border: none;
