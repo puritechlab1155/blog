@@ -157,28 +157,28 @@ textarea {
     background-color: #fff; 
     border-radius: 4px;
     border: 1px solid #727272;
-  }
-  
-  /* 체크 시 배경색 변경 */
-  .custom-checkbox input:checked ~ .checkmark {
+}
+
+/* 체크 시 배경색 변경 */
+.custom-checkbox input:checked ~ .checkmark {
     background-color: #FDCC32; /* 체크 시 배경색 */
     border: none;
-  }
-  
-  /* 체크 표시 모양 */
-  .checkmark:after {
+}
+
+/* 체크 표시 모양 */
+.checkmark:after {
     content: "";
     position: absolute;
     display: none;
-  }
-  
-  /* 체크 시 체크 표시 보여주기 */
-  .custom-checkbox input:checked ~ .checkmark:after {
+}
+
+/* 체크 시 체크 표시 보여주기 */
+.custom-checkbox input:checked ~ .checkmark:after {
     display: block;
-  }
-  
-  /* 체크 표시 스타일 */
-  .custom-checkbox .checkmark:after {
+}
+
+/* 체크 표시 스타일 */
+.custom-checkbox .checkmark:after {
     left: 7px;
     top: 2px;
     width: 5px;
@@ -188,9 +188,9 @@ textarea {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-  } /* 여기까지 체크박스 커스텀 */
+} /* 여기까지 체크박스 커스텀 */
 
-  
+
 .paperlogy {
     font-family: 'Paperlogy-8ExtraBold', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -281,6 +281,56 @@ margin-top: 100px;
     background-color: #cc9900; /* 클릭 시 배경색 */
     color: #ffffff; /* 클릭 시 글자색 */
 }
+.btn-04 {
+    border-color: #919191;
+    color: #717171;
+    background: #FAFAFA;
+    border: 1px solid #cfcfcf;
+    border-radius: 10px;
+    padding: 16px 0;
+}
+.btn-04:hover {
+    border-color: #919191;
+    color: #717171;
+    background: #ececec;
+    border: 1px solid #fffdea;
+    border-radius: 10px;
+}
+
+.user-btn {
+    width: 100%;
+    border-radius: 10px;
+    padding: 17.5px 0;
+    margin-bottom: 12px;
+    color: #202020;
+    background: #FDCC32;
+    font-size: 17px;
+}
+.user-btn:hover {
+    background: #FBC02D;
+    color: #202020;
+}
+
+.input-01 {
+    width: 100%;
+    padding: 15px 16px;
+    box-sizing: border-box;
+    border: 1px solid #D9D9D9;
+    font-size: 18px;
+    font-weight: 400;
+    color: #292929;
+    letter-spacing: -0.36px;
+}
+.input-01:focus {
+    outline: 1px solid #FDCC32;
+}
+
+.input-01::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: #CECECE;
+}
+
 .radius-20{
     border-radius: 20px;
 }
@@ -299,4 +349,73 @@ margin-top: 100px;
     width: 24px;
     height: 24px;
 }
+
+/* 팝업 */
+.show-pop {
+    display: block;
+}
+
+.hide-pop {
+    display: none;
+}
+
+.pop-wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background: #00000081;
+    border: 1px solid #ddd;
+}
+.pop-inner {
+    width: fit-content;
+    padding: 30px 50px;
+    background: #fefefe;
+    border: 2px solid #eee;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pop-text {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.refresh-check-pop .pop-text {
+    text-align: center;
+}
+
+.pop-text-caption {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #868686;
+}
+
+.popBtn-wrap {
+    width: 100%;
+    margin-top: 32px;
+    display: flex;
+    gap: 20px;
+}
+
+.popBtn-wrap .popBtn-item {
+    flex: 1;
+}
+.popBtn-wrap .btn-01 {
+    padding: 10px 20px !important;
+    width: 100% !important;
+}
+.popBtn-wrap .btn-02 {
+    width: 100%;
+    min-width: none !important;
+    max-width: none !important;
+} 
+
 /* 인풋태그등 스타일 촉화 추가... */
