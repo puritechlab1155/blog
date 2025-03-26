@@ -1,185 +1,220 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>블로그 게시글 작성</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/main.css">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>블로그 게시글 작성</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/main.css">
 
-</head>
-<body>
-    <header class="header">
-        <div class="header-contain">
-            <h1>
-                <a class="logo" href="index.html">BLOG SITE</a>
-            </h1>
-            <div class="header-right">
-                <div class="search-container">
-                    <input type="text" placeholder="키워드를 입력하세요." class="search-input"/>
-                    <button type="button" class="search-submit"><img src="img/common/search2.png" alt="돋보기 이미지"></button>
-                </div>
-                <button type="button" class="icon-area">
-                    <img src="img/common/search.png" alt="돋보기 이미지" class="search-icon">
-                    <img src="img/common/close.png" alt="돋보기 이미지" class="close-icon">
-                </button>
-                <button type="button" class="ham-box" id="menuBtn">
-                    <span class="ham"></span>
-                    <span class="ham"></span>
-                    <span class="ham"></span>
-                </button>
-            </div>
-        </div>
-    </header>
-    <!-- 메뉴 패널 -->
-    <div class="menu-panel" id="menuPanel">
-        <ul class="menu-list-box">
-            <a href="index.html"><li class="panel-list">Home</li></a>
-            <a href="edit.html"><li class="panel-list">Edit</li></a>
-            <a href="myInfo.html"><li class="panel-list">My Info</li></a>
-            <a class="log-in" href="login.html"><li class="panel-list">Log In</li></a><!-- 로그아웃 상태시 노출 -->
-            <a class="log-out" href="#"><li class="panel-list">Log Out</li></a><!-- 로그인 상태시 노출 -->
-        </ul>
-    </div><!-- 여기까지 메뉴 패널 -->
-
-
-
-    <div class="content-wrap">
-        <!-- 컨텐츠 시작 -->
-        <div id="main">
-            <div class="edit m-t-100">
-
-                <div class="container">
-                    <div class="icon-bar">
-                        <button type="button" class="photo-btn icon-btn01">
-                            <div class="icon-bg">
-                                <img src="img/edit/photo-icon.png" alt="사진 첨부 아이콘">
-                            </div>
-                            <span class="icon-text f-14">사진 첨부</span>
-                        </button>
-                        <button type="button" class="video-btn icon-btn01">
-                            <div class="icon-bg">
-                                <img src="img/edit/video-icon.png" alt="영상 첨부 아이콘">
-                            </div>
-                            <span class="icon-text f-14">영상 첨부</span>
-                        </button>
-                        <button type="button" class="link-btn icon-btn01">
-                            <div class="icon-bg">
-                                <img src="img/edit/link-icon.png" alt="링크 아이콘">
-                            </div>
-                            <span class="icon-text f-14">링크</span>
-                        </button>
-                        <button type="button" class="place-btn icon-btn01">
-                            <div class="icon-bg">
-                                <img src="img/edit/place-icon.png" alt="장소 아이콘">
-                            </div>
-                            <span class="icon-text f-14">장소</span>
-                        </button>
-                        <button type="button" class="file-btn icon-btn01">
-                            <div class="icon-bg">
-                                <img src="img/edit/file-icon.png" alt="파일 첨부 아이콘">
-                            </div>
-                            <span class="icon-text f-14">파일 첨부</span>
-                        </button>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-contain">
+                <h1>
+                    <a class="logo" href="index.html">BLOG SITE</a>
+                </h1>
+                <div class="header-right">
+                    <div class="search-container">
+                        <input type="text" placeholder="키워드를 입력하세요." class="search-input"/>
+                        <button type="button" class="search-submit"><img src="img/common/search2.png" alt="돋보기 이미지"></button>
                     </div>
-                    <div class="content">
-                        <!-- 왼쪽 -->
-                        <div class="left-panel">
-                            <div class="title-container">
-                                <textarea class="edit-title" placeholder="제목을 작성해 주세요."></textarea>
-                            
-                                <div class="btn-area">
-                                    <button type="button" class="color-btn icon-btn01">
-                                        <div class="icon-bg">
-                                            <img src="img/edit/color-icon.png" alt="텍스트 컬러 아이콘">
-                                        </div>
+                    <button type="button" class="icon-area">
+                        <img src="img/common/search.png" alt="돋보기 이미지" class="search-icon">
+                        <img src="img/common/close.png" alt="돋보기 이미지" class="close-icon">
+                    </button>
+                    <button type="button" class="ham-box" id="menuBtn">
+                        <span class="ham"></span>
+                        <span class="ham"></span>
+                        <span class="ham"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- 메뉴 패널 -->
+        <div class="menu-panel" id="menuPanel">
+            <ul class="menu-list-box">
+                <a href="index.html">
+                    <li class="panel-list">Home</li>
+                </a>
+                <a href="edit.html">
+                    <li class="panel-list">Edit</li>
+                </a>
+                <a href="myInfo.html">
+                    <li class="panel-list">My Info</li>
+                </a>
+                <a class="log-in" href="login.html">
+                    <li class="panel-list">Log In</li>
+                </a>
+                <!-- 로그아웃 상태시 노출 -->
+                <a class="log-out" href="#">
+                    <li class="panel-list">Log Out</li>
+                </a>
+                <!-- 로그인 상태시 노출 -->
+            </ul>
+        </div>
+        <!-- 여기까지 메뉴 패널 -->
+
+        <div class="content-wrap">
+            <!-- 컨텐츠 시작 -->
+            <div id="main">
+                <div class="edit m-t-100">
+
+                    <div class="container">
+                        <div class="icon-bar">
+                            <button type="button" class="photo-btn icon-btn01">
+                                <div class="icon-bg">
+                                    <img src="img/edit/photo-icon.png" alt="사진 첨부 아이콘">
+                                </div>
+                                <span class="icon-text f-14">사진 첨부</span>
+                            </button>
+                            <button type="button" class="video-btn icon-btn01">
+                                <div class="icon-bg">
+                                    <img src="img/edit/video-icon.png" alt="영상 첨부 아이콘">
+                                </div>
+                                <span class="icon-text f-14">영상 첨부</span>
+                            </button>
+                            <button type="button" class="link-btn icon-btn01">
+                                <div class="icon-bg">
+                                    <img src="img/edit/link-icon.png" alt="링크 아이콘">
+                                </div>
+                                <span class="icon-text f-14">링크</span>
+                            </button>
+                            <button type="button" class="place-btn icon-btn01">
+                                <div class="icon-bg">
+                                    <img src="img/edit/place-icon.png" alt="장소 아이콘">
+                                </div>
+                                <span class="icon-text f-14">장소</span>
+                            </button>
+                            <button type="button" class="file-btn icon-btn01">
+                                <div class="icon-bg">
+                                    <img src="img/edit/file-icon.png" alt="파일 첨부 아이콘">
+                                </div>
+                                <span class="icon-text f-14">파일 첨부</span>
+                            </button>
+                        </div>
+                        <div class="content">
+                            <!-- 왼쪽 -->
+                            <div class="left-panel">
+                                <div class="title-container">
+                                    <textarea class="edit-title" placeholder="제목을 작성해 주세요."></textarea>
+                                    <div class="btn-area">
+                                        <button type="button" class="color-btn icon-btn01">
+                                            <div class="icon-bg">
+                                                <img src="img/edit/color-icon.png" alt="텍스트 컬러 아이콘">
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <textarea class="text-area" placeholder="내용을 작성해 주세요."></textarea>
+                            </div>
+                            <!-- 오른쪽 -->
+                            <div class="right-panel">
+                                <div class="style-flex-box first-box">
+                                    <select class="f-14">
+                                        <option>나눔 바른 고딕</option>
+                                        <option>굴림</option>
+                                        <option>돋움</option>
+                                    </select>
+                                    <select class="f-14 w-r">
+                                        <option>본문 1</option>
+                                        <option>제목 1</option>
+                                        <option>제목 2</option>
+                                    </select>
+                                </div>
+                                <div class="style-flex-box second-box">
+                                    <button type="button" class="bold-btn btn-04">
+                                        <img class="edit-img" src="img/edit/blod-icon.png" alt="글씨 굵게 아이콘">
+                                    </button>
+                                    <button type="button" class="italic-btn btn-04">
+                                        <img class="edit-img" src="img/edit/italic-icon.png" alt="기울기 아이콘">
                                     </button>
                                 </div>
-                                
+                                <div class="style-flex-box third-box">
+                                    <button type="button" class="underline-btn btn-04">
+                                        <img class="edit-img" src="img/edit/underline-icon.png" alt="밑줄 아이콘">
+                                    </button>
+                                    <button type="button" class="strike-btn btn-04">
+                                        <img class="edit-img" src="img/edit/strikeline-icon.png" alt="취소선 아이콘">
+                                    </button>
+                                </div>
+                                <div class="style-flex-box four-box">
+                                    <button type="button" class="color-btn btn-04">
+                                        <img class="edit-img" src="img/edit/color-icon.png" alt="글자색 아이콘">
+                                    </button>
+                                    <button type="button" class="backcolor-btn btn-04">
+                                        <img class="edit-img" src="img/edit/backcolor-icon.png" alt="배경색 아이콘">
+                                    </button>
+                                </div>
+                                <div class="style-flex-box five-box">
+                                    <button type="button" class="array-btn btn-04">
+                                        <img class="edit-img" src="img/edit/array-icon.png" alt="정렬 아이콘">
+                                    </button>
+                                    <button type="button" class="index-btn btn-04">
+                                        <img class="edit-img" src="img/edit/index-icon.png" alt="배경색 아이콘">
+                                    </button>
+                                </div>
+                                <div class="style-flex-box six-box m-t-20">
+                                    <button type="button" class="btn-01" >미리<br class="mob-br">보기</button>
+                                    <button type="button" class="btn-01" >임시<br class="mob-br">저장</button>
+                                </div>
+                                <div class="style-flex-box last-box m-t-20">
+                                    <button class="complete user-btn">완료</button>
+                                </div>
                             </div>
-                            <textarea class="text-area" placeholder="내용을 작성해 주세요."></textarea>
-                        </div>
-                        <!-- 오른쪽 -->
-                        <div class="right-panel">
-                            <div class="style-flex-box">
-                                <select class="f-14">
-                                    <option>나눔 바른 고딕</option>
-                                    <option>굴림</option>
-                                    <option>돋움</option>
-                                </select>
-                                <select class="f-14 w-r">
-                                    <option>본문 1</option>
-                                    <option>제목 1</option>
-                                    <option>제목 2</option>
-                                </select>
-                            </div>
-                            <div class="style-flex-box">
-                                <button>B</button>
-                                <button>U</button>
-                            </div>
-                            <div class="style-flex-box">
-                                <button>S</button>
-                                <button>T</button>
-                            </div>
-                            <div class="style-flex-box">
-                                <button>T</button>
-                                <button>≡</button>
-                            </div>
-                                <div class="style-flex-box">
-                                <button>미리 보기</button>
-                                <button>임시 저장</button>
-                            </div>
-                            <button class="complete">완료</button>
                         </div>
                     </div>
+
+                </div>
+            </div>
+            <!-- 여기까지 컨텐츠 -->
+        </div>
+
+        <!-- 푸터 -->
+        <footer class="footer">
+            <div class="footer-contain">
+                <!-- 소셜 아이콘 -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="/img/common/facebook.png" alt="facebook">
+                    </a>
+                    <a href="https://www.spacex.com" target="_blank">
+                        <img src="/img/common/xmark.png" alt="xmark">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="/img/common/instagram.png" alt="instagram">
+                    </a>
+                    <a href="https://blog.naver.com" target="_blank">
+                        <img src="/img/common/blogger.png" alt="blogger">
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank">
+                        <img src="/img/common/youtube.png" alt="youtube">
+                    </a>
+                    <a href="mailto:example@email.com">
+                        <img src="/img/common/email.png" alt="email">
+                    </a>
+                </div>
+
+                <div class="footer-text">
+                    BlogStory Ⓒ 2025 Magazine Lab
                 </div>
 
             </div>
-        </div><!-- 여기까지 컨텐츠 -->
-    </div>
+        </footer>
 
+        <script src="/js/script.js"></script>
 
-    <!-- 푸터 -->
-    <footer class="footer">
-        <div class="footer-contain">
-            <!-- 소셜 아이콘 -->
-            <div class="social-icons">
-                <a href="https://www.facebook.com" target="_blank">
-                     <img src="/img/common/facebook.png" alt="facebook">
-                </a>
-                <a href="https://www.spacex.com" target="_blank">
-                    <img src="/img/common/xmark.png" alt="xmark">
-                </a>
-                <a href="https://www.instagram.com" target="_blank">
-                    <img src="/img/common/instagram.png" alt="instagram">
-                </a>
-                <a href="https://blog.naver.com" target="_blank">
-                    <img src="/img/common/blogger.png" alt="blogger">
-                </a>
-                <a href="https://www.youtube.com" target="_blank">
-                    <img src="/img/common/youtube.png" alt="youtube">
-                </a>
-                <a href="mailto:example@email.com">
-                    <img src="/img/common/email.png" alt="email">
-                </a>
-            </div>
-           
-            <div class="footer-text">
-                BlogStory Ⓒ 2025 Magazine Lab
-            </div>
-        
-        </div>
-    </footer>
-    
-    <script src="/js/script.js"></script>
+        <script>
+            function formatText(command) {
+                document.execCommand(command, false, null);
+            }
+        </script>
 
-    <script>
-        function formatText(command) {
-            document.execCommand(command, false, null);
-        }
-    </script>
-
-</body>
+    </body>
 </html>
