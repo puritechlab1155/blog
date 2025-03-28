@@ -124,7 +124,7 @@ select {
     width: 100%; /* 너비 조절 */
     cursor: pointer; /* 마우스 오버 시 커서 변경 */
     /* 화살표 추가 */
-    background-image: url('/img/edit/select-arrow.png');
+    background-image: url('../img/edit/select-arrow.png');
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 16px;
