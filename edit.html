@@ -99,6 +99,17 @@
                                 <span class="icon-text f-14">파일 첨부</span>
                             </button>
                         </div>
+                        <!-- 링크 입력 모달창 -->
+                        <div id="linkModal" class="link-modal">
+                            <div class="modal-content">
+                                <span class="close-btn">&times;</span>
+                                <h3 class="f-18">링크 입력</h3>
+                                <input class="border-ef m-t-40" type="text" id="linkName" placeholder="링크명 입력">
+                                <input class="border-ef m-t-20" type="url" id="linkURL" placeholder="URL 입력">
+                                <button class="btn-01 m-t-20" id="submitLink">입력</button>
+                            </div>
+                        </div>
+
                         <div class="content">
                             <!-- 왼쪽 -->
                             <div class="left-panel">
@@ -110,6 +121,15 @@
                                                 <img src="img/edit/color-icon.png" alt="제목 컬러 변경 아이콘">
                                             </div>
                                         </button>
+                                        <!-- 컬러패널 -->
+                                        <div class="style-pop"> <!-- 클릭했을때 나타나기-->
+                                            <ul class="array-box title-color">
+                                                <button type="button" class="pop-list"><div class="circle color-title"></div></button>
+                                                <button type="button" class="pop-list"><div class="circle color-b"></div></button>
+                                                <button type="button" class="pop-list"><div class="circle color-c"></div></button>
+                                            </ul>
+                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="text-area-border">
@@ -152,23 +172,54 @@
                                     <button type="button" class="color-btn btn-04">
                                         <img class="edit-img" src="img/edit/color-icon.png" alt="본문 폰트 컬러 아이콘">
                                     </button>
+                                    <!-- 컬러 패널 -->
+                                    <div class="style-pop"> <!-- 클릭했을때 나타나기-->
+                                        <ul class="array-box">
+                                            <button type="button" class="pop-list"><div class="circle color-a"></div></button>
+                                            <button type="button" class="pop-list"><div class="circle color-b"></div></button>
+                                            <button type="button" class="pop-list"><div class="circle color-c"></div></button>
+                                        </ul>
+                                    </div>
                                     <button type="button" class="backcolor-btn btn-04">
                                         <img class="edit-img" src="img/edit/backcolor-icon.png" alt="본문 폰트 배경색 아이콘">
                                     </button>
+                                    <!-- 컬러 패널 -->
+                                    <div class="style-pop"> <!-- 클릭했을때 나타나기-->
+                                        <ul class="array-box">
+                                            <button type="button" class="pop-list"><div class="circle color-a"></div></button>
+                                            <button type="button" class="pop-list"><div class="circle color-b"></div></button>
+                                            <button type="button" class="pop-list"><div class="circle color-c"></div></button>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="style-flex-box five-box">
                                     <button type="button" class="array-btn btn-04">
-                                        <img class="edit-img" src="img/edit/array-icon.png" alt="왼쪽 정렬 아이콘">
+                                        <img class="edit-img" src="img/edit/array-icon.png" alt="정렬 아이콘">
                                     </button>
+                                    <!-- 정렬 패널 -->
+                                    <div class="style-pop"> <!-- 클릭했을때 나타나기-->
+                                        <ul class="array-box">
+                                            <button type="button" class="pop-list"><img class="array-img" src="img/edit/array-left.png" alt="왼쪽 정렬 아이콘"></button>
+                                            <button type="button" class="pop-list"><img class="array-img" src="img/edit/array-center.png" alt="가운데 정렬 아이콘"></button>
+                                            <button type="button" class="pop-list"><img class="array-img" src="img/edit/array-right.png" alt="오른쪽 정렬 아이콘"></button>
+                                        </ul>
+                                    </div>
                                     <button type="button" class="index-btn btn-04">
-                                        <img class="edit-img" src="img/edit/index-icon.png" alt="가운데 정렬  아이콘">
+                                        <img class="edit-img" src="img/edit/index-icon.png" alt="리스트 스타일 아이콘">
                                     </button>
+                                    <!-- 리스트 스터알 패널 -->
+                                    <div class="style-pop"> <!-- 클릭했을때 나타나기-->
+                                        <ul class="array-box">
+                                            <button type="button" class="style-circle"><div class="style-flex g-15"><span class="circle"></span><span class="circle"></span></div></button>
+                                            <button type="button" class="style-num"><div class="style-flex"><span class="number">1.</span><span class="number">2.</span></div></button>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="style-flex-box six-box m-t-20">
+                                <div class="style-flex-box six-box">
                                     <button type="button" class="btn-01 preview">미리보기</button>
                                     <button type="button" class="btn-01 save">임시저장</button>
                                 </div>
-                                <div class="style-flex-box last-box m-t-20">
+                                <div class="style-flex-box last-box">
                                     <button class="complete user-btn">완료</button>
                                 </div>
                             </div>
@@ -218,6 +269,55 @@
             function formatText(command) {
                 document.execCommand(command, false, null);
             }
+
+            // 링크버튼 모달
+            document.addEventListener("DOMContentLoaded", function () {
+                const modal = document.getElementById("linkModal");
+                const openBtn = document.querySelector(".link-btn");
+                const closeBtn = document.querySelector(".close-btn");
+                const submitBtn = document.getElementById("submitLink");
+
+                // 모달 열기
+                openBtn.addEventListener("click", function () {
+                    modal.style.display = "flex";
+                });
+
+                // 모달 닫기
+                closeBtn.addEventListener("click", function () {
+                    modal.style.display = "none";
+                });
+
+                // 입력 버튼 클릭 시
+                submitBtn.addEventListener("click", function () {
+                    const linkName = document.getElementById("linkName").value;
+                    const linkURL = document.getElementById("linkURL").value;
+                    
+                    if (linkName && linkURL) {
+                        console.log("링크명:", linkName, "URL:", linkURL);
+                        alert("링크가 저장되었습니다!");
+                        modal.style.display = "none"; // 모달 닫기
+                    } else {
+                        alert("링크명과 URL을 입력해주세요!");
+                    }
+                });
+
+                // 모달 외부 클릭 시 닫기
+                window.addEventListener("click", function (event) {
+                    if (event.target === modal) {
+                        modal.style.display = "none";
+                    }
+                });
+            });
+            // 정렬 아이콘 버튼 이미지 경로변경
+            document.querySelectorAll(".array-img").forEach((img, index) => {
+                const originalSrc = img.src;
+                img.addEventListener("mouseenter", () => {
+                    img.src = originalSrc.replace(".png", "-a.png");
+                });
+                img.addEventListener("mouseleave", () => {
+                    img.src = originalSrc;
+                });
+            });
         </script>
 
     </body>
