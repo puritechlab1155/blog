@@ -1412,6 +1412,7 @@ color: #afafaf;
 }
 .edit .style-pop {
   position: relative; 
+
 }
 .edit .array-box {
   display: flex;
@@ -1425,6 +1426,7 @@ color: #afafaf;
   left: -111px;
   z-index: 10;
   background-color: #fff;
+  /* display: none; */
 }
 .edit .right-panel .array-box .array-img {
   min-width: 24px;
@@ -1670,6 +1672,11 @@ margin-top: 40px;
   .popBtn-wrap .btn-01{
     font-size: 20px;
   }
+  .edit .title-color {
+    top: 0px !important;
+    left: -33px !important;
+  }
+
 
 
   /* 해더 */
