@@ -210,8 +210,9 @@
                                     <!-- 리스트 스터알 패널 -->
                                     <div class="style-pop"> <!-- 클릭했을때 나타나기-->
                                         <ul class="array-box">
-                                            <button type="button" class="style-circle"><div class="style-flex g-15"><span class="circle"></span><span class="circle"></span></div></button>
-                                            <button type="button" class="style-num"><div class="style-flex"><span class="number">1.</span><span class="number">2.</span></div></button>
+                                            <button type="button" class="pop-list"><img class="array-img" src="img/edit/list-dot.png" alt="왼쪽 정렬 아이콘"></button>
+                                            <button type="button" class="pop-list"><img class="array-img" src="img/edit/list-num.png" alt="가운데 정렬 아이콘"></button>
+                                            <button type="button" class="pop-list"><img class="array-img" src="img/edit/list-none.png" alt="오른쪽 정렬 아이콘"></button>
                                         </ul>
                                     </div>
                                 </div>
@@ -222,6 +223,19 @@
                                 <div class="style-flex-box last-box">
                                     <button class="complete user-btn">완료</button>
                                 </div>
+                                <!-- 해쉬태그 입력 모달창 -->
+                                <div id="hashtagModal" class="hashtag-modal">
+                                    <div class="modal-content">
+                                        <h3 class="f-18">해쉬태그 입력</h3>
+                                        <textarea class="border-ef m-t-40" type="text" id="hashtag" placeholder="#태그입력"></textarea>
+                                        <span class="yellow">최대 20개까지 입력하실 수 있습니다.</span>
+                                        <div class="style-flex-box six-box">
+                                            <button type="button" class="btn-01 register">등록</button>
+                                            <button type="button" class="btn-01 cancel">취소</button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -308,7 +322,63 @@
                     }
                 });
             });
+
+
+            // 해쉬태그 입력 모달창
+            document.addEventListener("DOMContentLoaded", function () {
+                const modal = document.getElementById("hashtagModal");
+                const openBtn = document.querySelector(".complete.user-btn");
+                const registerBtn = document.querySelector(".btn-01.register");
+                const cancelBtn = document.querySelector(".btn-01.cancel");
+                const hashtagInput = document.getElementById("hashtag");
+
+                // 모달 열기
+                openBtn.addEventListener("click", function () {
+                    modal.style.display = "flex";
+                });
+
+                // 등록 버튼 클릭 시
+                registerBtn.addEventListener("click", function () {
+                    const hashtag = hashtagInput.value;
+
+                    if (hashtag) {
+                        console.log("해시태그:", hashtag);
+                        alert("해시태그가 등록되었습니다!");
+                        modal.style.display = "none";
+                        hashtagInput.value = "";
+                    } else {
+                        alert("해시태그를 입력해주세요!");
+                    }
+                });
+
+                // 취소 버튼 클릭 시
+                cancelBtn.addEventListener("click", function () {
+                    modal.style.display = "none";
+                    hashtagInput.value = "";
+                });
+
+                // 모달 외부 클릭 시 닫기
+                window.addEventListener("click", function (event) {
+                    if (event.target === modal) {
+                        modal.style.display = "none";
+                        hashtagInput.value = "";
+                    }
+                });
+            });
+
+
             // 정렬 아이콘 버튼 이미지 경로변경
+            document.querySelectorAll(".array-img").forEach((img, index) => {
+                const originalSrc = img.src;
+                img.addEventListener("mouseenter", () => {
+                    img.src = originalSrc.replace(".png", "-a.png");
+                });
+                img.addEventListener("mouseleave", () => {
+                    img.src = originalSrc;
+                });
+            });
+
+            // 리스트 스타일 아이콘 버튼 이미지 경로변경
             document.querySelectorAll(".array-img").forEach((img, index) => {
                 const originalSrc = img.src;
                 img.addEventListener("mouseenter", () => {

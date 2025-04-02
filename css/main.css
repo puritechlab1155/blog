@@ -1470,7 +1470,7 @@ color: #afafaf;
   font-size: 12px;
 }
 /* 링크버튼 모달 */
-.edit .link-modal {
+.edit .link-modal , .edit .hashtag-modal {
   display: none; 
   position: fixed;
   z-index: 1000;
@@ -1504,7 +1504,14 @@ color: #afafaf;
   cursor: pointer;
   line-height: 0;
 }
-
+/* 해쉬태그 입력 모달창 */
+.edit .hashtag-modal .yellow {
+  display: block;
+}
+.edit .hashtag-modal .border-ef {
+  width: 100%;
+  overflow-y: scroll;
+}
 /* ------푸터 --------*/
 .footer {
 background-color: #F8F8F8;
