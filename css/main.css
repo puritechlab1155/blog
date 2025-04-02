@@ -1440,19 +1440,24 @@ color: #afafaf;
 .edit .right-panel .g-15 {
   gap: 15px
 }
-.edit  .circle {
-  width: 10px;
-  height: 10px;
-  display: block;
-  background-color: #222222;
-  border-radius: 50%;
-}
-.edit .color-a,
-.edit .color-b,
-.edit  .color-c,
+.edit .circle-color,
 .edit .color-title {
   width: 20px;
   height: 20px;
+  display: block;
+  background-color: #727272;
+  border-radius: 50%;
+}
+.edit .flex {
+  display: flex;
+}
+.edit .flex-direc {
+  flex-direction: column;
+}
+.edit .right-panel .array-box .array-img-20 {
+  min-width: 20px;
+  min-height: 20px;
+  width: 100%;
 }
 .edit .color-a {
   background-color: #727272;
