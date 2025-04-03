@@ -2061,8 +2061,11 @@ margin-top: 40px;
   .user-auth .agree-wrap .terms-content {
       font-size: 14px;
   }
-  .user-auth .agree-wrap .drop-icon {
-      transform: scale(0.8);
+  .user-auth .agree-wrap .separate-item {
+    padding: 0;
+  }
+  .user-auth .agree-wrap .all-check {
+    padding: 20px 16px;
   }
   /* <register-from.html> */
   .user-auth .register .hidden-number{
