@@ -1408,7 +1408,8 @@ color: #afafaf;
 }
 .edit .title-color {
   top: 0px !important;
-  left: 12px !important;
+  left: -55px !important;
+  background: yellow !important;
 }
 .edit .style-pop {
   position: relative; 
@@ -1437,8 +1438,8 @@ color: #afafaf;
   display: flex;
   flex-direction: column;
 }
-.edit .right-panel .g-15 {
-  gap: 15px
+.edit .g-15 {
+  gap: 15px;
 }
 .edit .circle-color,
 .edit .color-title {
@@ -1459,18 +1460,70 @@ color: #afafaf;
   min-height: 20px;
   width: 100%;
 }
-.edit .color-a {
+.edit .color-title {
+  background-color: #292929;
+}
+/* 폰트 컬러 */
+.edit .color-1 {
+  background-color: #FEFEFE;
+  border: 1px solid #727272;
+}
+.edit .color-2 {
+  background-color: #9D4C4C;
+}
+.edit .color-3 {
+  background-color: #F67E3B;
+}
+.edit .color-4 {
+  background-color: #1BA80F;
+}
+.edit .color-5 {
+  background-color: #6E31EE;
+}
+.edit .color-6 {
   background-color: #727272;
 }
-.edit .color-b {
-  background-color: #EF3333;
+.edit .color-7 {
+  background-color: #E7425F;
 }
-.edit .color-c {
-  background-color: #FF8329;
-}
-.edit .color-title {
+.edit .color-8 {
   background-color: #FDCC32;
 }
+.edit .color-9 {
+  background-color: #317DEE;
+}
+.edit .color-10 {
+  background-color: #C50EB3;
+}
+/* 배경컬러 */
+.edit .color-a {
+  background-color: #FFE4E1;
+}
+.edit .color-b {
+  background-color: #F0FFF0;
+}
+.edit .color-c {
+  background-color: #E6F0FF;
+}
+.edit .color-d {
+  background-color: #F0E6FF;
+}
+.edit .color-e {
+  background-color: #FDF5E6;
+}
+.edit .color-f {
+  background-color: #FFB6C1;
+}
+.edit .color-g {
+  background-color: #8DDE8D;
+}
+.edit .color-h {
+  background-color: #A0C6FF;
+}
+.edit .color-i {
+  background-color: #D8BFD8;
+}
+
 .edit .list-num .number {
   font-size: 12px;
 }
@@ -1686,7 +1739,7 @@ margin-top: 40px;
   }
   .edit .title-color {
     top: 0px !important;
-    left: -33px !important;
+    left: -103px !important;
   }
 
 
@@ -1849,6 +1902,9 @@ margin-top: 40px;
   }
   .edit .right-panel .array-box {
     left: -68px;
+  }
+  .edit .right-panel .left-position {
+    left: -118px;
   }
   /* 푸터 */
   .footer .social-icons {
