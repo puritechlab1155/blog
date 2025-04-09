@@ -1272,11 +1272,9 @@ color: #afafaf;
   justify-content: space-between;
 }
 .file-container .file-title {
-  /* width: fit-content; */
   display: flex;
   gap: 12px;
   align-items: center;
-  cursor: pointer;
   margin-bottom: 15px;
 }
 .file-container .file-down {
