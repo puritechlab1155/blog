@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>블로그 검색페이지-글</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-contain">
+            <h1>
+                <a class="logo" href="index.html">BLOG SITE</a>
+            </h1>
+            <div class="header-right">
+                <div class="search-container">
+                    <input type="text" placeholder="키워드를 입력하세요." class="search-input"/>
+                    <button type="button" class="search-submit"><img src="img/common/search2.png" alt="돋보기 이미지"></button>
+                </div>
+                <button type="button" class="icon-area">
+                    <img src="img/common/search.png" alt="돋보기 이미지" class="search-icon">
+                    <img src="img/common/close.png" alt="돋보기 이미지" class="close-icon">
+                </button>
+                <button type="button" class="ham-box" id="menuBtn">
+                    <span class="ham"></span>
+                    <span class="ham"></span>
+                    <span class="ham"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- 메뉴 패널 -->
+    <div class="menu-panel" id="menuPanel">
+        <ul class="menu-list-box">
+            <a href="index.html"><li class="panel-list">Home</li></a>
+            <a href="edit.html"><li class="panel-list">Edit</li></a>
+            <a href="myInfo.html"><li class="panel-list">My Info</li></a>
+            <a class="log-in" href="login.html"><li class="panel-list">Log In</li></a><!-- 로그아웃 상태시 노출 -->
+            <a class="log-out" href="#"><li class="panel-list">Log Out</li></a><!-- 로그인 상태시 노출 -->
+        </ul>
+    </div><!-- 여기까지 메뉴 패널 -->
+
+    <div class="content-wrap">
+        <!-- 컨텐츠 시작 -->
+        <div id="main">
+            <div class="search detail m-t-100">
+                <!-- 여기서부터 -->
+                <div class="container">
+                    <!-- 1단 -->
+                    <div class="detail-content">
+                        <div class="post-title yellow">검색명이 표시됩니다</div>
+                
+                        <div class="top-container">
+                            <!-- 탭 -->
+                            <div class="tabs">
+                                <span class="tab active" onclick="showTab('tab1')">글</span>
+                                <span class="tab" onclick="showTab('tab2')">블로그</span>
+                            </div>
+                            <!-- 필터 -->
+                            <div class="filters">
+                                <div class="filter">정확도순</div>
+                                <div class="filter">최신순</div>
+                            </div>
+                        </div>
+
+
+                        <div class="post-count">총 3개의 게시글이 있습니다.</div>
+
+                        <!-- 탭 콘텐츠1 -->
+                        <div id="tab1" class="tab-content">
+                            <div class="blog-item">
+                            <div class="blog-title">📄 글 콘텐츠 제목 1</div>
+                            <div class="blog-desc">이 글은 일반 게시글로 작성된 내용입니다.</div>
+                            </div>
+                            <div class="blog-item">
+                            <div class="blog-title">📄 글 콘텐츠 제목 2</div>
+                            <div class="blog-desc">사용자 경험에 대한 생각을 담은 글입니다.</div>
+                            </div>
+                            <div class="blog-item">
+                            <div class="blog-title">📄 글 콘텐츠 제목 3</div>
+                            <div class="blog-desc">리뷰 중심의 피드백이 담겨 있는 글입니다.</div>
+                            </div>
+                        </div>
+                        <!-- 탭 콘텐츠2 -->
+                        <div id="tab2" class="tab-content" style="display: none;">
+                            <div class="blog-item">
+                            <div class="blog-title">☕ 전국 카페 투어 후기</div>
+                            <div class="blog-desc">부산부터 서울까지 다녀온 후기 모음.</div>
+                            </div>
+                            <div class="blog-item">
+                            <div class="blog-title">🏖️ 제주도 감성 카페 모음</div>
+                            <div class="blog-desc">제주에서 뷰 좋은 카페들을 정리해봤어요.</div>
+                            </div>
+                        </div>
+                    </div>
+  
+                    <!-- 2단 -->
+                    <div class="sidebar">
+                        <!-- 연관 검색 -->
+                        <div>
+                            <h2 class="sidebar-title">연관 검색</h2>
+                            <div class="related-search">
+                                <a href="#">서울 카페</a>
+                                <a href="#">카페 리뷰</a>
+                                <a href="#">감성 카페 사진 스팟</a>
+                                <a href="#">브런치카페 맛집</a>
+                            </div>
+                        </div>
+
+                        <!-- BEST3 -->
+                        <div class="best-list m-t-90">
+                            <h2 class="sidebar-title">BEST3</h2>
+                            <div class="best-item">
+                                <div class="thumbnail">
+                                    <img src="img/sample.png" alt="음식 이미지">
+                                    <span class="rank">1</span>
+                                </div>
+                                <div class="info">
+                                    <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳 트10 경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳 트10 경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳 트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                    <p class="date">2025.03.19</p>
+                                </div>
+                            </div>
+                        
+                            <div class="best-item">
+                                <div class="thumbnail">
+                                    <img src="img/detail/best2.png" alt="음식 이미지">
+                                    <span class="rank">2</span>
+                                </div>
+                                <div class="info">
+                                    <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                    <p class="date">2025.03.16</p>
+                                </div>
+                            </div>
+                        
+                            <div class="best-item">
+                                <div class="thumbnail">
+                                    <img src="img/detail/best3.png" alt="음식 이미지">
+                                    <span class="rank">3</span>
+                                </div>
+                                <div class="info">
+                                    <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                    <p class="date">2025.03.19</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <!-- 최근글 -->
+                        <div class="latest-list m-t-90">
+                            <h2 class="sidebar-title">최근글</h2>
+                            <div class="best-item">
+                                <div class="thumbnail">
+                                    <img src="img/detail/latest1.png" alt="최근글1">
+                                </div>
+                                <div class="info">
+                                    <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                    <div class="info-bottom">
+                                        <p class="category">메뉴 카테고리 <span class="category">1</span></p>
+                                        <p class="date">2025.03.19</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="best-item">
+                                <div class="thumbnail">
+                                    <img src="img/detail/latest2.png" alt="최근글2">
+                                </div>
+                                <div class="info">
+                                    <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                    <div class="info-bottom">
+                                        <p class="category">메뉴 카테고리 <span class="category">1</span></p>
+                                        <p class="date">2025.03.19</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="best-item">
+                                <div class="thumbnail">
+                                    <img src="img/detail/latest3.png" alt="최근글3">
+                                </div>
+                                <div class="info">
+                                    <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                    <div class="info-bottom">
+                                        <p class="category">메뉴 카테고리 <span class="category">1</span></p>
+                                        <p class="date">2025.03.19</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="best-item">
+                                <div class="thumbnail">
+                                    <img src="img/detail/latest4.png" alt="최근글4">
+                                </div>
+                                <div class="info">
+                                    <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                    <div class="info-bottom">
+                                        <p class="category">메뉴 카테고리 <span class="category">1</span></p>
+                                        <p class="date">2025.03.19</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="best-item">
+                                <div class="thumbnail">
+                                    <img src="img/detail/latest5.png" alt="최근글5">
+                                </div>
+                                <div class="info">
+                                    <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                    <div class="info-bottom">
+                                        <p class="category">메뉴 카테고리 <span class="category">1</span></p>
+                                        <p class="date">2025.03.19</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div><!-- 여기까지 컨텐츠 -->
+    </div>
+
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer-contain">
+            <!-- 소셜 아이콘 -->
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                     <img src="img/common/facebook.png" alt="facebook">
+                </a>
+                <a href="https://www.spacex.com" target="_blank">
+                    <img src="img/common/xmark.png" alt="xmark">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="img/common/instagram.png" alt="instagram">
+                </a>
+                <a href="https://blog.naver.com" target="_blank">
+                    <img src="img/common/blogger.png" alt="blogger">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="img/common/youtube.png" alt="youtube">
+                </a>
+                <a href="mailto:example@email.com">
+                    <img src="img/common/email.png" alt="email">
+                </a>
+            </div>
+           
+            <div class="footer-text">
+                BlogStory Ⓒ 2025 Magazine Lab
+            </div>
+        
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+
+    <script>
+function showTab(tabId) {
+    // 탭 숨기기
+    document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
+    // 탭 보이기
+    document.getElementById(tabId).style.display = 'block';
+    // 탭 버튼 활성화 처리
+    document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+
+
+    </script>
+
+</body>
+</html>

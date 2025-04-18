@@ -1734,6 +1734,113 @@ z-index: -1;
   overflow-y: scroll;
   min-height: 150px;
 }
+/* search 검색페이지 */
+.search .top-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #eee;
+}
+/* 탭 버튼 */
+.search .post-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.search .tabs {
+  display: flex;
+}
+
+.search .tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #888;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.search .tab.active {
+  color: #333;
+  border-bottom: 3px solid #FDCC32;
+}
+.search .filters {
+  display: flex;
+}
+.search .filters .filter {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.search .filters .filter:hover {
+  font-weight: 500;
+}
+/* 탭 콘텐츠 */
+.search .tab-content {
+  margin-top: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.search .post-txt {
+  font-size: 14px;
+  color: #999;
+  margin: 10px 0 20px;
+  text-align: right;
+}
+.search .blog-item {
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+.search .blog-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+.search .blog-desc {
+  margin-top: 6px;
+  color: #555;
+  font-size: 15px;
+}
+/* 블로그 탭 프로필 */
+.search .research-author {
+  display: flex;
+  gap: 15px;
+}
+.search .w-30 {
+  width: 30px;
+  height: 30px;
+}
+/* 연관 검색 */
+.search .related-search .related {
+  display: inline-block;
+  background: #f1f3f5;
+  padding: 8px 16px;
+  margin: 6px 6px 0 0;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.search .related-search .related:hover {
+  background: #fbe7ad;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
 /* ------푸터 --------*/
 .footer {
   background-color: #f8f8f8;
@@ -1878,7 +1985,10 @@ z-index: -1;
     margin-top: 0;
     width: 100%;
 }
-
+  /* search 검색페이지 */
+  .search .sidebar {
+    margin-top: 60px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2102,6 +2212,16 @@ z-index: -1;
   }
   .detail .author-description {
     width: 100%;
+  }
+
+  /* search 검색결과 */
+  .search .blog-item  {
+    flex-direction: column;
+  }
+  .search .subscribe {
+    margin-top: 15px;
+    max-width: 120px;
+    /* margin: 0 auto; */
   }
 }
 @media screen and (max-width: 480px) {
@@ -2397,5 +2517,9 @@ z-index: -1;
   }
   .file-container .file-down {
     width: 30%;
+  }
+  .search .research-author {
+    flex-direction: column;
+    gap: 0px !important;
   }
 }
