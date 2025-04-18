@@ -1589,7 +1589,7 @@ z-index: -1;
   left: -111px;
   z-index: 10;
   background-color: #fff;
-  display: none;
+  /* display: none; */
 }
 .edit .right-panel .array-box .array-img {
   min-width: 24px;
