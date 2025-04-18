@@ -53,8 +53,23 @@
                     <div class="detail-content">
                         <div class="post-title yellow">블로그 제목 </div>
                         <div class="post-meta m-t-60">
-                            <span class="writer">맛거리</span>
-                            <span class="date">2025. 03. 19</span>
+                            <div>
+                                <span class="writer">맛거리</span>
+                                <span class="date">2025. 03. 19</span>
+                            </div>
+                            <!-- 수정, 삭제 : 작성한 게시글 수정하기(작성자에게만 보여지기) -->
+                            <div class="edit-btn-box">
+                                
+                                <button class="share edit-btn" type="button" onclick="window.location.href='edit.html'">
+                                    <img class="iconW-24" src="img/detail/edit.png" alt="수정 아이콘">
+                                    <span class="edit-txt">수정</span>
+                                </button>
+                                <button class="share edit-btn" type="button">
+                                    <img class="iconW-24" src="img/detail/trash.png" alt="삭제 아이콘">
+                                    <span class="edit-txt">삭제</span> <!-- 263줄 삭제 모달 연결시키기 -->
+                                </button>
+
+                            </div>
                         </div>
                         <!-- 본문 -->
                         <div class="post-body m-t-60">
@@ -129,7 +144,7 @@
 
                             <div class="btn-box">
                                 <button class="like border-ef" type="button">
-                                    <img class="like-change iconW-24" src="img/detail/like-before.png" alt="하트 아이콘">
+                                    <img class="like-change iconW-24" src="img/detail/like-before.png" alt="하트 아이콘"> <!-- 클릭시 like-after.png 로 이미지 변경되도록 -->
                                     <span class="like-total">14</span>
                                 </button>
                                 <button class="share border-ef" type="button">
@@ -137,7 +152,6 @@
                                     <span class="share-total">14</span>
                                 </button>
                             </div>
-                            
                         </div>
                         <!-- 댓글 -->
                         <div class="comment-list m-t-40">
