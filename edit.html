@@ -146,109 +146,138 @@
                                 <div class="text-area-border">
                                 <textarea class="text-area" placeholder="내용을 작성해 주세요."></textarea></div>
                             </div>
-                            <!-- 오른쪽 -->
                             <div class="right-panel">
-                                <div class="style-flex-box first-box">
-                                    <select class="f-14">
-                                        <option class="pretendard">프리텐다드</option><!-- 기본 설정 -->
-                                        <option class="nanumgothic">나눔고딕</option>
-                                        <option class="nanumbarungothic">나눔바른고딕</option>
-                                        <option class="nanummyeongjo">나눔명조</option>
-                                        <option class="maruburi">마루부리</option>
-                                    </select>
-                                    <select class="f-14 w-r">
-                                        <option class="fs-22">22px</option>
-                                        <option class="fs-20">20px</option>
-                                        <option class="fs-18">18px</option><!-- 기본 설정 -->
-                                        <option class="fs-16">16px</option>
-                                    </select>
-                                </div>
-                                <div class="style-flex-box second-box">
-                                    <button type="button" class="bold-btn btn-04">
-                                        <img class="edit-img" src="img/edit/blod-icon.png" alt="본문 폰트 굵기 아이콘">
-                                    </button>
-                                    <button type="button" class="italic-btn btn-04">
-                                        <img class="edit-img" src="img/edit/italic-icon.png" alt="본문 폰트 기울기 아이콘">
-                                    </button>
-                                </div>
-                                <div class="style-flex-box third-box">
-                                    <button type="button" class="underline-btn btn-04">
-                                        <img class="edit-img" src="img/edit/underline-icon.png" alt="본문 폰트 밑줄 아이콘">
-                                    </button>
-                                    <button type="button" class="strike-btn btn-04">
-                                        <img class="edit-img" src="img/edit/strikeline-icon.png" alt="본문 폰트 취소선 아이콘">
-                                    </button>
-                                </div>
-                                <div class="style-flex-box four-box">
-                                    <button type="button" class="color-btn btn-04">
-                                        <img class="edit-img" src="img/edit/color-icon.png" alt="본문 폰트 컬러 아이콘">
-                                    </button>
-                                    <!-- 폰트 컬러 패널 -->
-                                    <div class="style-pop"> <!-- 클릭했을때 나타나기-->
-                                        <ul class="array-box flex-direc">
-                                            <div class="g-15 flex">
-                                                <button type="button" class="pop-list"><div class="circle-color color-1"></div></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-2"></div></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-3"></div></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-4"></div></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-5"></div></button>
-                                            </div>
-                                            <div class="g-15 flex">
-                                                <button type="button" class="pop-list"><div class="circle-color color-6"></div></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-7"></div></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-8"></div></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-9"></div></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-10"></div></button>
-                                            </div>
-                                        </ul>
+                                <!-- 편집스타일 -->
+                                <div class="edit-style-container">
+                                    <div class="style-flex-box first-box">
+                                        <select class="f-14">
+                                            <option class="pretendard">프리텐다드</option><!-- 기본 설정 -->
+                                            <option class="nanumgothic">나눔고딕</option>
+                                            <option class="nanumbarungothic">나눔바른고딕</option>
+                                            <option class="nanummyeongjo">나눔명조</option>
+                                            <option class="maruburi">마루부리</option>
+                                        </select>
+                                        <select class="f-14 w-r">
+                                            <option class="fs-22">22px</option>
+                                            <option class="fs-20">20px</option>
+                                            <option class="fs-18">18px</option><!-- 기본 설정 -->
+                                            <option class="fs-16">16px</option>
+                                        </select>
                                     </div>
-                                    <button type="button" class="backcolor-btn btn-04">
-                                        <img class="edit-img" src="img/edit/backcolor-icon.png" alt="본문 폰트 배경색 아이콘">
-                                    </button>
-                                    <!-- 배경컬러 패널 -->
-                                    <div class="style-pop"> <!-- 클릭했을때 나타나기-->
-                                        <ul class="array-box flex-direc">
-                                            <div class="g-15 flex">
-                                                <button type="button" class="pop-list"><img class="array-img-20" src="img/edit/bg-none.png" alt="배경없음 아이콘"/></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-a"></div></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-b"></div></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-c"></div></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-d"></div></button>
-                                            </div>
-                                            <div class="g-15 flex">
-                                                <button type="button" class="pop-list"><div class="circle-color color-e"></div></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-f"></div></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-g"></div></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-h"></div></button>
-                                                <button type="button" class="pop-list"><div class="circle-color color-i"></div></button>
-                                            </div>
-                                        </ul>
+                                    <div class="style-flex-box second-box">
+                                        <button type="button" class="bold-btn btn-04">
+                                            <img class="edit-img" src="img/edit/blod-icon.png" alt="본문 폰트 굵기 아이콘">
+                                        </button>
+                                        <button type="button" class="italic-btn btn-04">
+                                            <img class="edit-img" src="img/edit/italic-icon.png" alt="본문 폰트 기울기 아이콘">
+                                        </button>
+                                    </div>
+                                    <div class="style-flex-box third-box">
+                                        <button type="button" class="underline-btn btn-04">
+                                            <img class="edit-img" src="img/edit/underline-icon.png" alt="본문 폰트 밑줄 아이콘">
+                                        </button>
+                                        <button type="button" class="strike-btn btn-04">
+                                            <img class="edit-img" src="img/edit/strikeline-icon.png" alt="본문 폰트 취소선 아이콘">
+                                        </button>
+                                    </div>
+                                    <div class="style-flex-box four-box">
+                                        <button type="button" class="color-btn btn-04">
+                                            <img class="edit-img" src="img/edit/color-icon.png" alt="본문 폰트 컬러 아이콘">
+                                        </button>
+                                        <!-- 폰트 컬러 패널 -->
+                                        <div class="style-pop"> <!-- 클릭했을때 나타나기-->
+                                            <ul class="array-box flex-direc">
+                                                <div class="g-15 flex">
+                                                    <button type="button" class="pop-list"><div class="circle-color color-1"></div></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-2"></div></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-3"></div></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-4"></div></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-5"></div></button>
+                                                </div>
+                                                <div class="g-15 flex">
+                                                    <button type="button" class="pop-list"><div class="circle-color color-6"></div></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-7"></div></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-8"></div></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-9"></div></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-10"></div></button>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="backcolor-btn btn-04">
+                                            <img class="edit-img" src="img/edit/backcolor-icon.png" alt="본문 폰트 배경색 아이콘">
+                                        </button>
+                                        <!-- 배경컬러 패널 -->
+                                        <div class="style-pop"> <!-- 클릭했을때 나타나기-->
+                                            <ul class="array-box flex-direc">
+                                                <div class="g-15 flex">
+                                                    <button type="button" class="pop-list"><img class="array-img-20" src="img/edit/bg-none.png" alt="배경없음 아이콘"/></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-a"></div></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-b"></div></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-c"></div></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-d"></div></button>
+                                                </div>
+                                                <div class="g-15 flex">
+                                                    <button type="button" class="pop-list"><div class="circle-color color-e"></div></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-f"></div></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-g"></div></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-h"></div></button>
+                                                    <button type="button" class="pop-list"><div class="circle-color color-i"></div></button>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="style-flex-box five-box">
+                                        <button type="button" class="array-btn btn-04">
+                                            <img class="edit-img" src="img/edit/array-icon.png" alt="정렬 아이콘">
+                                        </button>
+                                        <!-- 정렬 패널 -->
+                                        <div class="style-pop"> <!-- 클릭했을때 나타나기-->
+                                            <ul class="array-box">
+                                                <button type="button" class="pop-list"><img class="array-img" src="img/edit/array-left.png" alt="왼쪽 정렬 아이콘"></button>
+                                                <button type="button" class="pop-list"><img class="array-img" src="img/edit/array-center.png" alt="가운데 정렬 아이콘"></button>
+                                                <button type="button" class="pop-list"><img class="array-img" src="img/edit/array-right.png" alt="오른쪽 정렬 아이콘"></button>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="index-btn btn-04">
+                                            <img class="edit-img" src="img/edit/index-icon.png" alt="리스트 스타일 아이콘">
+                                        </button>
+                                        <!-- 리스트 스타일 패널 -->
+                                        <div class="style-pop"> <!-- 클릭했을때 나타나기-->
+                                            <ul class="array-box left-position">
+                                                <button type="button" class="pop-list"><img class="array-img" src="img/edit/list-dot.png" alt="왼쪽 정렬 아이콘"></button>
+                                                <button type="button" class="pop-list"><img class="array-img" src="img/edit/list-num.png" alt="가운데 정렬 아이콘"></button>
+                                                <button type="button" class="pop-list"><img class="array-img" src="img/edit/list-none.png" alt="오른쪽 정렬 아이콘"></button>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="style-flex-box five-box">
-                                    <button type="button" class="array-btn btn-04">
-                                        <img class="edit-img" src="img/edit/array-icon.png" alt="정렬 아이콘">
-                                    </button>
-                                    <!-- 정렬 패널 -->
-                                    <div class="style-pop"> <!-- 클릭했을때 나타나기-->
-                                        <ul class="array-box">
-                                            <button type="button" class="pop-list"><img class="array-img" src="img/edit/array-left.png" alt="왼쪽 정렬 아이콘"></button>
-                                            <button type="button" class="pop-list"><img class="array-img" src="img/edit/array-center.png" alt="가운데 정렬 아이콘"></button>
-                                            <button type="button" class="pop-list"><img class="array-img" src="img/edit/array-right.png" alt="오른쪽 정렬 아이콘"></button>
-                                        </ul>
+                                <!-- 해쉬태그 -->
+                                <div class="hashtag-content">
+                                    <div class="border-ef">
+                                        <span class="" type="text" id="hashtag">
+                                            <!-- 해쉬태그 입력 전 -->
+                                            <div class="htagInput-item">
+                                                <span>#</span>
+                                                <input type="text" name="tagText" id="tagText" placeholder="태그입력" class="tagInput" oninput="resizeInput(this)" />
+                                            </div>
+                                            <!-- 해쉬태그 입력 후 -->
+                                            <div class="htagInput-item m-r-7 keyword-btn btn-03 radius-20">
+                                                <span>#</span>
+                                                <span>전국 카페</span>
+                                                <button type="button" class="remove-btn" aria-label="삭제">×</button>
+                                            </div>
+                                            <!-- 해쉬태그 입력 전 -->
+                                            <div class="htagInput-item">
+                                                <span>#</span>
+                                                <input type="text" name="tagText" id="tagText" placeholder="태그입력" class="tagInput" oninput="resizeInput(this)" />
+                                            </div>
+
+                                        </span>
                                     </div>
-                                    <button type="button" class="index-btn btn-04">
-                                        <img class="edit-img" src="img/edit/index-icon.png" alt="리스트 스타일 아이콘">
-                                    </button>
-                                    <!-- 리스트 스타일 패널 -->
-                                    <div class="style-pop"> <!-- 클릭했을때 나타나기-->
-                                        <ul class="array-box left-position">
-                                            <button type="button" class="pop-list"><img class="array-img" src="img/edit/list-dot.png" alt="왼쪽 정렬 아이콘"></button>
-                                            <button type="button" class="pop-list"><img class="array-img" src="img/edit/list-num.png" alt="가운데 정렬 아이콘"></button>
-                                            <button type="button" class="pop-list"><img class="array-img" src="img/edit/list-none.png" alt="오른쪽 정렬 아이콘"></button>
-                                        </ul>
-                                    </div>
+                                    <span class="yellow">최대 20개까지 입력하실 수 있습니다.</span>
+
                                 </div>
+                                <!-- 버튼 -->
                                 <div class="style-flex-box six-box">
                                     <button type="button" class="btn-01 preview">미리보기</button>
                                     <button type="button" class="btn-01 save">임시저장</button>
@@ -257,7 +286,7 @@
                                     <button class="complete user-btn">완료</button>
                                 </div>
                                 <!-- 해쉬태그 입력 모달창 -->
-                                <div id="hashtagModal" class="hashtag-modal">
+                                <!-- <div id="hashtagModal" class="hashtag-modal">
                                     <div class="modal-content">
                                         <h3 class="f-18">해쉬태그 입력</h3>
                                         <textarea class="border-ef m-t-40" type="text" id="hashtag" placeholder="#태그입력"></textarea>
@@ -267,7 +296,7 @@
                                             <button type="button" class="btn-01 cancel">취소</button>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                             </div>
                         </div>
@@ -421,6 +450,14 @@
                     img.src = originalSrc;
                 });
             });
+
+
+            // 해쉬태그 input 텍스트에 맞게 자동 넓이조절
+            function resizeInput(input) {
+                input.style.width = '20px'; // 초기화
+                input.style.width = (input.scrollWidth) + 'px';
+            }
+
         </script>
 
     </body>

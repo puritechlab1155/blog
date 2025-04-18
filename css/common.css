@@ -267,6 +267,9 @@ textarea {
 .w-100 {
     width: 100%;
 }
+.m-r-7 {
+    margin-right: 7px;
+}
 .m-t-20{
     margin-top: 20px;
 }

@@ -1416,11 +1416,9 @@ z-index: -1;
 }
 /* 왼쪽 패널 */
 .edit .left-panel {
-  /* flex: 2;
-  padding: 20px; */
+  flex: 3;
   border-radius: 20px;
   max-width: 900px;
-  width: 100%;
   border: 1px solid #efefef;
   height: 90vh;
 }
@@ -1479,17 +1477,59 @@ z-index: -1;
 }
 /* 오른쪽 패널 */
 .edit .right-panel {
-  /* flex: 1; */
-  padding: 40px 10px;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
-  max-width: 246px;
-  width: 100%;
-  height: 480px;
-  border-radius: 20px;
-  border: 1px solid #efefef;
 }
+.edit-style-container{
+  padding: 40px 10px;
+  border-radius: 20px;
+  width: 100%;
+  border: 1px solid #efefef; 
+}
+/* 해쉬태그 */
+.hashtag-content {
+  margin-top: 30px;
+}
+.hashtag-content .border-ef {
+  width: 100%;
+  min-height: 100px;
+}
+.htagInput-item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+}
+.htagInput-item span {
+  color: #666;
+  margin-right: 4px;
+}
+.htagInput-item .tagInput {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 1ch;         /* 처음엔 좁게 시작하고 */
+  min-width: 55px;     /* 너무 작지 않도록 최소 너비 지정 */
+}
+.htagInput-item .bg3E4 {
+  background: #FFF3E4;
+}
+.htagInput-item .tagInput::placeholder {
+  color: #bbb;
+}
+.htagInput-item .remove-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #999;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.htagInput-item .remove-btn:hover {
+  color: #333;
+}
+/*  */
 .edit .right-panel .style-flex-box {
   margin-top: 10px;
   display: flex;
@@ -1650,8 +1690,7 @@ z-index: -1;
   font-size: 12px;
 }
 /* 링크버튼 모달 */
-.edit .link-modal,
-.edit .hashtag-modal {
+.edit .link-modal{
   display: none;
   position: fixed;
   z-index: 1000;
@@ -1686,12 +1725,14 @@ z-index: -1;
   line-height: 0;
 }
 /* 해쉬태그 입력 모달창 */
-.edit .hashtag-modal .yellow {
+.edit .hashtag-content .yellow {
   display: block;
+  margin-top: 10px;
 }
-.edit .hashtag-modal .border-ef {
+.edit .hashtag-content .border-ef {
   width: 100%;
   overflow-y: scroll;
+  min-height: 150px;
 }
 /* ------푸터 --------*/
 .footer {
@@ -1788,7 +1829,10 @@ z-index: -1;
     /* line-height: 220%; */
   }
   .edit .right-panel {
-    /* display: flex; */
+    align-items: center;
+    gap: 10px;
+  }
+  .edit .right-panel .edit-style-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     max-width: none;
@@ -1798,7 +1842,7 @@ z-index: -1;
     gap: 10px;
   }
   .edit .style-flex-box {
-    margin-right: 10px;
+    /* margin-right: 10px; */
   }
   .edit .icon-bar {
     justify-content: center;
@@ -1829,6 +1873,12 @@ z-index: -1;
   .edit .right-panel .array-box {
     left: -91px;
   }
+  /* 해쉬태그 */
+  .hashtag-content {
+    margin-top: 0;
+    width: 100%;
+}
+
 }
 
 @media screen and (max-width: 767px) {
@@ -2261,17 +2311,26 @@ z-index: -1;
     padding: 30px 0 0;
   }
   .edit .right-panel {
-    padding: 20px 10px;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: none;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; */
+  }
+  .edit .right-panel .edit-style-container{
+    /* padding: 20px 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: none;
     height: auto;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 10px; */
   }
   .edit .style-flex-box {
-    margin-right: 10px;
+    /* margin-right: 10px; */
   }
   .edit .icon-bar {
     justify-content: center;
@@ -2288,17 +2347,20 @@ z-index: -1;
     width: 50%;
   }
   .edit .right-panel .first-box {
-    grid-column: span 2;
+    grid-column: span 4;
   }
 
   .edit .right-panel .second-box,
   .edit .right-panel .third-box,
   .edit .right-panel .four-box,
   .edit .right-panel .five-box {
-    grid-column: span 1;
+    grid-column: span 2;
   }
   .edit .right-panel .six-box {
     grid-column: span 1;
+  }
+  .edit .right-panel .six-box {
+    margin: 0;
   }
   .edit .right-panel .last-box {
     grid-column: span 1;
