@@ -2330,4 +2330,7 @@ z-index: -1;
   .detail .blog-author-card .mob-hidden {
     display: none !important;
   }
+  .file-container .file-down {
+    width: 30%;
+  }
 }
