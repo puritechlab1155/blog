@@ -877,6 +877,11 @@ z-index: -1;
   line-height: 140%;
   font-family: 'Paperlogy';
 }
+.detail .detail-content .post-meta {
+  display: flex;
+  justify-content: space-between;
+  /* align-items:end; */
+}
 .detail .detail-content .writer {
   color: #727272;
   font-weight: bold;
@@ -886,6 +891,24 @@ z-index: -1;
 .detail .detail-content .date {
   color: #afafaf;
   font-size: 14px;
+}
+.detail .detail-content .edit-btn-box {
+  display: flex;
+  gap: 20px;
+}
+.detail .detail-content .edit-btn {
+  border-radius: 10px;
+  border: 1px solid #ffe48f;
+  padding: 8px 10px;
+  /* background: #FFF4D7; */
+}
+.detail .detail-content .edit-btn:hover {
+  background: #FFE7A8;
+}
+.detail .detail-content .edit-btn-box .edit-txt {
+  font-size: 14px;
+  color: #727272;
+  font-weight: 500;
 }
 .detail .sidebar {
   width: 34%;
