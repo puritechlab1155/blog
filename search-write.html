@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>블로그 검색페이지-글</title>
+    <title>블로그 검색페이지-블로그</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
@@ -51,48 +51,147 @@
                 <div class="container">
                     <!-- 1단 -->
                     <div class="detail-content">
-                        <div class="post-title yellow">검색명이 표시됩니다</div>
+                        <h2 class="post-title yellow">검색명이 표시됩니다</h2>
                 
                         <div class="top-container">
                             <!-- 탭 -->
                             <div class="tabs">
-                                <span class="tab active" onclick="showTab('tab1')">글</span>
-                                <span class="tab" onclick="showTab('tab2')">블로그</span>
+                                <span class="tab active"><a href="search-write.html">글</a></span>
+                                <span class="tab"><a href="search-blog.html">블로그</a></span>
                             </div>
                             <!-- 필터 -->
                             <div class="filters">
-                                <div class="filter">정확도순</div>
-                                <div class="filter">최신순</div>
+                                <span class="filter"><a href="#">정확도순</a></span>
+                                <span class="filter"><a href="#">최신순</a></span>
                             </div>
                         </div>
 
 
-                        <div class="post-count">총 3개의 게시글이 있습니다.</div>
+                        <div class="post-txt">총 <span class="post-count post-txt">3</span>개의 게시글이 있습니다.</div>
 
                         <!-- 탭 콘텐츠1 -->
                         <div id="tab1" class="tab-content">
                             <div class="blog-item">
-                            <div class="blog-title">📄 글 콘텐츠 제목 1</div>
-                            <div class="blog-desc">이 글은 일반 게시글로 작성된 내용입니다.</div>
+                                <div>
+                                    <!-- 프로필 -->
+                                    <div class="flex-c">
+                                        <div class="author-info">
+                                            <img class="profile-img w-30" src="img/detail/user-img1.png" alt="프로필 이미지">
+                                            <div class="research-author">
+                                                <div class="">
+                                                    <span class="name">블로그 작가 이름</span>
+                                                </div>
+                                                <div class="category">뱃지 + #카테고리 분야</div>
+                                            </div>
+                                        </div>
+                                        <p class="date">2025.03.19</p>
+                                    </div>
+                                    <!-- 기사 미리보기 -->
+                                    <a href="#">
+                                        <div class="best-item m-t-20 gap-10">
+                                            <div class="thumbnail w-150">
+                                                <img src="img/sample.png" alt="블로그 글 썸네일">
+                                            </div>
+                                            <div class="info m-0">
+                                                <p class="title">경기도 국수 맛집 베스트10 유명해경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                                <span class="write-text">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- 버튼 -->
+                                    <div class="btn-box">
+                                        <button class="like" type="button">
+                                            <img class="like-change iconW-24" src="img/detail/like-before.png" alt="하트 아이콘"> <!-- 클릭시 like-after.png 로 이미지 변경되도록 -->
+                                            <span class="like-total">14</span>
+                                        </button>
+                                        <button class="share" type="button">
+                                            <img class="iconW-24" src="img/detail/share.png" alt="공유하기 아이콘">
+                                            <span class="share-total">14</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
+                           
                             <div class="blog-item">
-                            <div class="blog-title">📄 글 콘텐츠 제목 2</div>
-                            <div class="blog-desc">사용자 경험에 대한 생각을 담은 글입니다.</div>
+                                <div>
+                                    <!-- 프로필 -->
+                                    <div class="flex-c">
+                                        <div class="author-info">
+                                            <img class="profile-img w-30" src="img/detail/user-img1.png" alt="프로필 이미지">
+                                            <div class="research-author">
+                                                <div class="">
+                                                    <span class="name">블로그 작가 이름</span>
+                                                </div>
+                                                <div class="category">뱃지 + #카테고리 분야</div>
+                                            </div>
+                                        </div>
+                                        <p class="date">2025.03.19</p>
+                                    </div>
+                                    <!-- 기사 미리보기 -->
+                                    <a href="#">
+                                        <div class="best-item m-t-20 gap-10">
+                                            <div class="thumbnail w-150">
+                                                <img src="img/detail/post-body1.png" alt="블로그 글 썸네일">
+                                            </div>
+                                            <div class="info m-0">
+                                                <p class="title">경기도 국수 맛집 베스트10 유명해경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                                <span class="write-text">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- 버튼 -->
+                                    <div class="btn-box">
+                                        <button class="like" type="button">
+                                            <img class="like-change iconW-24" src="img/detail/like-before.png" alt="하트 아이콘"> <!-- 클릭시 like-after.png 로 이미지 변경되도록 -->
+                                            <span class="like-total">14</span>
+                                        </button>
+                                        <button class="share" type="button">
+                                            <img class="iconW-24" src="img/detail/share.png" alt="공유하기 아이콘">
+                                            <span class="share-total">14</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
+                            
                             <div class="blog-item">
-                            <div class="blog-title">📄 글 콘텐츠 제목 3</div>
-                            <div class="blog-desc">리뷰 중심의 피드백이 담겨 있는 글입니다.</div>
-                            </div>
-                        </div>
-                        <!-- 탭 콘텐츠2 -->
-                        <div id="tab2" class="tab-content" style="display: none;">
-                            <div class="blog-item">
-                            <div class="blog-title">☕ 전국 카페 투어 후기</div>
-                            <div class="blog-desc">부산부터 서울까지 다녀온 후기 모음.</div>
-                            </div>
-                            <div class="blog-item">
-                            <div class="blog-title">🏖️ 제주도 감성 카페 모음</div>
-                            <div class="blog-desc">제주에서 뷰 좋은 카페들을 정리해봤어요.</div>
+                                <div>
+                                    <!-- 프로필 -->
+                                    <div class="flex-c">
+                                        <div class="author-info">
+                                            <img class="profile-img w-30" src="img/detail/user-img1.png" alt="프로필 이미지">
+                                            <div class="research-author">
+                                                <div class="">
+                                                    <span class="name">블로그 작가 이름</span>
+                                                </div>
+                                                <div class="category">뱃지 + #카테고리 분야</div>
+                                            </div>
+                                        </div>
+                                        <p class="date">2025.03.19</p>
+                                    </div>
+                                    <!-- 기사 미리보기 -->
+                                    <a href="#">
+                                        <div class="best-item m-t-20 gap-10">
+                                            <div class="thumbnail w-150">
+                                                <img src="img/sample.png" alt="블로그 글 썸네일">
+                                            </div>
+                                            <div class="info m-0">
+                                                <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                                <span class="write-text">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- 버튼 -->
+                                    <div class="btn-box">
+                                        <button class="like" type="button">
+                                            <img class="like-change iconW-24" src="img/detail/like-before.png" alt="하트 아이콘"> <!-- 클릭시 like-after.png 로 이미지 변경되도록 -->
+                                            <span class="like-total">14</span>
+                                        </button>
+                                        <button class="share" type="button">
+                                            <img class="iconW-24" src="img/detail/share.png" alt="공유하기 아이콘">
+                                            <span class="share-total">14</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -103,10 +202,10 @@
                         <div>
                             <h2 class="sidebar-title">연관 검색</h2>
                             <div class="related-search">
-                                <a href="#">서울 카페</a>
-                                <a href="#">카페 리뷰</a>
-                                <a href="#">감성 카페 사진 스팟</a>
-                                <a href="#">브런치카페 맛집</a>
+                                <a class="related" href="#">서울 카페</a>
+                                <a class="related" href="#">카페 리뷰</a>
+                                <a class="related" href="#">감성 카페 사진 스팟</a>
+                                <a class="related" href="#">브런치카페 맛집</a>
                             </div>
                         </div>
 
@@ -271,19 +370,6 @@
     
     <script src="js/script.js"></script>
 
-    <script>
-function showTab(tabId) {
-    // 탭 숨기기
-    document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
-    // 탭 보이기
-    document.getElementById(tabId).style.display = 'block';
-    // 탭 버튼 활성화 처리
-    document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-    event.target.classList.add('active');
-  }
-
-
-    </script>
 
 </body>
 </html>
