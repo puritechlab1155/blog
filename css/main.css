@@ -833,6 +833,9 @@ z-index: -1;
   /* gap: 5%; */
   justify-content: space-between;
 }
+.user-auth .info .blogIntro-box {
+  align-items: start;
+}
 .user-auth .info .category {
   margin-right: 5px;
 }
@@ -843,6 +846,12 @@ z-index: -1;
 }
 .user-auth .info .flex-mob .input_title {
   width: 100%;
+}
+.user-auth .info .flex-mob .blogIntro-bg {
+  background: #fefefe;
+}
+.user-auth .info .flex-mob .blogIntro-bg .input-01 {
+  border-radius: 10px;
 }
 .user-auth .info .btn-02 {
   flex: 0.5;
