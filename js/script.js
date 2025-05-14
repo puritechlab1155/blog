@@ -55,3 +55,33 @@ document.addEventListener("DOMContentLoaded", function () {
   searchIcon.style.display = "block";
   closeIcon.style.display = "none";
 });
+
+
+
+
+
+
+// 영상 임베드 방식2
+document.getElementById("youtubeInput").addEventListener("input", function () {
+  const input = this.value;
+  const videoId = extractYouTubeId(input);
+  const preview = document.getElementById("youtubePreview");
+
+  if (videoId) {
+    preview.innerHTML = `
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/${videoId}"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>`;
+  } else {
+    preview.innerHTML = ""; // 유효하지 않으면 미리보기 제거
+  }
+});
+
+// 유튜브 링크에서 영상 ID 추출 방식2
+function extractYouTubeId(url) {
+  const regExp = /^.*(youtu.be\/|v=|\/embed\/|\/v\/|watch\?v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return (match && match[2].length === 11) ? match[2] : null;
+}

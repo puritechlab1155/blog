@@ -1270,9 +1270,95 @@ z-index: -1;
 }
 
 /* <edit.html> */
+/* 링크 */
 .link-style {
-  text-decoration: underline;
   color: #317dee;
+  display: block;
+}
+.link-box .link-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 34px;
+  /* gap: 20px; */
+  border: 1px solid #c7c7c7;
+  margin: 20px auto;
+  border-radius: 15px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); */
+}
+.link-box .thumb {
+  width: clamp(100px, 30vw, 200px);
+  aspect-ratio: 1 / 1;   /* 1:1 비율 유지 */
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; /* 로딩 중일 때 배경 처리용 */
+  flex-shrink: 0;
+}
+.link-box .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* 썸네일에 꽉 차게 */
+  object-position: center;
+  border-radius: 10px;
+}
+.link-box .link-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* padding: 30px 0; */
+  margin: 0 30px;
+}
+.link-box .link-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #202020;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.link-box .link-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 최대 4줄까지 보이게 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.link-box .link-site {
+  font-size: 14px;
+  font-style: italic;
+  color: #c1c1c1;
+}
+
+/* 영상 임베드 영역 */
+.videoWrapper {
+  text-align: center;
+}
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 비율 (9/16 * 100) */
+  margin-top: 20px;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 /* 파일첨부 */
 .file-container {
@@ -2275,6 +2361,11 @@ z-index: -1;
     justify-content: space-between;
     align-items: start;
   }
+  .link-box .link-info {
+    /* gap: 10px;
+    padding: 15px 0;
+    margin: 0 15px; */
+  }
 
   /* 푸터 */
   .footer .social-icons {
@@ -2322,6 +2413,19 @@ z-index: -1;
   .search .subscribe {
     margin-top: 0px;
   } 
+  .link-box .link-site {
+    margin-top: 0;
+  }
+  .link-box .link-item {
+    flex-direction: column;
+  }
+  .link-box .thumb {
+    max-width: 560px;
+    width: 100%;
+  }
+  .link-box .link-info {
+    padding: 30px 0;
+  }
 }
 @media screen and (max-width: 480px) {
   .m-t-100 {
