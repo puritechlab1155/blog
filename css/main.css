@@ -1515,7 +1515,8 @@ z-index: -1;
   border-radius: 20px;
   max-width: 900px;
   border: 1px solid #efefef;
-  height: 90vh;
+  /* height: 90vh; */
+  /* background: pink; */
 }
 .edit .title-container {
   display: flex;
@@ -1557,6 +1558,7 @@ z-index: -1;
   box-sizing: border-box; /* 패딩을 포함한 높이를 계산 */
   overflow-y: auto;
   color: #727272;
+  /* background: skyblue; */
 }
 .text-area-border {
   padding-top: 20px;
@@ -1833,9 +1835,11 @@ z-index: -1;
 .edit {
   /* margin-bottom: 300px; */
 }
-
 .thumb-footer  {
   /* margin-top: 170px; */
+}
+.thumbnail-wrapper .hidden {
+  display: none;
 }
 .thumbnail-wrapper {
   margin-top: 20px;
@@ -1845,12 +1849,12 @@ z-index: -1;
   margin-top: 100px;
 }
 .thumbnail-flex {
-  display: flex;
-  align-items: end;
-  gap: 30px;
+  position: relative;
+  text-align: left;
+  margin-top: 5px;
 }
 .thumbnail-preview {
-  display: none;
+  /* display: none; */
   width: 150px;
   height: 150px;
   object-fit: cover;
@@ -1858,6 +1862,21 @@ z-index: -1;
   border-radius: 8px;
   margin-top: 10px;
 }
+.remove-thumbnail {
+  position: absolute;
+  top: 17px;
+  left: 117px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
 .file-input {
   display: none;
 }
@@ -2111,15 +2130,23 @@ z-index: -1;
   }
 
   /* <edit.html> */
+  .edit {
+    margin-bottom: 250px;
+  }
   .edit .container {
     height: 135vh;
   }
   .edit .content {
     flex-direction: column-reverse;
   }
+  .edit .left-panel {
+    min-height: 550px;
+  }
   .edit .left-panel .text-area {
     font-size: 15px;
     line-height: 180%;
+    /* background: yellow; */
+    height: 50vh;
   }
   .edit .left-panel .edit-title::placeholder {
     font-size: 35px;
@@ -2343,7 +2370,7 @@ z-index: -1;
   .edit .left-panel .text-area {
     font-size: 14px;
     line-height: 150%;
-    height: 570px;
+    /* height: 570px; */
   }
   .edit .left-panel .edit-title {
     font-size: 28px;
@@ -2669,7 +2696,7 @@ z-index: -1;
     font-size: 25px;
   }
   .edit .left-panel .text-area {
-    height: 580px;
+    /* height: 580px; */
   }
   .edit .left-panel .edit-title::placeholder {
     white-space: nowrap;
