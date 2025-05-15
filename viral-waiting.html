@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>블로그 샘플</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="header-contain">
+            <h1>
+                <a class="logo" href="index.html">BLOG SITE</a>
+            </h1>
+            <div class="header-right">
+                <div class="search-container">
+                    <input type="text" placeholder="키워드를 입력하세요." class="search-input"/>
+                    <button type="button" class="search-submit"><img src="img/common/search2.png" alt="돋보기 이미지"></button>
+                </div>
+                <button type="button" class="icon-area">
+                    <img src="img/common/search.png" alt="돋보기 이미지" class="search-icon">
+                    <img src="img/common/close.png" alt="돋보기 이미지" class="close-icon">
+                </button>
+                <button type="button" class="ham-box" id="menuBtn">
+                    <span class="ham"></span>
+                    <span class="ham"></span>
+                    <span class="ham"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- 메뉴 패널 -->
+    <div class="menu-panel" id="menuPanel">
+        <ul class="menu-list-box">
+            <a href="index.html"><li class="panel-list">Home</li></a>
+            <a href="edit.html"><li class="panel-list">Edit</li></a>
+            <a href="myInfo.html"><li class="panel-list">My Info</li></a>
+            <a class="log-in" href="login.html"><li class="panel-list">Log In</li></a><!-- 로그아웃 상태시 노출 -->
+            <a class="log-out" href="#"><li class="panel-list">Log Out</li></a><!-- 로그인 상태시 노출 -->
+        </ul>
+    </div><!-- 여기까지 메뉴 패널 -->
+
+
+    <div class="content-wrap">
+        <!-- 컨텐츠 시작 -->
+        <div id="main">
+            <div class="video m-t-100">
+                <div class="user-auth-wrap agree-wrap">
+                    <div class="project-wait-img">
+                        <img class="img-item" src="img/wait-img.png" alt="비디오 변환 중">
+                    </div>
+                    <h3 class="content-title paperlogy m-t-60">
+                        예상 소요 시간은 <br/>
+                        <span class="highlight-time paperlogy">0분 00초</span>입니다
+                    </h3>
+                    <div class="title-descript m-t-40">
+                        <span>이용자 대기순번에 따라 소요 시간이 바뀔 수 있습니다.</span>
+                    </div>
+                    <div class="btn_wrap m-t-40">
+                        <button type="button" class="btn-03" onclick="location.href='viral.html'">바이럴 AI 보관함으로 이동</button>  <!-- viral.html 로 이동하는게 맞나..?  -->
+                        <button type="button" class="btn-03" onclick="location.href='edit.html'">기다리는동안 블로그 작성하기</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- 여기까지 컨텐츠 -->
+    </div>
+
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer-contain">
+            <!-- 소셜 아이콘 -->
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                     <img src="img/common/facebook.png" alt="facebook">
+                </a>
+                <a href="https://www.spacex.com" target="_blank">
+                    <img src="img/common/xmark.png" alt="xmark">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="img/common/instagram.png" alt="instagram">
+                </a>
+                <a href="https://blog.naver.com" target="_blank">
+                    <img src="img/common/blogger.png" alt="blogger">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="img/common/youtube.png" alt="youtube">
+                </a>
+                <a href="mailto:example@email.com">
+                    <img src="img/common/email.png" alt="email">
+                </a>
+            </div>
+           
+            <div class="footer-text">
+                BlogStory Ⓒ 2025 Magazine Lab
+            </div>
+        
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+
+    <script>
+    </script>
+
+</body>
+</html>
