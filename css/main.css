@@ -243,10 +243,25 @@ z-index: -1;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical; */
 }
+.intro .ai-prompt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .intro .post-date {
   font-size: 0.9rem;
   color: #777;
   margin-top: 5px;
+}
+.intro .promptMessage {
+  display: flex;
+  gap: 3px;
+}
+.intro .ing-txt {
+  font-size: 0.9rem;
+  color: #777;
+  /* margin-top: 5px; */
+  display: flex;
 }
 .intro .hidden,
 .detail .hidden {
@@ -289,6 +304,12 @@ z-index: -1;
   background-position: center;
   object-position: center;
   border-radius: 10px;
+}
+.ing-img {
+  width: 15px !important;
+  height: 15px !important;
+  min-height: 15px !important;
+  margin-top: 4px;
 }
 .intro .sec1 {
   display: flex;
@@ -1100,9 +1121,6 @@ z-index: -1;
   padding: 50px;
   border-radius: 5px;
   text-align: center;
-}
-.detail .modal.hidden {
-  display: none;
 }
 .detail .modal.hidden {
   display: none;
@@ -2045,6 +2063,379 @@ z-index: -1;
   display: none ;
 }
 
+
+/* -------영상 변환 */
+.video .my-project {
+  /* padding: 70px 72px; */
+}
+
+/* 환영소개 */
+.video .my-project .hello {
+  border: 1px solid #FDCC32;
+  background-color: #fefefe;
+  box-shadow: 0px 0px 2px #FDCC32;
+  width: 65%;
+  color:#292929;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 20px 30px;
+  margin-bottom: 80px;
+  display: flex;                 
+  justify-content: flex-start;    
+  align-items: center;          
+  gap: 20px;   
+}
+
+.video .my-project .hello-icon {
+  padding: 0.5vw;
+  background: #fff3e4;
+  border: 1px solid #EFEAFF;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  height: 15vw;
+  max-width: 60px;
+  max-height: 60px;
+  border: 1.5px solid #EFEFEF;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.video .my-project .edit-title {
+  font-size: 20px;
+}
+
+.video .my-project .hello .strong{
+  color: #FDCC32;
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.video .my-project .f_container,
+.video .my-project .m_container {
+  border: 1px solid #d2d2d2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 50px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.video .my-project .content-title {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+.video .my-project .title-descript {
+  /* line-height: 1.5; */
+  margin-top: 10px;
+  display: block;
+  font-size: 16px;
+  color: #868686;
+  font-weight: 400;
+}
+/* 영상제작하기 */
+.video .my-project .f_container {
+  margin-bottom: 100px;
+  padding: 50px;
+}
+.video .my-project .m_container {
+  padding: 100px 50px;   
+}
+.video .my-project .f_container .input_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2%;
+}
+.video .my-project .input_container label {
+  flex: 7;
+}
+.video .my-project .f_container input {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid #EFEFEF;
+  font-size: clamp(0.8rem, 2vw, 1.3rem);
+  letter-spacing: -0.36px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.video .my-project input:focus {
+  outline: 1px solid #FDCC32;
+}
+.video .my-project input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #CECECE;
+}
+.video .my-project .f_container .changeBtn {
+  flex: 3;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 90px;
+  background: #FDCC32;
+  color: #fff;
+  border: none;
+  transition: all 0.1s linear;
+}
+.video .my-project .f_container .changeBtn:hover {
+  /* border-color: #FDCC32; */
+  transform: scale(1.1);
+}
+.video .my-project .upload-area {
+  margin-top: 1.5rem;
+  border: 1px dashed #CCC;
+  padding: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.video .my-project .upload-area:hover,
+.video .my-project .upload-area:focus {
+  border: 1px dashed #FDCC32;
+}
+.video .my-project .upload-icon {
+  padding: 0.5vw;
+  background: #fff3e4;
+  border: 1px solid #EFEAFF;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  height: 15vw;
+  max-width: 60px;
+  max-height: 60px;
+  border: 1.5px solid #EFEFEF;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.video .my-project .upload-icon img {
+  width: 30px;
+  height: auto;
+  display: block;
+}
+.video .my-project .upload-area:hover .upload-icon,
+.video .my-project .upload-area:focus .upload-icon {
+  border-color: #FDCC32;
+}
+.video .my-project .upload-area-title {
+  margin-top: 1rem;
+  display: block;
+  font-weight: 700;
+  color: #0d0f21;
+  font-size: 18px;
+}
+.video .my-project .upload-area-description {
+  display: block;
+  margin-top: 1rem;
+  color: #6a6b76;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* 바이럴 AI 보관함 */
+.video .my-project .video_container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 130px 20px;
+  padding: 20px 0;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.video .my-project .item-wrapper {
+  position: relative;
+  flex: 0 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.video .my-project .item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background-color: #FEFEFE;
+  border-radius: 20px;
+  border: 2px solid #e1e1e1;
+}
+.video .my-project .item-wrapper:nth-child(1) .item {
+  /* background-color: #FFADAD;
+  background-image: url('../img/sample.png');
+  background-size: cover;         
+  background-position: center;    
+  background-repeat: no-repeat;    */
+}
+.video .my-project .label {
+  position: absolute;
+  font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+  color: #FDCC32;
+  font-weight: 500;
+  /* padding: 0.2em 0.5em; */
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.video .my-project .top-right {
+  top: -1.5em;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;                
+  align-items: center;          
+  gap: 3px;
+}
+.video .my-project .ing {
+  font-weight: 700;
+  color:#868686 !important;
+}
+.video .my-project .ing {
+  font-weight: 500;
+  color:#FDCC32;
+}
+.video .my-project .bottom-left {
+  bottom: -1.5em;
+  left: 0;
+  transform: translateY(50%);
+  font-weight: 500;
+  color:#868686;
+}
+.video .my-project .bottom-right {
+  bottom: -1.5em;
+  right: 0;
+  transform: translateY(50%);
+  font-weight: 500;
+  color:#868686;
+}
+.video .my-project .bottom-right .ing-img {
+  margin-top: -2px;
+}
+
+/* 삭제 버튼 스타일 */
+.video .my-project .deletBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #F8F8F8;
+  border: none;
+  padding: clamp(4px, 0.8vw, 8px);
+  border: 2px solid #EFEFEF;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.1s linear;
+  z-index: 1;
+}
+.video .my-project .deletBtn:hover {
+  border-color: #FDCC32;
+  transform: scale(1.1);
+}
+.video .my-project .deletBtn img {
+  /* width: clamp(14px, 1.8vw, 15px); */
+  height: auto;
+  display: block;
+}
+.hidden {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .video .my-project .hello {
+      width: 100%;
+  }
+  .video .my-project .f_container .changeBtn {
+      margin-top: 20px;
+  }
+  
+  .video .my-project .f_container .input_container {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .video .my-project .input_container label,
+  .video .my-project .input_container .changeBtn {
+      flex: none;
+      width: 100%;
+  }
+  .video .my-project .edit-title {
+      font-size: 17px;
+  }
+  .video .my-project .m_container {
+      padding: 60px 30px;   
+  }
+  .video .my-project .item-wrapper {
+      flex: 0 1 calc(50% - 10px);
+      max-width: calc(50% - 10px);
+  }
+  .video .my-project .video_container {
+      gap: 100px 20px;
+  }
+  .video .my-project .top-right {        
+      gap: 2px;
+  }
+  .video .my-project .deletBtn {
+      border-radius: 5px;
+  }
+  .video .my-project .mob-br {
+      display: block;
+  }
+}
+@media (max-width: 597px) {
+  .video .my-project .item-wrapper {
+      flex: 0 1 100%;
+      max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .video .my-project {
+      /* padding: 50px 20px; */
+  }
+  .video .my-project .hello {
+      padding: 10px 20px;
+      margin-bottom: 40px;
+  }
+  .video .my-project .f_container {
+      margin-bottom: 80px;
+  }
+  .video .my-project .edit-title {
+      font-size: 15px;
+  }
+  .video .my-project .f_container .changeBtn {
+      font-size: 13px;
+      margin-top: 10px;
+      padding: 15px 0;
+  }
+  .video .my-project .upload-icon img {
+      width: 25px;
+  }
+  .video .my-project .upload-area-description {
+      font-size: 12px;
+  }
+
+  .video .my-project .deletBtn {
+      border-radius: 5px;
+  }
+}
 
 
 

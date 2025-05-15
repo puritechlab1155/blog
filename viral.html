@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>블로그 바이럴 AI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="header-contain">
+            <h1>
+                <a class="logo" href="index.html">BLOG SITE</a>
+            </h1>
+            <div class="header-right">
+                <div class="search-container">
+                    <input type="text" placeholder="키워드를 입력하세요." class="search-input"/>
+                    <button type="button" class="search-submit"><img src="img/common/search2.png" alt="돋보기 이미지"></button>
+                </div>
+                <button type="button" class="icon-area">
+                    <img src="img/common/search.png" alt="돋보기 이미지" class="search-icon">
+                    <img src="img/common/close.png" alt="돋보기 이미지" class="close-icon">
+                </button>
+                <button type="button" class="ham-box" id="menuBtn">
+                    <span class="ham"></span>
+                    <span class="ham"></span>
+                    <span class="ham"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- 메뉴 패널 -->
+    <div class="menu-panel" id="menuPanel">
+        <ul class="menu-list-box">
+            <a href="index.html"><li class="panel-list">Home</li></a>
+            <a href="edit.html"><li class="panel-list">Edit</li></a>
+            <a href="myInfo.html"><li class="panel-list">My Info</li></a>
+            <a class="log-in" href="login.html"><li class="panel-list">Log In</li></a><!-- 로그아웃 상태시 노출 -->
+            <a class="log-out" href="#"><li class="panel-list">Log Out</li></a><!-- 로그인 상태시 노출 -->
+        </ul>
+    </div><!-- 여기까지 메뉴 패널 -->
+
+
+    <div class="content-wrap">
+        <!-- 컨텐츠 시작 -->
+        <div id="main">
+            <div class="video m-t-100">
+                <div class="content-inner my-project">
+                    <div class="hello">
+                        <span class="hello-icon">
+                            <img src="img/video/hello.svg" alt="hello">
+                        </span>
+                        <span class="edit-title font-IBM">반가워요 <span class="strong"> id1234님!</span> <br>숏폼 만들기 바로 시작해보세요!</span>
+                    </div>
+
+                    <!-- 쇼츠제작 -->
+                    <h3 class="content-title font-IBM">
+                        바이럴 AI
+                        <span class="title-descript">유튜브 영상 링크를 입력하시거나, 파일을 넣어주세요. <br class="mob-br">자동으로 짧고
+                            임팩트 있는 쇼츠로 변환됩니다!</span>
+                    </h3>
+                    <div class="f_container">
+                        <div class="input_container">
+                            <label for="y_link" class="link">
+                                <input type="text" id="y_link" placeholder="https://www.youtube.com/watch?v=...">
+                            </label>
+                            <button class="changeBtn" type="button" onclick="">변환시작</button>
+                        </div>
+
+                        <div class="upload-area">
+                            <span class="upload-icon">
+                                <img src="img/video/upload.svg" id="iconClick" alt="upload">
+                            </span>
+                            <span class="upload-area-title">영상올리기</span>
+                            <span class="upload-area-description">
+                                이곳에 파일을 드래그해서 <br class="mob-br ">삽입하세요
+                            </span>
+                            <input type="file" id="fileInput" style="display: none;" />
+                        </div>
+                    </div>
+
+                    <!-- 변환된 영상 보관함 -->
+                    <h3 class="content-title font-IBM">
+                        바이럴 AI 보관함
+                        <span class="title-descript">생성된 바이럴 AI는 게시글 작성시 선택 가능합니다 </span>
+                    </h3>
+                    <div class="m_container">
+                        <div class="video_container">
+                            <!-- 1. 영상변환 진행중 -->
+                            <div class="item-wrapper">
+                                <div class="item">
+                                    <img src="" alt="default 썸네일">
+                                    <button class="deletBtn">
+                                        <img src="img/iconamoon_trash-fill.svg" alt="휴지통 아이콘">
+                                    </button>
+                                </div>
+                                <div class="label bottom-left">2024.10.23</div>
+                                <div class="label bottom-right">
+                                    <img class="ing-img" src="img/ing.svg" alt="진행중 아이콘" />
+                                    <span>영상변환 진행중</span>
+                                </div>
+                            </div>
+                            <div class="item-wrapper">
+                                <div class="item">
+                                    <img src="" alt="default 썸네일">
+                                    <button class="deletBtn">
+                                        <img src="img/iconamoon_trash-fill.svg" alt="휴지통 아이콘">
+                                    </button>
+                                </div>
+                                <div class="label bottom-left">2024.10.23</div>
+                                <div class="label bottom-right">
+                                    <img class="ing-img" src="img/ing.svg" alt="진행중 아이콘" />
+                                    <span>영상변환 진행중</span>
+                                </div>
+                            </div>
+                            <div class="item-wrapper">
+                                <div class="item">
+                                    <img src="" alt="default 썸네일">
+                                    <button class="deletBtn">
+                                        <img src="img/iconamoon_trash-fill.svg" alt="휴지통 아이콘">
+                                    </button>
+                                </div>
+                                <div class="label bottom-left">2024.10.23</div>
+                                <div class="label bottom-right">
+                                    <img class="ing-img" src="img/ing.svg" alt="진행중 아이콘" />
+                                    <span>영상변환 진행중</span>
+                                </div>
+                            </div>
+
+                            <!-- 2. 영상변환 완료 -->
+                            <div class="item-wrapper">
+                                <div class="item">
+                                    <img src="img/sample.png" alt="바이럴 썸네일 이미지">
+                                    <button class="deletBtn">
+                                        <img src="img/iconamoon_trash-fill.svg" alt="휴지통 아이콘">
+                                    </button>
+                                </div>
+                                <div class="label bottom-left">2024.10.23</div>
+                                <div class="label bottom-right">
+                                    <img class="ing-img" src="img/end.svg" alt="완료 아이콘" />
+                                    <span>영상변환 완료</span>
+                                </div>
+                            </div>
+                            <div class="item-wrapper">
+                                <div class="item">
+                                    <img src="img/sample.png" alt="바이럴 썸네일 이미지">
+                                    <button class="deletBtn">
+                                        <img src="img/iconamoon_trash-fill.svg" alt="휴지통 아이콘">
+                                    </button>
+                                </div>
+                                <div class="label bottom-left">2024.10.23</div>
+                                <div class="label bottom-right">
+                                    <img class="ing-img" src="img/end.svg" alt="완료 아이콘" />
+                                    <span>영상변환 완료</span>
+                                </div>
+                            </div>
+                            <div class="item-wrapper">
+                                <div class="item">
+                                    <img src="img/sample.png" alt="바이럴 썸네일 이미지">
+                                    <button class="deletBtn">
+                                        <img src="img/iconamoon_trash-fill.svg" alt="휴지통 아이콘">
+                                    </button>
+                                </div>
+                                <div class="label bottom-left">2024.10.23</div>
+                                <div class="label bottom-right">
+                                    <img class="ing-img" src="img/end.svg" alt="완료 아이콘" />
+                                    <span>영상변환 완료</span>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div> 
+
+                </div>
+            </div>
+        </div><!-- 여기까지 컨텐츠 -->
+    </div>
+
+    <!-- 삭제 클릭 확인 모달창 ---// listDetail.html 삭제버튼 모달과 동일--- -->
+    <div class="detail">
+        <div id="reportModal" class="modal hidden">
+            <div class="modal-content">
+                <p class="text"><b>삭제하신 컨텐츠는 복원이 불가능합니다<br/>정말로 삭제하시겠습니까?</br></p>
+                <div class="m-t-40">
+                    <button type="button" class="confirm btn-01 w-125" onclick="confirmReport()">예</button>
+                    <button type="button" class="cancel btn-01 w-125" onclick="closeReportModal()">아니요</button>
+                </div>
+            </div>
+        </div>
+        <!-- 삭제 완료 모달 -->
+        <div id="reportSuccessModal" class="modal hidden">
+            <div class="modal-content">
+                <p class="text"><b>신고가 접수되었습니다.</b></p>
+                <button type="button" class="close m-t-40 btn-01 w-125" onclick="closeReportSuccessModal()">확인</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer-contain">
+            <!-- 소셜 아이콘 -->
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                     <img src="img/common/facebook.png" alt="facebook">
+                </a>
+                <a href="https://www.spacex.com" target="_blank">
+                    <img src="img/common/xmark.png" alt="xmark">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="img/common/instagram.png" alt="instagram">
+                </a>
+                <a href="https://blog.naver.com" target="_blank">
+                    <img src="img/common/blogger.png" alt="blogger">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="img/common/youtube.png" alt="youtube">
+                </a>
+                <a href="mailto:example@email.com">
+                    <img src="img/common/email.png" alt="email">
+                </a>
+            </div>
+           
+            <div class="footer-text">
+                BlogStory Ⓒ 2025 Magazine Lab
+            </div>
+        
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+            // 삭제 버튼(.deletBtn) 클릭 → 삭제 확인 모달 열기
+            document.querySelectorAll('.deletBtn').forEach(button => {
+                button.addEventListener('click', function () {
+                    document.getElementById('reportModal').classList.remove('hidden');
+                });
+            });
+
+            // "예" 버튼 클릭 → 삭제 확인 모달 닫고 삭제 완료 모달 열기
+            window.confirmReport = function () {
+                document.getElementById('reportModal').classList.add('hidden');
+                document.getElementById('reportSuccessModal').classList.remove('hidden');
+            };
+
+            // "아니요" 버튼 클릭 → 삭제 확인 모달 닫기
+            window.closeReportModal = function () {
+                document.getElementById('reportModal').classList.add('hidden');
+            };
+
+            // "확인" 버튼 클릭 → 삭제 완료 모달 닫기
+            window.closeReportSuccessModal = function () {
+                document.getElementById('reportSuccessModal').classList.add('hidden');
+            };
+        });
+    </script>
+
+</body>
+</html>
