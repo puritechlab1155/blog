@@ -1494,7 +1494,24 @@ z-index: -1;
   flex-direction: column;
   /* height: 100vh; */
 }
-
+/* 아이콘 바 모바일 전용 문구 */
+.edit .scrollMob-container {
+  display: none;
+  /* display: flex; */
+  justify-content: right;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.edit .scrollMob-container .scroll-txt {
+  color: #202020;
+  font-size: 14px;
+}
+.edit .scrollMob-container .scroll-icon {
+  width: 15px;
+  /* height: 24px; */
+  margin-left: 10px;
+}
+/* 아이콘 바 */
 .edit .icon-bar {
   display: flex;
   justify-content: flex-start;
@@ -1935,6 +1952,9 @@ z-index: -1;
   }
   #saveShorts .save-shorts > .shorts-list:nth-child(n+11) { /* 최대 15개 제한 */
     display: block;
+  }
+  .edit .scrollMob-container {
+    display: flex;  
   }
 }
 
@@ -3023,6 +3043,8 @@ color: #FDCC32;
   .link-box .link-info {
     padding: 30px 0;
   }
+  /* edit */
+  .modal-content .desc
 }
 @media screen and (max-width: 480px) {
   .m-t-100 {
@@ -3289,7 +3311,7 @@ color: #FDCC32;
     /* padding: 0; */
   }
   .edit .btn-01 {
-    font-size: 13px;
+    /* font-size: 13px; */
   }
   .edit .user-btn {
     font-size: 14px;

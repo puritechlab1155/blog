@@ -67,6 +67,11 @@
                 <div class="edit m-t-100">
 
                     <div class="container">
+                        <!-- 모바일 전용 스크롤 문구 -->
+                        <div class="scrollMob-container">
+                            <span class="scroll-txt">scroll</span>
+                            <img class="scroll-icon" src="img/edit/scroll-arrow.svg" alt="스크롤 화살표"/>
+                        </div>
                         <div class="icon-bar">
                             <button type="button" class="photo-btn icon-btn01">
                                 <div class="icon-bg">
@@ -254,7 +259,7 @@
                             <div class="modal-content">
                                 <span class="close-btn">&times;</span>
                                 <h3 class="f-18">숏츠 AI 사용하기</h3>
-                                <p class="desc m-t-10">유튜브 영상 링크를 입력하시거나, 파일첨부시 쇼츠로 변환됩니다!</p>
+                                <p class="desc m-t-10">유튜브 영상 링크를 입력하시거나, <span class="desc mob_br">파일첨부시 쇼츠로 변환됩니다!</span></p>
                                 <p class="desc">바이럴 AI로 쇼츠를 제작해 블로그를 꾸며보세요!</p>
                                 <button class="btn-01 m-t-20" id="viralMaking" onclick="location.href='viral.html'">새로 만들기</button>
                                 <button class="btn-01 m-t-20" id="viralBring">저장된 쇼츠 가져오기</button>
@@ -630,7 +635,26 @@
             });
 
 
+            // 아이콘바 스크롤 시작시 스크롤 아이콘 감추기 (모버일 전용)
+            document.addEventListener('DOMContentLoaded', function () {
+                const iconBar = document.querySelector('.icon-bar');
+                const scrollMobContainer = document.querySelector('.scrollMob-container');
 
+                if (iconBar && scrollMobContainer) {
+                    iconBar.addEventListener('scroll', function () {
+                    if (iconBar.scrollLeft > 0) {
+                        scrollMobContainer.style.transition = 'opacity 0.3s ease';
+                        scrollMobContainer.style.opacity = 0;
+                    } else {
+                        scrollMobContainer.style.transition = 'opacity 0.3s ease';
+                        scrollMobContainer.style.opacity = 1;
+                    }
+                    });
+                }
+            });
+
+
+            
 
             // 해쉬태그 입력 모달창
             document.addEventListener("DOMContentLoaded", function () {
