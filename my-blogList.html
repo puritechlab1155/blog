@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>블로그 검색페이지-블로그</title>
+    <title>블로그 MyBlog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
@@ -46,55 +46,70 @@
     <div class="content-wrap">
         <!-- 컨텐츠 시작 -->
         <div id="main">
-            <div class="search detail m-t-100">
+            <div class="myBlog search detail m-t-100">
                 <!-- 여기서부터 -->
                 <div class="container">
                     <!-- 1단 -->
                     <div class="detail-content">
-                        <h2 class="post-title yellow">검색명이 표시됩니다</h2>
+                        <!-- <h2 class="post-title yellow">검색명이 표시됩니다</h2> -->
+                        <input type="text" id="searchInput" placeholder="제목 검색" />
                 
                         <div class="top-container">
                             <!-- 탭 -->
                             <div class="tabs">
-                                <span class="tab active"><a href="search-write.html">글</a></span>
-                                <span class="tab"><a href="search-blog.html">블로그</a></span>
+                                <span class="tab active"><a href="my-blogList.html">상세보기</a></span>
+                                <span class="tab"><a href=".html">썸네일로보기</a></span>
                             </div>
                             <!-- 필터 -->
-                            <div class="filters">
-                                <span class="filter"><a href="#">정확도순</a></span>
-                                <span class="filter"><a href="#">최신순</a></span>
+                            <div class="filters btn-03">
+                                <span class="filter">
+                                    <button type="button" onclick="location.href='edit.html'">게시글 +</button>
+                                </span>
                             </div>
                         </div>
 
 
                         <div class="post-txt">총 <span class="post-count post-txt">3</span>개의 게시글이 있습니다.</div>
 
-                        <!-- 탭 콘텐츠1 -->
+                        <!-- 상세보기 콘텐츠1 -->
                         <div id="tab1" class="tab-content">
                             <div class="blog-item">
-                                <div>
-                                    <!-- 프로필 -->
-                                    <div class="flex-c">
-                                        <div class="author-info">
-                                            <img class="profile-img w-30" src="img/detail/user-img1.png" alt="프로필 이미지">
-                                            <div class="research-author">
-                                                <div class="">
-                                                    <span class="name">블로그 작가 이름</span>
-                                                </div>
-                                                <div class="category">뱃지 + #카테고리 분야</div>
+                                <div class="my-blog">
+                                    <!-- 설정 -->
+                                    <div class="setting flex-c">
+                                        <!-- 공개설정 -->
+                                        <div class="status">
+                                            
+                                            <div class="author-info">
+                                                <select id="statusFilter">
+                                                    <option value="">공개여부</option>  
+                                                    <option value="공개">공개</option>
+                                                    <option value="비공개">비공개</option>
+                                                </select>
                                             </div>
+                                            <p class="status-slect date">공개</p><!-- 기본값으로 전체공개 -->
                                         </div>
-                                        <p class="date">2025.03.19</p>
+                                        <!-- 썸네일 변경버튼 -->
+                                        <div class="thumbChange">
+                                            <button id="thumbChangeBtn" class="thumb-change btn-01" type="button">
+                                              썸네일
+                                              <img class="edit" src="img/detail/edit.png" alt="썸네일 수정 아이콘">
+                                            </button>
+                                            <input type="file" id="thumbInput" accept="image/*" style="display: none;">
+                                        </div>
+                                        
                                     </div>
+
                                     <!-- 기사 미리보기 -->
                                     <a href="#">
                                         <div class="best-item m-t-20 gap-10">
                                             <div class="thumbnail w-150">
-                                                <img src="img/sample.png" alt="블로그 글 썸네일">
+                                                <img img id="thumbImage" src="img/sample.png" alt="블로그 글 썸네일">
                                             </div>
                                             <div class="info m-0">
                                                 <p class="title">경기도 국수 맛집 베스트10 유명해경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
                                                 <span class="write-text">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</span>
+                                                <p class="date">2025.03.19</p>
                                             </div>
                                         </div>
                                     </a>
@@ -108,34 +123,53 @@
                                             <img class="iconW-24" src="img/detail/share.png" alt="공유하기 아이콘">
                                             <span class="share-total">14</span>
                                         </button>
+                                        <!--삭제버튼 -->
+                                        <div class="delete">
+                                            <button class="deletBtn" type="button">
+                                                <img src="img/iconamoon_trash-fill.svg" alt="휴지통 아이콘">
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                            
                             <div class="blog-item">
-                                <div>
-                                    <!-- 프로필 -->
-                                    <div class="flex-c">
-                                        <div class="author-info">
-                                            <img class="profile-img w-30" src="img/detail/user-img1.png" alt="프로필 이미지">
-                                            <div class="research-author">
-                                                <div class="">
-                                                    <span class="name">블로그 작가 이름</span>
-                                                </div>
-                                                <div class="category">뱃지 + #카테고리 분야</div>
+                                <div class="my-blog">
+                                    <!-- 설정 -->
+                                    <div class="setting flex-c">
+                                        <!-- 공개설정 -->
+                                        <div class="status">
+                                            
+                                            <div class="author-info">
+                                                <select id="statusFilter">
+                                                    <option value="">공개여부</option>  
+                                                    <option value="공개">공개</option>
+                                                    <option value="비공개">비공개</option>
+                                                </select>
                                             </div>
+                                            <p class="status-slect date">공개</p><!-- 기본값으로 전체공개 -->
                                         </div>
-                                        <p class="date">2025.03.19</p>
+                                        <!-- 썸네일 변경버튼 -->
+                                        <div class="thumbChange">
+                                            <button id="thumbChangeBtn" class="thumb-change btn-01" type="button">
+                                              썸네일
+                                              <img class="edit" src="img/detail/edit.png" alt="썸네일 수정 아이콘">
+                                            </button>
+                                            <input type="file" id="thumbInput" accept="image/*" style="display: none;">
+                                        </div>
+                                        
                                     </div>
+
                                     <!-- 기사 미리보기 -->
                                     <a href="#">
                                         <div class="best-item m-t-20 gap-10">
                                             <div class="thumbnail w-150">
-                                                <img src="img/detail/post-body1.png" alt="블로그 글 썸네일">
+                                                <img img id="thumbImage" src="img/sample.png" alt="블로그 글 썸네일">
                                             </div>
                                             <div class="info m-0">
                                                 <p class="title">경기도 국수 맛집 베스트10 유명해경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
                                                 <span class="write-text">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</span>
+                                                <p class="date">2025.03.19</p>
                                             </div>
                                         </div>
                                     </a>
@@ -149,34 +183,53 @@
                                             <img class="iconW-24" src="img/detail/share.png" alt="공유하기 아이콘">
                                             <span class="share-total">14</span>
                                         </button>
+                                        <!--삭제버튼 -->
+                                        <div class="delete">
+                                            <button class="deletBtn" type="button">
+                                                <img src="img/iconamoon_trash-fill.svg" alt="휴지통 아이콘">
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="blog-item">
-                                <div>
-                                    <!-- 프로필 -->
-                                    <div class="flex-c">
-                                        <div class="author-info">
-                                            <img class="profile-img w-30" src="img/detail/user-img1.png" alt="프로필 이미지">
-                                            <div class="research-author">
-                                                <div class="">
-                                                    <span class="name">블로그 작가 이름</span>
-                                                </div>
-                                                <div class="category">뱃지 + #카테고리 분야</div>
+                                <div class="my-blog">
+                                    <!-- 설정 -->
+                                    <div class="setting flex-c">
+                                        <!-- 공개설정 -->
+                                        <div class="status">
+                                            
+                                            <div class="author-info">
+                                                <select id="statusFilter">
+                                                    <option value="">공개여부</option>  
+                                                    <option value="공개">공개</option>
+                                                    <option value="비공개">비공개</option>
+                                                </select>
                                             </div>
+                                            <p class="status-slect date">공개</p><!-- 기본값으로 전체공개 -->
                                         </div>
-                                        <p class="date">2025.03.19</p>
+                                        <!-- 썸네일 변경버튼 -->
+                                        <div class="thumbChange">
+                                            <button id="thumbChangeBtn" class="thumb-change btn-01" type="button">
+                                              썸네일
+                                              <img class="edit" src="img/detail/edit.png" alt="썸네일 수정 아이콘">
+                                            </button>
+                                            <input type="file" id="thumbInput" accept="image/*" style="display: none;">
+                                        </div>
+                                        
                                     </div>
+
                                     <!-- 기사 미리보기 -->
                                     <a href="#">
                                         <div class="best-item m-t-20 gap-10">
                                             <div class="thumbnail w-150">
-                                                <img src="img/sample.png" alt="블로그 글 썸네일">
+                                                <img img id="thumbImage" src="img/sample.png" alt="블로그 글 썸네일">
                                             </div>
                                             <div class="info m-0">
-                                                <p class="title">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
+                                                <p class="title">경기도 국수 맛집 베스트10 유명해경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</p>
                                                 <span class="write-text">경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳경기도 국수 맛집 베스트10 유명해서 사람들이 많이 방문하는 곳</span>
+                                                <p class="date">2025.03.19</p>
                                             </div>
                                         </div>
                                     </a>
@@ -190,9 +243,16 @@
                                             <img class="iconW-24" src="img/detail/share.png" alt="공유하기 아이콘">
                                             <span class="share-total">14</span>
                                         </button>
+                                        <!--삭제버튼 -->
+                                        <div class="delete">
+                                            <button class="deletBtn" type="button">
+                                                <img src="img/iconamoon_trash-fill.svg" alt="휴지통 아이콘">
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
   
@@ -329,6 +389,29 @@
 
 
                     </div>
+
+
+                    <!-- 삭제 클릭 확인 모달창 ---// listDetail.html 삭제버튼 모달과 동일--- -->
+                    <div class="detail">
+                        <div id="reportModal" class="modal hidden">
+                            <div class="modal-content">
+                                <p class="text"><b>삭제하신 컨텐츠는 복원이 불가능합니다<br/>정말로 삭제하시겠습니까?</br></p>
+                                <div class="m-t-40">
+                                    <button type="button" class="confirm btn-01 w-125" onclick="confirmReport()">예</button>
+                                    <button type="button" class="cancel btn-01 w-125" onclick="closeReportModal()">아니요</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 삭제 완료 모달 -->
+                        <div id="reportSuccessModal" class="modal hidden">
+                            <div class="modal-content">
+                                <p class="text"><b>신고가 접수되었습니다.</b></p>
+                                <button type="button" class="close m-t-40 btn-01 w-125" onclick="closeReportSuccessModal()">확인</button>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
 
             </div>
@@ -369,6 +452,59 @@
     </footer>
     
     <script src="js/script.js"></script>
+
+    <script>
+        // 썸네일
+  const thumbChangeBtn = document.getElementById('thumbChangeBtn');
+  const thumbInput = document.getElementById('thumbInput');
+  const thumbImage = document.getElementById('thumbImage');
+
+  thumbChangeBtn.addEventListener('click', () => {
+    thumbInput.click(); // 파일 선택창 열기
+  });
+
+  thumbInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        thumbImage.src = event.target.result; // 썸네일 이미지 변경
+      };
+      reader.readAsDataURL(file);
+    } else {
+      alert('이미지 파일만 업로드할 수 있습니다.');
+    }
+  });
+
+
+
+
+        // 삭제버튼
+        document.addEventListener("DOMContentLoaded", function () {
+            // 삭제 버튼(.deletBtn) 클릭 → 삭제 확인 모달 열기
+            document.querySelectorAll('.deletBtn').forEach(button => {
+                button.addEventListener('click', function () {
+                    document.getElementById('reportModal').classList.remove('hidden');
+                });
+            });
+
+            // "예" 버튼 클릭 → 삭제 확인 모달 닫고 삭제 완료 모달 열기
+            window.confirmReport = function () {
+                document.getElementById('reportModal').classList.add('hidden');
+                document.getElementById('reportSuccessModal').classList.remove('hidden');
+            };
+
+            // "아니요" 버튼 클릭 → 삭제 확인 모달 닫기
+            window.closeReportModal = function () {
+                document.getElementById('reportModal').classList.add('hidden');
+            };
+
+            // "확인" 버튼 클릭 → 삭제 완료 모달 닫기
+            window.closeReportSuccessModal = function () {
+                document.getElementById('reportSuccessModal').classList.add('hidden');
+            };
+        });
+    </script>
 
 
 </body>

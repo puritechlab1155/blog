@@ -1614,10 +1614,25 @@ z-index: -1;
   flex-direction: column;
 }
 .edit-style-container{
-  padding: 40px 10px;
+  padding: 20px 10px 40px 10px;
   border-radius: 20px;
   width: 100%;
   border: 1px solid #efefef; 
+}
+.edit .right-panel .ai-bg {
+  /* background: #efefef; */
+}
+/* .edit .right-panel > .ai-bg {
+  padding-bottom: 250px;
+} */
+.edit .right-panel .style-flex-box .ai-bg {
+  background: #efefef;
+  border: 1px solid #efefef; 
+  padding: 20px;
+}
+.edit-style-container .edit-style-title {
+  font-family: 'Paperlogy';
+  /* text-align: center; */
 }
 /* 해쉬태그 */
 .hashtag-content {
@@ -1920,6 +1935,95 @@ z-index: -1;
 #saveShorts > .shorts-list:nth-child(n+11) { /* 최대 10개 제한 */
   display: none;
 }
+/* <my-blogList.html> */
+.myBlog {
+
+}
+.myBlog .btn-03 {
+  max-height: 40px;
+  padding: 0 10px;
+}
+.myBlog .status {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  /* margin-bottom: 20px; */
+  width: 60px;
+  gap: 10px;
+}
+.myBlog #statusFilter {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+}
+.myBlog .author-info {
+  /* width: 65%; */
+  width: 10px;
+}
+.myBlog .blog-item .my-blog .m-t-20 {
+  margin-top: 10px;
+}
+.myBlog .blog-item  .title {
+  -webkit-line-clamp: 1;
+}
+.myBlog .blog-item .best-item .info .write-text {
+  -webkit-line-clamp: 2;
+}
+.myBlog .blog-item .info .date {
+  text-align: right;
+  margin-top: 10px;
+}
+.myBlog .blog-item .my-blog .w-150 {
+  width: 120px;
+  height: 120px;
+}
+.myBlog .like-total, .share-total {
+  font-size: 14px;
+}
+.myBlog .btn-container .like, .share {
+  gap: 0;
+}
+/* 썸네일 수정 버튼 */
+.myBlog .my-blog .thumbChange {
+
+}
+.myBlog .blog-item .my-blog .flex-c {
+  align-items: start;
+}
+.myBlog .my-blog .thumbChange .thumb-change {
+  border-radius: 10px;
+  border: 1px solid #ffe48f;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #727272;
+  font-weight: 500;
+}
+.myBlog .my-blog .thumbChange .thumb-change:hover {
+  background: #FFE7A8;
+}
+.myBlog .my-blog .thumbChange .edit {
+  width: 20px;
+  height: 20px;
+  /* margin-left: -5px; */
+}
+/* 삭제 버튼 스타일 */
+.myBlog .delete .deletBtn {
+  /* background-color: #F8F8F8; */
+  /* padding: 10px; */
+  /* border: 2px solid #EFEFEF; */
+  border-radius: 10px;
+  cursor: pointer;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); */
+  transition: all 0.1s linear;
+}
+.myBlog .delete .deletBtn:hover {
+  border-color: #FDCC32;
+  transform: scale(1.1);
+}
+.hidden {
+  display: none;
+}
+
 
 /* 모바일 대응 */
 @media (max-width: 767px) {
@@ -2480,7 +2584,7 @@ z-index: -1;
   display: none;
 }
 
-/* viral-waiting.html */
+/* <viral-waiting.html> */
 .video .user-auth-wrap {
   margin: 0 auto;
   text-align: center;
@@ -2744,7 +2848,7 @@ color: #FDCC32;
     margin-top: 0;
     width: 100%;
 }
-  /* search 검색페이지 */
+  /* <search 검색페이지> */
   .search .sidebar {
     margin-top: 60px;
   }
