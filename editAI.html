@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>블로그 게시글 작성</title>
+        <title>블로그 게시글 작성AI</title>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
@@ -108,6 +108,12 @@
                                     <img src="img/edit/viral-icon.png" alt="숏츠변환 아이콘">
                                 </div>
                                 <span class="icon-text f-14">숏츠 AI</span>
+                            </button>
+                            <button type="button" class="prompt-btn icon-btn01">
+                                <div class="icon-bg">
+                                    <img src="img/edit/prompt-icon.png" alt="프롬프트 작성 아이콘">
+                                </div>
+                                <span class="icon-text f-14">BLOG AI</span>
                             </button>
                         </div>
                         <!-- 저장된 쇼츠 (viral.html 바이럴 AI 보관함 불러오기) -->
@@ -259,7 +265,17 @@
                                 <button class="btn-01 m-t-20" id="viralBring">저장된 쇼츠 가져오기</button>
                             </div>
                         </div>
-           
+                        <!-- BLOG AI 모달창(프롬프트) -->
+                        <div id="promptModal" class="link-modal">
+                            <div class="modal-content">
+                                <span class="close-btn">&times;</span>
+                                <h3 class="f-18">프롬프트 사용하기</h3>
+                                <p class="desc m-t-10">프롬프트에 입력시 AI가 블로그를 작성해줍니다!</p>
+                                <p class="caution m-t-10">* 프롬프트 사용시 작성된 글은 저장되지 않습니다. <br/>임시저장을 클릭해 작성된 글을 저장해주세요</p>
+                                <button class="btn-01 m-t-20" id="viralMaking" onclick="location.href='prompt.html'">프롬프트 사용해보기</button>
+                            </div>
+                        </div>
+
                         <div class="content">
                             <!-- 왼쪽 -->
                             <div class="left-panel">
@@ -565,6 +581,20 @@
                 window.addEventListener("click", function (event) {
                     if (event.target === viralModal) {
                     closeModal(viralModal);
+                    }
+                });
+
+                // === 프롬프트 모달 ===
+                const promptModal = document.getElementById("promptModal");
+                const promptOpenBtn = document.querySelector(".prompt-btn");
+                const promptCloseBtn = promptModal.querySelector(".close-btn");
+
+                promptOpenBtn.addEventListener("click", () => openModal(promptModal));
+                promptCloseBtn.addEventListener("click", () => closeModal(promptModal));
+
+                window.addEventListener("click", function (event) {
+                    if (event.target === promptModal) {
+                    closeModal(promptModal);
                     }
                 });
 
