@@ -1818,8 +1818,8 @@ z-index: -1;
   align-items: center;
 }
 .edit .modal-content {
-  max-width: 500px;
-  width: 100%;
+  /* max-width: 500px;
+  width: 100%; */
   background: white;
   padding: 50px;
   text-align: center;
@@ -1839,6 +1839,108 @@ z-index: -1;
   cursor: pointer;
   line-height: 0;
 }
+/* 숏츠 AI 바이럴 모달 */
+.modal-content .desc {
+  display: block;
+  font-size: 16px;
+  color: #868686;
+  font-weight: 400;
+}
+.modal-content .caution {
+  display: block;
+  font-size: 14px;
+  color: #cb0909;
+  font-weight: 400;
+}
+/* 숏츠 AI - 저장된 쇼츠 불러오기 */
+#saveShorts{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 30px;
+  border-radius: 20px;
+  /* border: 1px solid #efefef; */
+  background: #efefef;
+  padding: 30px;
+}
+#saveShorts .shorts-list {
+  flex: 1 0 calc(20% - 10px); /* 5개 이상 한 줄 */
+  max-width: calc(20% - 10px);
+  box-sizing: border-box;
+}
+#saveShorts .shorts-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+#saveShorts .shorts-imgBox {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* 1:1 비율 유지 */
+  overflow: hidden;
+  border-radius: 8px;
+  background: #eee;
+}
+#saveShorts .shorts-imgBox img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#saveShorts .shorts-item .date {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #555;
+}
+#saveShorts > .shorts-list:nth-child(n+11) { /* 최대 10개 제한 */
+  display: none;
+}
+
+/* 모바일 대응 */
+@media (max-width: 767px) {
+  .edit .icon-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-right: 16px;
+    gap: 20px;
+  }
+  .edit .icon-btn01 .icon-bg {
+    width: 70px;
+  }
+  .edit .icon-btn01 {
+    flex: 0 0 auto;
+    min-width: 64px;
+    padding: 0;
+  }
+  #saveShorts {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    /* padding-bottom: 8px; */
+    padding-right: 50px; /* 모바일에서 화면 일부 걸치기 */
+    background: none;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  #saveShorts .shorts-list {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  #saveShorts .save-shorts > .shorts-list:nth-child(n+11) { /* 최대 15개 제한 */
+    display: block;
+  }
+}
+
+
+
+
 /* 해쉬태그 입력 모달창 */
 .edit .hashtag-content .yellow {
   display: block;
@@ -2589,7 +2691,7 @@ color: #FDCC32;
     /* margin-right: 10px; */
   }
   .edit .icon-bar {
-    justify-content: center;
+    /* justify-content: center; */
   }
   .edit .edit-img {
     width: 100%;
@@ -3151,7 +3253,7 @@ color: #FDCC32;
     /* margin-right: 10px; */
   }
   .edit .icon-bar {
-    justify-content: center;
+    /* justify-content: center; */
   }
   .edit .left-panel .icon-btn01 .icon-bg {
     width: 35px;
@@ -3184,7 +3286,7 @@ color: #FDCC32;
     grid-column: span 1;
   }
   .edit .icon-btn01 {
-    padding: 0;
+    /* padding: 0; */
   }
   .edit .btn-01 {
     font-size: 13px;
