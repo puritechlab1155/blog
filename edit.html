@@ -40,26 +40,22 @@
         <!-- 메뉴 패널 -->
         <div class="menu-panel" id="menuPanel">
             <ul class="menu-list-box">
-                <a href="index.html">
-                    <li class="panel-list">Home</li>
-                </a>
-                <a href="edit.html">
-                    <li class="panel-list">Edit</li>
-                </a>
-                <a href="myInfo.html">
-                    <li class="panel-list">My Info</li>
-                </a>
-                <a class="log-in" href="login.html">
-                    <li class="panel-list">Log In</li>
-                </a>
-                <!-- 로그아웃 상태시 노출 -->
-                <a class="log-out" href="#">
-                    <li class="panel-list">Log Out</li>
-                </a>
-                <!-- 로그인 상태시 노출 -->
+                <a href="index.html"><li class="panel-list">Home</li></a>
+                <a href="my-blogList.html"><li class="panel-list">My Posts</li></a>
+                <a href="my-videoList.html"><li class="panel-list">My Videos</li></a>
+                <a href="myInfo.html"><li class="panel-list">My Info</li></a>
+                <a class="log-in" href="login.html"><li class="panel-list">Log In</li></a><!-- 로그아웃 상태시 노출 -->
+                <a class="log-out" href="#"><li class="panel-list">Log Out</li></a><!-- 로그인 상태시 노출 -->
             </ul>
+        </div><!-- 여기까지 메뉴 패널 -->
+    
+        <!-- 퀵메뉴 -->
+        <div class="quick-menu" id="quickMenu">
+            <button class="quick-button sub-button" onclick="location.href='viral.html'">쇼츠AI</button>
+            <button class="quick-button sub-button" onclick="location.href='edit.html'">글쓰기</button>
+            <button class="quick-button sub-button" onclick="location.href='editAI.html'">프롬프트</button>
+            <button class="quick-button" id="mainButton">+</button>
         </div>
-        <!-- 여기까지 메뉴 패널 -->
 
         <div class="content-wrap">
             <!-- 컨텐츠 시작 -->
