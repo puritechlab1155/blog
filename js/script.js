@@ -28,6 +28,36 @@ document.addEventListener("DOMContentLoaded", function () {
     menuBtn.classList.toggle("active");
   });
 
+  // 서브메뉴 토글
+  document.querySelectorAll('.menu-toggle').forEach(btn => {
+    const parentLi = btn.parentElement;
+
+    btn.addEventListener('click', function(e) {
+      e.preventDefault(); // 링크 이동 막기
+      parentLi.classList.toggle('active');
+    });
+
+    // hover 효과 클래스 제어 (상위 메뉴 hover 유지를 막기 위한 보완)
+    btn.addEventListener('mouseenter', function () {
+      btn.classList.add('hover');
+    });
+
+    btn.addEventListener('mouseleave', function () {
+      btn.classList.remove('hover');
+    });
+
+    // 하위 메뉴로 마우스 이동 시 hover 클래스 제거
+    const submenu = parentLi.querySelector('.submenu-list-box');
+    if (submenu) {
+      submenu.addEventListener('mouseenter', function () {
+        btn.classList.remove('hover');
+      });
+      submenu.addEventListener('mouseleave', function () {
+        btn.classList.add('hover');
+      });
+    }
+  });
+
   // 검색 버튼(돋보기/닫기) 클릭 이벤트
   searchBtn.addEventListener("click", function () {
     const isSearchActive = searchContainer.classList.contains("active");
@@ -57,6 +87,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+// 퀵메뉴
+const mainButton = document.getElementById('mainButton');
+const quickMenu = document.getElementById('quickMenu');
+
+mainButton.addEventListener('click', () => {
+  quickMenu.classList.toggle('open');
+  mainButton.textContent = quickMenu.classList.contains('open') ? '×' : '+';
+});
 
 
 

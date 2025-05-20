@@ -34,15 +34,25 @@
     </header>
     <!-- 메뉴 패널 -->
     <div class="menu-panel" id="menuPanel">
-        <ul class="menu-list-box">
-            <a href="index.html"><li class="panel-list">Home</li></a>
-            <a href="my-blogList.html"><li class="panel-list">My Posts</li></a>
-            <a href="my-videoList.html"><li class="panel-list">My Videos</li></a>
-            <a href="myInfo.html"><li class="panel-list">My Info</li></a>
-            <a class="log-in" href="login.html"><li class="panel-list">Log In</li></a><!-- 로그아웃 상태시 노출 -->
-            <a class="log-out" href="#"><li class="panel-list">Log Out</li></a><!-- 로그인 상태시 노출 -->
-        </ul>
-    </div><!-- 여기까지 메뉴 패널 -->
+      <ul class="menu-list-box">
+        <li class="panel-list"><a class="panelLink" href="index.html">Home</a></li>
+    
+        <li class="panel-list has-submenu">
+          <a href="#" class="menu-toggle panelLink">My Content</a>
+          <ul class="submenu-list-box">
+            <li class="submenu-list"><a class="panel-subLink" href="my-blogList.html" class="panel-sub-list">My Posts</a></li>
+            <li class="submenu-list"><a class="panel-subLink" href="my-videoList.html" class="panel-sub-list">My Videos</a></li>
+          </ul>
+        </li>
+    
+        <li class="panel-list"><a class="panelLink" href="myInfo.html">My Info</a></li>
+        <li class="panel-list log-in"><a class="panelLink" href="login.html">Log In</a></li><!-- 로그아웃 상태시 노출 -->
+        <li class="panel-list log-out"><a class="panelLink" href="#">Log Out</a></li><!-- 로그인 상태시 노출 -->
+      </ul>
+    </div>
+    
+    
+    <!-- 여기까지 메뉴 패널 -->
 
     <!-- 퀵메뉴 -->
     <div class="quick-menu" id="quickMenu">

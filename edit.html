@@ -67,6 +67,8 @@
                 <div class="edit m-t-100">
 
                     <div class="container">
+                        <h3 class="edit-style-title">게시글 작성_일반 ver</h3>
+
                         <!-- 모바일 전용 스크롤 문구 -->
                         <div class="scrollMob-container">
                             <span class="scroll-txt">scroll</span>
@@ -313,10 +315,8 @@
                                 <textarea class="text-area" placeholder="내용을 작성해 주세요."></textarea></div>
                             </div>
                             <div class="right-panel">
-                                
                                 <!-- 편집스타일 -->
                                 <div class="edit-style-container">
-                                    <h3 class="edit-style-title">게시글 작성_일반 ver</h3>
                                     <div class="style-flex-box first-box">
                                         <select class="f-14">
                                             <option class="pretendard">프리텐다드</option><!-- 기본 설정 -->
@@ -445,14 +445,7 @@
                                     <span class="yellow">최대 20개까지 입력하실 수 있습니다.</span>
 
                                 </div>
-                                <!-- 버튼 -->
-                                <div class="style-flex-box six-box">
-                                    <button type="button" class="btn-01 preview">미리보기</button>
-                                    <button type="button" class="btn-01 save">임시저장</button>
-                                </div>
-                                <div class="style-flex-box last-box">
-                                    <button class="complete user-btn">완료</button>
-                                </div>
+                                
                                 <!-- 해쉬태그 입력 모달창 -->
                                 <!-- <div id="hashtagModal" class="hashtag-modal">
                                     <div class="modal-content">
@@ -467,32 +460,38 @@
                                 </div> -->
 
                             </div>
+                            
                         </div>
 
-                        
+
+                         
+                        <!-- 버튼 -->
+                        <div class="style-flex-box six-box">
+                            <button type="button" class="btn-01 preview">미리보기</button>
+                            <button type="button" class="btn-01 save">임시저장</button>
+                        </div>
+                        <!-- 하단 썸네일 -->
+                        <div class="thumbnail-wrapper">
+                            <label for="thumbnailInput" class="custom-upload-button user-btn">썸네일 +</label>
+
+                            <div class="thumbnail-flex">
+                                <img id="thumbnailPreview" class="thumbnail-preview hidden" alt="썸네일 미리보기" />
+                                <button id="removeThumbnailBtn" class="remove-thumbnail hidden">×</button>
+                                <input type="file" id="thumbnailInput" accept="image/*" class="file-input" />
+                            </div>
+                        </div>
+                        <!-- 버튼 -->
+                        <div class="style-flex-box last-box">
+                            <button class="complete user-btn">완료</button>
+                        </div>
+                       
 
                     </div>
 
                 </div>
             </div>
             <!-- 여기까지 컨텐츠 -->
-
-            <!-- 하단 썸네일 -->
-            <div class="thumbnail-wrapper">
-                <label for="thumbnailInput" class="custom-upload-button user-btn">썸네일 +</label>
-              
-                <div class="thumbnail-flex">
-                    <img id="thumbnailPreview" class="thumbnail-preview hidden" alt="썸네일 미리보기" />
-                    <button id="removeThumbnailBtn" class="remove-thumbnail hidden">×</button>
-                    <input type="file" id="thumbnailInput" accept="image/*" class="file-input" />
-                </div>
-            </div>
-
-
         </div> 
-
-        
-
 
         <!-- 푸터 -->
         <footer class="footer">

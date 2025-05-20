@@ -45,29 +45,65 @@
 
     <div class="content-wrap">
         <!-- 컨텐츠 시작 -->
-        <div id="main">
-            <div class="myBlog search detail m-t-100">
+        <div id="main" class="intro">
+            <div class="sec1 myBlog search detail m-t-100">
                 <!-- 여기서부터 -->
                 <div class="container">
+
+
+
+                    <!-- 큰 제목 -->
+                    <h2 class="post-title yellow">My List</h2>
+                    <!-- 프로필/키워드 박스 전체 컨테이너 -->
+                    <div class="profile-count-container">
+                        <!-- 프로필 박스 -->
+                        <div class="profile-box">
+                        <div class="profile-img">
+                            <img src="img/profile.png" alt="프로필 사진" />
+                        </div>
+                        <div class="profile-text">
+                            <div class="nick-job-container">
+                            <p class="nickname">휠소굳</p>
+                            <p class="job-title">프로 여행러</p>
+                            </div>
+                            <p class="bio">
+                            현실만을 믿는 삶이란 때론 더욱 불행할 수도 있지 그렇지 않은감
+                            </p>
+                        </div>
+                        <!-- <button type="button" class="subscribe-btn btn-02 radius-50">구독하기</button> -->
+                        </div>
+                        <!-- 조회수 박스 -->
+                        <div class="count-box">
+                            <div class="count-left">
+                                <p class="count-text">전체 방문자수</p>
+                                <p class="count-number paperlogy">4,333명</p>
+                            </div>
+                            <div class="count-right">
+                                <p class="count-today">Today <span class="count-today-number">15</span></p>
+                                <p class="count-yesterday">Yesterday <span class="count-yesterday-number">23</span></p>
+                            </div>
+                            </div>
+                    </div>
+
+
+
                     <!-- 1단 -->
                     <div class="detail-content">
-                        <!-- <h2 class="post-title yellow">검색명이 표시됩니다</h2> -->
-                        <input type="text" id="searchInput" placeholder="제목 검색" />
-                
+                        
+
                         <div class="top-container">
-                            <!-- 탭 -->
-                            <div class="tabs">
-                                <span class="tab active"><a href="my-blogList.html">상세보기</a></span>
-                                <span class="tab"><a href=".html">썸네일로보기</a></span>
+                            <!-- 검색창 -->
+                            <div class="search-container">
+                                <input type="text" id="myList-search" placeholder="검색" class="search-input"/>
+                                <button type="button" class="search-submit"><img src="img/common/search2.png" alt="돋보기 이미지"></button>
                             </div>
                             <!-- 필터 -->
                             <div class="filters btn-03">
                                 <span class="filter">
-                                    <button type="button" onclick="location.href='edit.html'">게시글 +</button>
+                                    <button type="button" onclick="location.href='edit.html'"><span class="mob-n">게시글</span> +</button>
                                 </span>
                             </div>
                         </div>
-
 
                         <div class="post-txt">총 <span class="post-count post-txt">3</span>개의 게시글이 있습니다.</div>
 
@@ -257,9 +293,9 @@
                     </div>
   
                     <!-- 2단 -->
-                    <div class="sidebar">
+                    <!-- <div class="sidebar"> -->
                         <!-- 연관 검색 -->
-                        <div>
+                        <!-- <div>
                             <h2 class="sidebar-title">연관 검색</h2>
                             <div class="related-search">
                                 <a class="related" href="#">서울 카페</a>
@@ -267,10 +303,10 @@
                                 <a class="related" href="#">감성 카페 사진 스팟</a>
                                 <a class="related" href="#">브런치카페 맛집</a>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- BEST3 -->
-                        <div class="best-list m-t-90">
+                        <!-- <div class="best-list m-t-90">
                             <h2 class="sidebar-title">BEST3</h2>
                             <a href="#">
                                 <div class="best-item">
@@ -309,9 +345,9 @@
                                 </div>
                             </a>
                         </div>
-                      
+                       -->
                         <!-- 최근글 -->
-                        <div class="latest-list m-t-90">
+                        <!-- <div class="latest-list m-t-90">
                             <h2 class="sidebar-title">최근글</h2>
                             <a href="#">
                                 <div class="best-item">
@@ -383,12 +419,8 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
-
-
-
-
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
 
 
                     <!-- 삭제 클릭 확인 모달창 ---// listDetail.html 삭제버튼 모달과 동일--- -->

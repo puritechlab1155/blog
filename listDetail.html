@@ -62,11 +62,11 @@
                                 
                                 <button class="share edit-btn" type="button" onclick="window.location.href='edit.html'">
                                     <img class="iconW-24" src="img/detail/edit.png" alt="수정 아이콘">
-                                    <span class="edit-txt">수정</span>
+                                    <!-- <span class="edit-txt">수정</span> -->
                                 </button>
                                 <button class="share edit-btn" type="button">
-                                    <img class="iconW-24" src="img/detail/trash.png" alt="삭제 아이콘">
-                                    <span class="edit-txt">삭제</span> <!-- 263줄 삭제 모달 연결시키기 -->
+                                    <img class="iconW-24" src="img/detail/trash.png" alt="삭제 아이콘"><!-- 263줄 삭제 모달 연결시키기 -->
+                                    <!-- <span class="edit-txt">삭제</span>  -->
                                 </button>
 
                             </div>
@@ -302,13 +302,20 @@
                                 </div>
                             </div>
                             <!-- 삭제 모달 -->
-                            <div id="reportModal" class="modal hidden">
+                            <div id="deleteModal" class="modal hidden">
                                 <div class="modal-content">
                                     <p class="text"><b>정말로 삭제하시겠습니까?</b></p>
                                     <div class="m-t-40">
                                         <button type="button" class="confirm btn-01 w-125" onclick="confirmReport()">예</button>
                                         <button type="button" class="cancel btn-01 w-125" onclick="closeReportModal()">아니요</button>
                                     </div>
+                                </div>
+                            </div>
+                            <!-- 삭제 완료 모달 -->
+                            <div id="deleteSuccessModal" class="modal hidden">
+                                <div class="modal-content">
+                                    <p class="text"><b>삭제되었습니다.</b></p>
+                                    <button type="button" class="close m-t-40 btn-01 w-125" onclick="closeReportSuccessModal()">확인</button>
                                 </div>
                             </div>
 
@@ -340,8 +347,8 @@
                                     일상템들 블로그는 축제와 국내여행, 해외여행의 볼거리와 먹을거리, 놀거리를 알려드립니다.  
                                     그리고 좋은 여행지와 카페, 맛집을 엄선하여 추천합니다.
                                 </p>
-                                <button class="subscribe-btn btn-02 mob-hidden">구독하기</button>
-                                <button class="subscribe-btn btn-02 hidden">구독</button>
+                                <!-- <button class="subscribe-btn btn-02 mob-hidden">구독하기</button>
+                                <button class="subscribe-btn btn-02 hidden">구독</button> -->
                             </div>
 
                         </div>
